@@ -1,6 +1,6 @@
 ﻿using Entidades;
 
-namespace UI
+namespace Modelo
 {
     public class RolModelo
     {

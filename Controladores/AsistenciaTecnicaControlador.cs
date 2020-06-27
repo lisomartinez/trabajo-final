@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Entidades;
+using Modelo;
 using Servicios;
 using Vistas;
 

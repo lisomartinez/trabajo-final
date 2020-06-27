@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,19 +46,10 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(270, 256);
+            this.groupBox1.Size = new System.Drawing.Size(272, 232);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tasa de fallas promedio";
             // 
             // label2
             // 
@@ -69,14 +60,14 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Componente que más falla";
             // 
-            // label3
+            // label5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Costo Promedio Del Reemplazo";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tasa de Fallas por Usuario";
             // 
             // label4
             // 
@@ -87,23 +78,33 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Costo Total Acumulado (Mensual)";
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Tasa de Fallas por Usuario";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(156, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Costo Promedio Del Reemplazo";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tasa de fallas promedio";
             // 
             // ReporteFallasHardwareForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 380);
+            this.ClientSize = new System.Drawing.Size(359, 306);
             this.Controls.Add(this.groupBox1);
             this.Name = "ReporteFallasHardwareForm";
             this.Text = "ReporteFallasHardwareForm";
+            this.Load += new System.EventHandler(this.ReporteFallasHardwareForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -186,6 +186,7 @@
             this.Controls.Add(this.groupBox4);
             this.Name = "SoftwareForm";
             this.Text = "SoftwareForm";
+            this.Load += new System.EventHandler(this.SoftwareForm_Load);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);

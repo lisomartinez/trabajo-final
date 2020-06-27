@@ -1,7 +1,6 @@
 ﻿using Entidades;
-using UI;
 
-namespace Vistas
+namespace Modelo
 {
     public class UsuarioModelo
     {

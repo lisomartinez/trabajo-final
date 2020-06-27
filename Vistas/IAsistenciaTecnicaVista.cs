@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Controladores;
+using Modelo;
 
 namespace Vistas
 {

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Runtime.InteropServices;
 using Entidades;
+using Modelo;
 using Servicios;
 using Vistas;
 

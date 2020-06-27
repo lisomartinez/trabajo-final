@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Entidades;
 
-namespace Controladores
+namespace Modelo
 {
     public class ProveedorModelo
     {

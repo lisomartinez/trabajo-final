@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using AccesoDatos;
-using Repositorios;
+using Entidades;
 
-namespace Entidades
+namespace Repositorios
 {
     public class SoftwareRepositorio : SqlRepositorio<Software>
     {

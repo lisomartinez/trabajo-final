@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using Entidades;
+using Modelo;
+using Servicios;
 using Vistas;
 
 namespace Controladores

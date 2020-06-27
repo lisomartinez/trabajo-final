@@ -49,6 +49,7 @@
     <Compile Include="IOrdenDeCompraVista.cs" />
     <Compile Include="IProveedoresVista.cs" />
     <Compile Include="IReporteAsistenciaTecnicaVista.cs" />
+    <Compile Include="IReporteFallasHardwareVista.cs" />
     <Compile Include="ISoftwareVista.cs" />
     <Compile Include="ISolicitudAsistenciaVista.cs" />
     <Compile Include="ITecnicoVista.cs" />

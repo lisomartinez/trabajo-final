@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Entidades;
-using UI;
+using Modelo;
 
 namespace Vistas
 {

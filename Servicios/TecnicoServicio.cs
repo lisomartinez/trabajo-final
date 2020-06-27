@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Entidades;
-using Servicios;
+using Repositorios;
 
-namespace Controladores
+namespace Servicios
 {
     public class TecnicoServicio
     {

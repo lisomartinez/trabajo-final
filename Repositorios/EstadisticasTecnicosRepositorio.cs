@@ -1,4 +1,4 @@
-﻿namespace Servicios
+﻿namespace Repositorios
 {
     public class EstadisticasTecnicosRepositorio
     {

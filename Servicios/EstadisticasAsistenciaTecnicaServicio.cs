@@ -33,5 +33,10 @@ namespace Servicios
         {
             throw new NotImplementedException();
         }
+
+        public EstadisticaFallas ObtenerEstadisticasFallas()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using Entidades;
+using Modelo;
 using Servicios;
 using Vistas;
 

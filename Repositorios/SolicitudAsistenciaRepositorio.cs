@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using AccesoDatos;
 using Entidades;
-using Repositorios;
 
-namespace Servicios
+namespace Repositorios
 {
     public class SolicitudAsistenciaRepositorio : SqlRepositorio<SolicitudAsistenciaTecnica>
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Entidades;
 
-namespace Vistas
+namespace Modelo
 {
     public class ComputadoraModelo
     {

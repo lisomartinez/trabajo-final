@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using AccesoDatos;
 using Entidades;
-using Repositorios;
 
-namespace Servicios
+namespace Repositorios
 {
     public class ProveedoresRepositorio : SqlRepositorio<Proveedor>
 

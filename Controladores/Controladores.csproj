@@ -51,6 +51,7 @@
     <Compile Include="ProveedoresControlador.cs" />
     <Compile Include="ReemplazoComponenteControlador.cs" />
     <Compile Include="ReporteAsistenciaTecnicaControlador.cs" />
+    <Compile Include="ReporteFallasHardwareControlador.cs" />
     <Compile Include="SoftwareControlador.cs" />
     <Compile Include="SolicitudAsistenciaControlador.cs" />
     <Compile Include="TecnicoControlador.cs" />

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Controladores;
+using Modelo;
 using Vistas;
 
 namespace UI

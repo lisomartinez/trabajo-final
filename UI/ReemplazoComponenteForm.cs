@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Modelo;
 using Vistas;
 
 namespace UI
@@ -30,6 +31,11 @@ namespace UI
         public void MostrarExcepcion(Exception exception)
         {
             throw new NotImplementedException();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

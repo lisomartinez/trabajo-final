@@ -1,6 +1,6 @@
 ﻿using Entidades;
 
-namespace Servicios
+namespace Repositorios
 {
     public class EstadisticasAsistenciasTecnicasRepositorio
     {

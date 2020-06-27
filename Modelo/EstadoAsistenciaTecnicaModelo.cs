@@ -1,7 +1,7 @@
 ﻿using System;
 using Entidades;
 
-namespace Vistas
+namespace Modelo
 {
     public class EstadoAsistenciaTecnicaModelo
     {

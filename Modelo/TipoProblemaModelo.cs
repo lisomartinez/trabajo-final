@@ -1,6 +1,6 @@
 ﻿using Entidades;
 
-namespace Controladores
+namespace Modelo
 {
     public class TipoProblemaModelo
     {
