@@ -1,0 +1,38 @@
+﻿using System;
+using Entidades;
+using Servicios;
+using Vistas;
+
+namespace Controladores
+{
+    public class LoginControlador
+    {
+        private ILoginVista _vista;
+        private LoginServicio _servicio;
+
+
+        public LoginControlador(ILoginVista vista, LoginServicio servicio)
+        {
+            _vista = vista;
+            _servicio = servicio;
+        }
+
+        public void Logearse()
+        {
+            try
+            {
+                var nombreUsuario = _vista.Usuario;
+                var password =  _vista.Password;
+
+                 var usuario = _servicio.Ingresar(nombreUsuario, password);
+                 if (usuario == null) throw new NotImplementedException();
+
+                 Sesion.Instance.Usuario = usuario;
+            }
+            catch (Exception e)
+            {
+                _vista.MostrarExcepcion(e);
+            }
+        }
+    }
+}
