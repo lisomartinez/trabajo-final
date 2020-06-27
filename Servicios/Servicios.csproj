@@ -50,6 +50,7 @@
     <Compile Include="PasswordHasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedoresServicio.cs" />
+    <Compile Include="SoftwareServicio.cs" />
     <Compile Include="SolicitarAsistenciaServicio.cs" />
     <Compile Include="TecnicoServicio.cs" />
     <Compile Include="TipoProblemaServicio.cs" />

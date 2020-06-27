@@ -55,7 +55,7 @@ namespace Controladores
              
                 var computadora = new Computadora(new ComputadoraId(_vista.Codigo), _vista.Marca, _vista.Modelo,
                     _vista.Componentes.Select(c => c.ToEntity()).ToList(),
-                    _vista.Software.Select(s => s.ToEntity).ToList());
+                    _vista.Software.Select(s => s.ToEntity()).ToList());
                 _servicio.CrearComputadora(computadora);
             }
             catch (Exception e)
@@ -148,7 +148,7 @@ namespace Controladores
             {
                 var seleccionado = _vista.SoftwareSeleccionado;
                 _servicio.EliminarSoftwareDeComputadora(_vista.ComputadoraSeleccionada.ToEntity(),
-                    seleccionado.ToEntity);
+                    seleccionado.ToEntity());
             }
             catch (Exception e)
             {

@@ -4,34 +4,21 @@ namespace Entidades
 {
     public class Software : Entidad
     {
-        private SoftwareRepositorio _repositorio;
-        public Software(Id id) : base(id)
+        public CodigoSoftware Codigo { get; }
+        public string Nombre { get; }
+        public string Version { get; }
+        public string Desarrollador { get; }
+
+
+        public Software(CodigoSoftware codigo, string nombre, string version, string desarrollador) : base(codigo)
         {
+            Codigo = codigo;
+            Nombre = nombre;
+            Version = version;
+            Desarrollador = desarrollador;
+            
         }
 
-        public Software(CodigoSoftware id, string vistaNombre, string vistaVersion, string vistaDesarrollador) : base(id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void AgregarSoftware(Software software)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void ModificarSoftware(Software software)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void EliminarSoftware(Software software)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public List<Software> ObtenerTodos()
-        {
-            throw new System.NotImplementedException();
-        }
+      
     }
 }

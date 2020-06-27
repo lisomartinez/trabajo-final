@@ -19,6 +19,7 @@ namespace Servicios
         private EstadisticasAsistenciasTecnicas ComputarEstadisticas(AsistenciaTecnica asistenciaTecnica)
         {
             _estadisticasAsistenciasTecnicas.ComputarEstadisticasActualizacionEstado(asistenciaTecnica);
+            throw new NotImplementedException();
         }
 
         public List<AsistenciaTecnica> ObtenerAsistenciaTecnico(Legajo usuarioLegajo)

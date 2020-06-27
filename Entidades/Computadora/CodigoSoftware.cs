@@ -4,9 +4,8 @@ namespace Entidades
 { 
     public class CodigoSoftware : Id
     {
-        public CodigoSoftware(int codigo)
+        public CodigoSoftware(int value) : base(value)
         {
-            throw new NotImplementedException();
         }
     }
 }

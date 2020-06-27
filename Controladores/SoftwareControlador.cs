@@ -8,9 +8,9 @@ namespace Controladores
     public class SoftwareControlador
     {
         private ISoftwareVista _vista;
-        private Software _servicio;
+        private SoftwareServicio _servicio;
         private ComputadoraModelo _computadoraModelo;
-        public SoftwareControlador(ISoftwareVista vista, Software servicio)
+        public SoftwareControlador(ISoftwareVista vista, SoftwareServicio servicio)
         {
             _vista = vista;
             _servicio = servicio;
