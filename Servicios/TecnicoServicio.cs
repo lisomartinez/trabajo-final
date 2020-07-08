@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using AccesoDatos;
 using Entidades;
 using Repositorios;
 
@@ -6,31 +7,36 @@ namespace Servicios
 {
     public class TecnicoServicio
     {
-        private UsuarioRepositorio _usuario;
+        private UsuarioRepositorio _repositorio;
+
+        public TecnicoServicio()
+        {
+            _repositorio = new UsuarioRepositorio(AccesoADatos.Instance);
+        }
 
         public List<Usuario> ObtenerTodos()
         {
-            throw new System.NotImplementedException();
+            return _repositorio.ObtenerTodos();
         }
 
         public void CrearTecnico(Usuario tecnico)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Guardar(tecnico);
         }
 
         public void Actualizar(Usuario tecnico)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Actualizar(tecnico);
         }
 
         public void EliminarTecnico(Usuario tecnico)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Eliminar(tecnico.Id);
         }
 
         public void CambiarPassword(Usuario tecnico)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Actualizar(tecnico);
         }
     }
 }

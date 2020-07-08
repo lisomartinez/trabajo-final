@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controladores;
 using Modelo;
 using Vistas;
 
@@ -14,9 +15,13 @@ namespace UI
 {
     public partial class OrdenDeCompra : Form, IOrdenDeCompraVista
     {
-        public OrdenDeCompra()
+        private OrdenDeCompraControlador _controlador;
+
+        public OrdenDeCompra(ComponenteModelo componenteModelo)
         {
             InitializeComponent();
+            _controlador = new OrdenDeCompraControlador(this, componenteModelo);
+            _controlador.MostrarProveedorVendiendoComponente();
         }
 
         private void OrdenDeCompra_Load(object sender, EventArgs e)
@@ -26,9 +31,13 @@ namespace UI
 
         public void MostrarExcepcion(Exception exception)
         {
-            throw new NotImplementedException();
+            MessageBox.Show(exception.Message);
         }
 
-        public List<ProveedorModelo> Proveedores { get; set; }
+        public List<ProveedorModelo> Proveedores
+        {
+            get => throw new NotImplementedException();
+            set => ProveedoresDGV.DataSource = value;
+        }
     }
 }

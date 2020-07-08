@@ -9,5 +9,8 @@ namespace Vistas
         void MostrarExcepcion(Exception exception);
         List<ComputadoraModelo> Computadoras { get; set; }
         ComputadoraModelo ComputadoraSeleccionada { get; set; }
+        int Legajo { get; set; }
+        string Nombre { get; set; }
+        string Apellido { get; set; }
     }
 }

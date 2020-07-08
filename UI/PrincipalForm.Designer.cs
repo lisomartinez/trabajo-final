@@ -29,128 +29,125 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asistenciaTecnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.solicitarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.encuestaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.MenuPrincipal = new System.Windows.Forms.MenuStrip();
+            this.PrincipalSubMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.IngresarOpcion = new System.Windows.Forms.ToolStripMenuItem();
+            this.AsistenciaSubMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.SolicitarAsistenciaOpcion = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultarAsistenciaOpcion = new System.Windows.Forms.ToolStripMenuItem();
+            this.UsuariosSubMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.AdministrarOpcion = new System.Windows.Forms.ToolStripMenuItem();
+            this.EncuestaMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultarOpcion = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReportesSubMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.EstadisticasMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // MenuPrincipal
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.asistenciaTecnicaToolStripMenuItem,
-            this.usuariosToolStripMenuItem,
-            this.encuestaToolStripMenuItem,
-            this.reportesToolStripMenuItem,
-            this.estadísticasToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.MenuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PrincipalSubMenu,
+            this.AsistenciaSubMenu,
+            this.UsuariosSubMenu,
+            this.EncuestaMenu,
+            this.ReportesSubMenu,
+            this.EstadisticasMenu});
+            this.MenuPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.MenuPrincipal.Name = "MenuPrincipal";
+            this.MenuPrincipal.Size = new System.Drawing.Size(800, 24);
+            this.MenuPrincipal.TabIndex = 1;
+            this.MenuPrincipal.Text = "menuStrip1";
             // 
-            // toolStripMenuItem1
+            // PrincipalSubMenu
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(50, 20);
-            this.toolStripMenuItem1.Text = "Menu";
+            this.PrincipalSubMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.IngresarOpcion});
+            this.PrincipalSubMenu.Name = "PrincipalSubMenu";
+            this.PrincipalSubMenu.Size = new System.Drawing.Size(50, 20);
+            this.PrincipalSubMenu.Text = "Menu";
             // 
-            // ingresarToolStripMenuItem
+            // IngresarOpcion
             // 
-            this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
-            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ingresarToolStripMenuItem.Text = "Ingresar";
-            this.ingresarToolStripMenuItem.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
+            this.IngresarOpcion.Name = "IngresarOpcion";
+            this.IngresarOpcion.Size = new System.Drawing.Size(180, 22);
+            this.IngresarOpcion.Text = "Ingresar";
+            this.IngresarOpcion.Click += new System.EventHandler(this.IngresarOpcion_Click);
             // 
-            // asistenciaTecnicaToolStripMenuItem
+            // AsistenciaSubMenu
             // 
-            this.asistenciaTecnicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.solicitarToolStripMenuItem,
-            this.consultarToolStripMenuItem});
-            this.asistenciaTecnicaToolStripMenuItem.Name = "asistenciaTecnicaToolStripMenuItem";
-            this.asistenciaTecnicaToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
-            this.asistenciaTecnicaToolStripMenuItem.Text = "Asistencia Tecnica";
+            this.AsistenciaSubMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SolicitarAsistenciaOpcion,
+            this.ConsultarAsistenciaOpcion});
+            this.AsistenciaSubMenu.Name = "AsistenciaSubMenu";
+            this.AsistenciaSubMenu.Size = new System.Drawing.Size(115, 20);
+            this.AsistenciaSubMenu.Text = "Asistencia Tecnica";
             // 
-            // solicitarToolStripMenuItem
+            // SolicitarAsistenciaOpcion
             // 
-            this.solicitarToolStripMenuItem.Name = "solicitarToolStripMenuItem";
-            this.solicitarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.solicitarToolStripMenuItem.Text = "Solicitar";
-            this.solicitarToolStripMenuItem.Click += new System.EventHandler(this.solicitarToolStripMenuItem_Click);
+            this.SolicitarAsistenciaOpcion.Name = "SolicitarAsistenciaOpcion";
+            this.SolicitarAsistenciaOpcion.Size = new System.Drawing.Size(180, 22);
+            this.SolicitarAsistenciaOpcion.Text = "Solicitar";
             // 
-            // consultarToolStripMenuItem
+            // ConsultarAsistenciaOpcion
             // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultarToolStripMenuItem.Text = "Consultar";
-            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
+            this.ConsultarAsistenciaOpcion.Name = "ConsultarAsistenciaOpcion";
+            this.ConsultarAsistenciaOpcion.Size = new System.Drawing.Size(180, 22);
+            this.ConsultarAsistenciaOpcion.Text = "Consultar";
             // 
-            // usuariosToolStripMenuItem
+            // UsuariosSubMenu
             // 
-            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.administrarToolStripMenuItem});
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.UsuariosSubMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AdministrarOpcion});
+            this.UsuariosSubMenu.Name = "UsuariosSubMenu";
+            this.UsuariosSubMenu.Size = new System.Drawing.Size(64, 20);
+            this.UsuariosSubMenu.Text = "Usuarios";
             // 
-            // encuestaToolStripMenuItem
+            // AdministrarOpcion
             // 
-            this.encuestaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarToolStripMenuItem1});
-            this.encuestaToolStripMenuItem.Name = "encuestaToolStripMenuItem";
-            this.encuestaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.encuestaToolStripMenuItem.Text = "Encuesta";
+            this.AdministrarOpcion.Name = "AdministrarOpcion";
+            this.AdministrarOpcion.Size = new System.Drawing.Size(180, 22);
+            this.AdministrarOpcion.Text = "Administrar";
             // 
-            // reportesToolStripMenuItem
+            // EncuestaMenu
             // 
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.EncuestaMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ConsultarOpcion});
+            this.EncuestaMenu.Name = "EncuestaMenu";
+            this.EncuestaMenu.Size = new System.Drawing.Size(66, 20);
+            this.EncuestaMenu.Text = "Encuesta";
             // 
-            // administrarToolStripMenuItem
+            // ConsultarOpcion
             // 
-            this.administrarToolStripMenuItem.Name = "administrarToolStripMenuItem";
-            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.administrarToolStripMenuItem.Text = "Administrar";
-            this.administrarToolStripMenuItem.Click += new System.EventHandler(this.administrarToolStripMenuItem_Click);
+            this.ConsultarOpcion.Name = "ConsultarOpcion";
+            this.ConsultarOpcion.Size = new System.Drawing.Size(180, 22);
+            this.ConsultarOpcion.Text = "Consultar";
             // 
-            // consultarToolStripMenuItem1
+            // ReportesSubMenu
             // 
-            this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
-            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.consultarToolStripMenuItem1.Text = "Consultar";
-            this.consultarToolStripMenuItem1.Click += new System.EventHandler(this.consultarToolStripMenuItem1_Click);
+            this.ReportesSubMenu.Name = "ReportesSubMenu";
+            this.ReportesSubMenu.Size = new System.Drawing.Size(65, 20);
+            this.ReportesSubMenu.Text = "Reportes";
             // 
-            // estadísticasToolStripMenuItem
+            // EstadisticasMenu
             // 
-            this.estadísticasToolStripMenuItem.Name = "estadísticasToolStripMenuItem";
-            this.estadísticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.estadísticasToolStripMenuItem.Text = "Estadísticas";
+            this.EstadisticasMenu.Name = "EstadisticasMenu";
+            this.EstadisticasMenu.Size = new System.Drawing.Size(79, 20);
+            this.EstadisticasMenu.Text = "Estadísticas";
             // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.MenuPrincipal);
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.MenuPrincipal;
             this.Name = "PrincipalForm";
             this.Text = "Sistema de Asistencias Técnicas";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.PrincipalForm_Load);
+            this.MenuPrincipal.ResumeLayout(false);
+            this.MenuPrincipal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,17 +155,17 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem ingresarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem asistenciaTecnicaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem solicitarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem encuestaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem estadísticasToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip MenuPrincipal;
+        private System.Windows.Forms.ToolStripMenuItem PrincipalSubMenu;
+        private System.Windows.Forms.ToolStripMenuItem IngresarOpcion;
+        private System.Windows.Forms.ToolStripMenuItem AsistenciaSubMenu;
+        private System.Windows.Forms.ToolStripMenuItem SolicitarAsistenciaOpcion;
+        private System.Windows.Forms.ToolStripMenuItem ConsultarAsistenciaOpcion;
+        private System.Windows.Forms.ToolStripMenuItem UsuariosSubMenu;
+        private System.Windows.Forms.ToolStripMenuItem AdministrarOpcion;
+        private System.Windows.Forms.ToolStripMenuItem EncuestaMenu;
+        private System.Windows.Forms.ToolStripMenuItem ConsultarOpcion;
+        private System.Windows.Forms.ToolStripMenuItem ReportesSubMenu;
+        private System.Windows.Forms.ToolStripMenuItem EstadisticasMenu;
     }
 }

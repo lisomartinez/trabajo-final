@@ -4,14 +4,29 @@ namespace Modelo
 {
     public class TipoProblemaModelo
     {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+
+        public TipoProblemaModelo(int id, string nombre)
+        {
+            Id = id;
+            Nombre = nombre;
+        }
+
         public static TipoProblemaModelo From(TipoProblema tp)
         {
-            throw new System.NotImplementedException();
+            return new TipoProblemaModelo(
+                id: tp.Id.AsInt(),
+                nombre: tp.Nombre
+            );
         }
 
         public TipoProblema ToEntitty()
         {
-            throw new System.NotImplementedException();
+            return new TipoProblema(
+                id: new TipoProblemaId(Id),
+                nombre: Nombre
+            );
         }
     }
 }

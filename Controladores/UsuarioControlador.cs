@@ -11,10 +11,10 @@ namespace Controladores
         private IUsuarioVista _vista;
         private UsuarioServicio _servicio;
 
-        public UsuarioControlador(IUsuarioVista vista, UsuarioServicio servicio)
+        public UsuarioControlador(IUsuarioVista vista)
         {
             _vista = vista;
-            _servicio = servicio;
+            _servicio = new UsuarioServicio();
         }
 
         public void MostrarUsuarios()
@@ -38,7 +38,7 @@ namespace Controladores
                 _vista.Nombre = seleccionado.Nombre;
                 _vista.Apellido = seleccionado.Apellido;
                 _vista.Email = seleccionado.Email;
-                _vista.Rol = seleccionado.Rol;
+                // _vista.Rol = seleccionado.Rol;
             }
             catch (Exception e)
             {
@@ -52,8 +52,8 @@ namespace Controladores
             try
             {
                 ValidarCampos();
-                var usuario = new Usuario(new Legajo(_vista.Legajo), _vista.Nombre, _vista.Apellido, _vista.Email, _vista.Rol.ToEntity());
-                _servicio.CrearUsuario(usuario);
+                // var Usuario = new Usuario(new Legajo(_vista.Legajo), _vista.Nombre, _vista.Apellido, _vista.Email, _vista.Rol.ToEntity());
+                // _servicio.CrearUsuario(Usuario);
             }
             catch (Exception e)
             {
@@ -75,7 +75,7 @@ namespace Controladores
                 seleccionado.Nombre = _vista.Nombre;
                 seleccionado.Apellido = _vista.Apellido;
                 seleccionado.Email = _vista.Email;
-                seleccionado.Rol = _vista.Rol;
+                // seleccionado.Rol = _vista.Rol;
                 _servicio.Actualizar(seleccionado.ToEntity());
             }
             catch (Exception e)
@@ -103,7 +103,7 @@ namespace Controladores
             {
                 var seleccionado = _vista.UsuarioSeleccionado;
                 _vista.SolicitarIngresoPassword();
-                seleccionado.Password =   _vista.Password;
+                // seleccionado.Password =   _vista.Password;
                 _servicio.CambiarPassword(seleccionado.ToEntity());
             }
             catch (Exception e)

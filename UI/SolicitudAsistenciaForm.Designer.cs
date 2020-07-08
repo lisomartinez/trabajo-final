@@ -35,8 +35,8 @@ namespace UI
             this.TurnosDGV = new System.Windows.Forms.DataGridView();
             this.ConfirmarSolicitudBTN = new System.Windows.Forms.Button();
             this.SolicitarTurnoBTN = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.DescripcionTB = new System.Windows.Forms.TextBox();
+            this.TipoProblemaCB = new System.Windows.Forms.ComboBox();
             this.DescripcionProblemaTB = new System.Windows.Forms.Label();
             this.TipoProblemaLBL = new System.Windows.Forms.Label();
             this.SolicitarAsistenciaGB.SuspendLayout();
@@ -51,8 +51,8 @@ namespace UI
             this.SolicitarAsistenciaGB.Controls.Add(this.TurnosDGV);
             this.SolicitarAsistenciaGB.Controls.Add(this.ConfirmarSolicitudBTN);
             this.SolicitarAsistenciaGB.Controls.Add(this.SolicitarTurnoBTN);
-            this.SolicitarAsistenciaGB.Controls.Add(this.textBox1);
-            this.SolicitarAsistenciaGB.Controls.Add(this.comboBox2);
+            this.SolicitarAsistenciaGB.Controls.Add(this.DescripcionTB);
+            this.SolicitarAsistenciaGB.Controls.Add(this.TipoProblemaCB);
             this.SolicitarAsistenciaGB.Controls.Add(this.DescripcionProblemaTB);
             this.SolicitarAsistenciaGB.Controls.Add(this.TipoProblemaLBL);
             this.SolicitarAsistenciaGB.Location = new System.Drawing.Point(12, 18);
@@ -69,6 +69,7 @@ namespace UI
             this.TurnosDGV.Enabled = false;
             this.TurnosDGV.Location = new System.Drawing.Point(21, 395);
             this.TurnosDGV.Name = "TurnosDGV";
+            this.TurnosDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TurnosDGV.Size = new System.Drawing.Size(544, 176);
             this.TurnosDGV.TabIndex = 4;
             // 
@@ -82,7 +83,7 @@ namespace UI
             this.ConfirmarSolicitudBTN.TabIndex = 3;
             this.ConfirmarSolicitudBTN.Text = "Confirmar Solicitud";
             this.ConfirmarSolicitudBTN.UseVisualStyleBackColor = true;
-            this.ConfirmarSolicitudBTN.Click += new System.EventHandler(this.button1_Click);
+            this.ConfirmarSolicitudBTN.Click += new System.EventHandler(this.ConfirmarSolicitudBTN_Click);
             // 
             // SolicitarTurnoBTN
             // 
@@ -93,24 +94,25 @@ namespace UI
             this.SolicitarTurnoBTN.TabIndex = 3;
             this.SolicitarTurnoBTN.Text = "Solicitar Turno";
             this.SolicitarTurnoBTN.UseVisualStyleBackColor = true;
+            this.SolicitarTurnoBTN.Click += new System.EventHandler(this.SolicitarTurnoBTN_Click);
             // 
-            // textBox1
+            // DescripcionTB
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(122, 78);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(443, 212);
-            this.textBox1.TabIndex = 2;
+            this.DescripcionTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DescripcionTB.Location = new System.Drawing.Point(122, 78);
+            this.DescripcionTB.Multiline = true;
+            this.DescripcionTB.Name = "DescripcionTB";
+            this.DescripcionTB.Size = new System.Drawing.Size(443, 212);
+            this.DescripcionTB.TabIndex = 2;
             // 
-            // comboBox2
+            // TipoProblemaCB
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(122, 28);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(443, 21);
-            this.comboBox2.TabIndex = 1;
+            this.TipoProblemaCB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TipoProblemaCB.FormattingEnabled = true;
+            this.TipoProblemaCB.Location = new System.Drawing.Point(122, 28);
+            this.TipoProblemaCB.Name = "TipoProblemaCB";
+            this.TipoProblemaCB.Size = new System.Drawing.Size(443, 21);
+            this.TipoProblemaCB.TabIndex = 1;
             // 
             // DescripcionProblemaTB
             // 
@@ -146,12 +148,12 @@ namespace UI
 
         }
 
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox TipoProblemaCB;
         private System.Windows.Forms.Button ConfirmarSolicitudBTN;
         private System.Windows.Forms.Label DescripcionProblemaTB;
         private System.Windows.Forms.GroupBox SolicitarAsistenciaGB;
         private System.Windows.Forms.Button SolicitarTurnoBTN;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox DescripcionTB;
         private System.Windows.Forms.Label TipoProblemaLBL;
         private System.Windows.Forms.DataGridView TurnosDGV;
 

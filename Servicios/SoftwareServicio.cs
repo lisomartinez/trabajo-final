@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using AccesoDatos;
 using Entidades;
 using Repositorios;
 
@@ -8,29 +9,30 @@ namespace Servicios
     {
         private SoftwareRepositorio _repositorio;
 
-        public SoftwareServicio(SoftwareRepositorio repositorio)
+        public SoftwareServicio()
         {
-            _repositorio = repositorio;
+            _repositorio = new SoftwareRepositorio(AccesoADatos.Instance);
         }
+
 
         public void AgregarSoftware(Software software)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Guardar(software);
         }
 
         public void ModificarSoftware(Software software)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Actualizar(software);
         }
 
         public void EliminarSoftware(Software software)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Eliminar(software.Id);
         }
 
         public List<Software> ObtenerTodos()
         {
-            throw new System.NotImplementedException();
+           return _repositorio.ObtenerTodos();
         }
     }
 }

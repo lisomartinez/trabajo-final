@@ -12,7 +12,6 @@ namespace Vistas
         string Nombre { get; set; }
         string Apellido { get; set; }
         string Email { get; set; }
-        string Password { get; set; }
         List<UsuarioModelo> Tecnicos { get; set; }
         void SolicitarIngresoPassword();
     }

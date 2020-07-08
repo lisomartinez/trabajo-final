@@ -13,10 +13,11 @@ namespace Controladores
         private IProveedoresVista _vista;
         private ProveedoresServicio _servicio;
 
-        public ProveedoresControlador(IProveedoresVista vista, ProveedoresServicio servicio)
+
+        public ProveedoresControlador(IProveedoresVista vista)
         {
             _vista = vista;
-            _servicio = servicio;
+            _servicio = new ProveedoresServicio();
         }
 
         public void MostrarProveedores()

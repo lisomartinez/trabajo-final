@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using AccesoDatos;
 using Entidades;
 using Repositorios;
 
@@ -8,24 +9,30 @@ namespace Servicios
     public class ComponenteServicio
     {
         private ComponenteRepositorio _repositorio;
+
+        public ComponenteServicio()
+        {
+            _repositorio = new ComponenteRepositorio(AccesoADatos.Instance);
+        }
+
         public List<Componente> ObtenerTodos()
         {
-            throw new NotImplementedException();
+            return _repositorio.ObtenerTodos();
         }
 
         public void Guardar(Componente componente)
         {
-            throw new NotImplementedException();
+            _repositorio.Guardar(componente);
         }
 
         public void Modificar(Componente componente)
         {
-            throw new NotImplementedException();
+            _repositorio.Actualizar(componente);
         }
 
         public void Eliminar(Componente componente)
         {
-            throw new NotImplementedException();
+            _repositorio.Eliminar(componente.Id);
         }
     }
 }

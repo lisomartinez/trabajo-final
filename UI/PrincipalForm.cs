@@ -7,60 +7,134 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace UI
 {
-    public partial class PrincipalForm : Form
+    public partial class PrincipalForm : Form, IPrincipalVista
     {
+        private PrincipalControlador _controlador;
         public PrincipalForm()
         {
             InitializeComponent();
+            _controlador = new PrincipalControlador(this);
         }
 
-        private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
+        // private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
+        // {
+        //     if (Application.OpenForms.OfType<LoginForm>().Count() == 1)
+        //         return;
+        //
+        //     var login = new LoginForm {MdiParent = this};
+        //     login.Show();
+        //
+        // }
+        //
+        // private void solicitarToolStripMenuItem_Click(object sender, EventArgs e)
+        // {
+        //     if (Application.OpenForms.OfType<SolicitudAsistenciaForm>().Count() == 1)
+        //         return;
+        //
+        //     var solicitarAsistencia = new SolicitudAsistenciaForm {MdiParent = this};
+        //     solicitarAsistencia.Show();
+        // }
+        //
+        // private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        // {
+        //     if (Application.OpenForms.OfType<AsistenciaTecnicaForm>().Count() == 1)
+        //         return;
+        //
+        //     var asistencias = new AsistenciaTecnicaForm {MdiParent = this};
+        //     asistencias.Show();
+        // }
+        //
+        // private void administrarToolStripMenuItem_Click(object sender, EventArgs e)
+        // {
+        //     if (Application.OpenForms.OfType<UsuarioForm>().Count() == 1)
+        //         return;
+        //
+        //     var usuarios = new UsuarioForm {MdiParent = this};
+        //     usuarios.Show();
+        // }
+        //
+        // private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        // {
+        //     if (Application.OpenForms.OfType<CompletarEncuestaForm>().Count() == 1)
+        //         return;
+        //
+        //     var encuestas = new EncuestaForm {MdiParent = this};
+        //     encuestas.Show();
+        // }
+
+        private void PrincipalForm_Load(object sender, EventArgs e)
+        {
+            _controlador.MostrarMenus();
+            // if (Sesion.Instance.NoInciada())
+            // {
+            //     foreach (ToolStripItem item in MenuPrincipal.Items)
+            //     {
+            //         item.Visible = false;
+            //     }
+            // }
+            // MenuPrincipal.Items["PrincipalSubMenu"].Visible = true;
+        }
+
+        private void IngresarOpcion_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms.OfType<LoginForm>().Count() == 1)
                 return;
-
+            
             var login = new LoginForm {MdiParent = this};
+            login.FormClosed += (s, ee) => { OnMdiChildClosed(s as Form, ee.CloseReason); };
             login.Show();
-
         }
 
-        private void solicitarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OnMdiChildClosed(Form sender, CloseReason eCloseReason)
         {
-            if (Application.OpenForms.OfType<SolicitudAsistenciaForm>().Count() == 1)
-                return;
-
-            var solicitarAsistencia = new SolicitudAsistenciaForm {MdiParent = this};
-            solicitarAsistencia.Show();
+            if (Sesion.Instance.NoInciada())
+            {
+                foreach (ToolStripItem item in MenuPrincipal.Items)
+                {
+                    item.Visible = true;
+                }
+            }
         }
 
-        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        public List<string> Habilitados
         {
-            if (Application.OpenForms.OfType<AsistenciaTecnicaForm>().Count() == 1)
-                return;
-
-            var asistencias = new AsistenciaTecnicaForm {MdiParent = this};
-            asistencias.Show();
+            get => throw new NotImplementedException();
+            set
+            {
+                foreach (ToolStripItem item in MenuPrincipal.Items)
+                {
+                    // if (value.Contains(item.Name)) item.Visible = true;
+                    // else item.Visible = false;
+                }
+            }
         }
+    }
 
-        private void administrarToolStripMenuItem_Click(object sender, EventArgs e)
+    public class PrincipalControlador
+    {
+        private IPrincipalVista _vista;
+
+        public PrincipalControlador(IPrincipalVista vista)
         {
-            if (Application.OpenForms.OfType<UsuarioForm>().Count() == 1)
-                return;
-
-            var usuarios = new UsuarioForm {MdiParent = this};
-            usuarios.Show();
+            _vista = vista;
         }
 
-        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        public void MostrarMenus()
         {
-            if (Application.OpenForms.OfType<CompletarEncuestaForm>().Count() == 1)
-                return;
-
-            var encuestas = new EncuestaForm {MdiParent = this};
-            encuestas.Show();
+            if (Sesion.Instance.NoInciada())
+            {
+                _vista.Habilitados = new List<string> { "PrincipalSubMenu" };
+            } 
+            
         }
+    }
+
+    public interface IPrincipalVista
+    {
+        List<string> Habilitados { get; set; }
     }
 }

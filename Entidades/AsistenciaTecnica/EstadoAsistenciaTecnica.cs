@@ -1,14 +1,12 @@
 ﻿namespace Entidades
 {
-    public class EstadoAsistenciaTecnica
+    public class EstadoAsistenciaTecnica : Entidad
     {
-        public int Codigo { get; }
         public string Nombre { get; }
         public string Descripcion { get; }
 
-        public EstadoAsistenciaTecnica(int codigo, string nombre, string descripcion)
+        public EstadoAsistenciaTecnica(CodigoEstadoAsistencia codigo, string nombre, string descripcion) : base(codigo)
         {
-            Codigo = codigo;
             Nombre = nombre;
             Descripcion = descripcion;
         }

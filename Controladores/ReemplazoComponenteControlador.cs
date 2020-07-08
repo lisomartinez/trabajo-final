@@ -28,6 +28,13 @@ namespace Controladores
 
         }
 
+        public ReemplazoComponenteControlador(IReemplazoComponenteVista vista, AsistenciaTecnicaModelo asistenciaTecnicaModelo)
+        {
+            _vista = vista;
+            _asistenciaTecnicaModelo = asistenciaTecnicaModelo;
+            _servicio = new AsistenciaTecnicaServicio();
+        }
+
         public void MostrarComputadora()
         {
             try
@@ -55,7 +62,7 @@ namespace Controladores
 
                 var componenteSeleccionado = _vista.ComponenteSeleccionado;
                 _vista.MostrarOrdenDeCompraForm(componenteSeleccionado);
-                _asistenciaTecnicaModelo.Estado = new EstadoAsistenciaTecnicaModelo();
+                // _asistenciaTecnicaModelo.Estado = new EstadoAsistenciaTecnicaModelo();
                 _servicio.ReemplazarComponente(_asistenciaTecnicaModelo.ToEntity(), componenteSeleccionado.ToEntity());
             }
             catch (Exception e)

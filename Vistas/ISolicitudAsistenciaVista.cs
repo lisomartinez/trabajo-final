@@ -11,7 +11,7 @@ namespace Vistas
         string Descripcion { get; set; }
         List<TurnoModelo> Turnos { get; set; }
         TipoProblemaModelo TipoProblemaSeleccionado { get; set; }
-        TurnoModelo TurnoSeleccionado();
+        TurnoModelo TurnoSeleccionado { get; set; }
         void MostrarExcepcion(Exception exception);
     }
 }

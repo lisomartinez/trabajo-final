@@ -8,5 +8,10 @@ namespace Modelo
         {
             throw new System.NotImplementedException();
         }
+
+        public static RolModelo From(Rol usuarioRol)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

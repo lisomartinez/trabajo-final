@@ -28,81 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Modificacion = new System.Windows.Forms.Button();
-            this.Baja = new System.Windows.Forms.Button();
+            this.SoftwaresGB = new System.Windows.Forms.GroupBox();
+            this.SoftwareDGV = new System.Windows.Forms.DataGridView();
+            this.SoftwareGB = new System.Windows.Forms.GroupBox();
+            this.ModificacionBTN = new System.Windows.Forms.Button();
+            this.BajaBTN = new System.Windows.Forms.Button();
             this.AltaBTN = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.DesarrolladorTB = new System.Windows.Forms.TextBox();
+            this.VersionTB = new System.Windows.Forms.TextBox();
+            this.NombreTB = new System.Windows.Forms.TextBox();
+            this.CodigoTB = new System.Windows.Forms.TextBox();
+            this.DesarrolladorLBL = new System.Windows.Forms.Label();
+            this.VersionLBL = new System.Windows.Forms.Label();
+            this.NombreLBL = new System.Windows.Forms.Label();
+            this.CodigoLBL = new System.Windows.Forms.Label();
+            this.SoftwaresGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SoftwareDGV)).BeginInit();
+            this.SoftwareGB.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox4
+            // SoftwaresGB
             // 
-            this.groupBox4.Controls.Add(this.dataGridView2);
-            this.groupBox4.Location = new System.Drawing.Point(12, 12);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(521, 426);
-            this.groupBox4.TabIndex = 4;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Softwares";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            this.SoftwaresGB.Controls.Add(this.SoftwareDGV);
+            this.SoftwaresGB.Location = new System.Drawing.Point(12, 12);
+            this.SoftwaresGB.Name = "SoftwaresGB";
+            this.SoftwaresGB.Size = new System.Drawing.Size(521, 426);
+            this.SoftwaresGB.TabIndex = 4;
+            this.SoftwaresGB.TabStop = false;
+            this.SoftwaresGB.Text = "Softwares";
             // 
-            // dataGridView2
+            // SoftwareDGV
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(11, 24);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(500, 382);
-            this.dataGridView2.TabIndex = 0;
+            this.SoftwareDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SoftwareDGV.Location = new System.Drawing.Point(11, 24);
+            this.SoftwareDGV.Name = "SoftwareDGV";
+            this.SoftwareDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.SoftwareDGV.Size = new System.Drawing.Size(500, 382);
+            this.SoftwareDGV.TabIndex = 0;
+            this.SoftwareDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SoftwareDGV_CellClick);
             // 
-            // groupBox1
+            // SoftwareGB
             // 
-            this.groupBox1.Controls.Add(this.Modificacion);
-            this.groupBox1.Controls.Add(this.Baja);
-            this.groupBox1.Controls.Add(this.AltaBTN);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(548, 20);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(405, 417);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Software";
+            this.SoftwareGB.Controls.Add(this.ModificacionBTN);
+            this.SoftwareGB.Controls.Add(this.BajaBTN);
+            this.SoftwareGB.Controls.Add(this.AltaBTN);
+            this.SoftwareGB.Controls.Add(this.DesarrolladorTB);
+            this.SoftwareGB.Controls.Add(this.VersionTB);
+            this.SoftwareGB.Controls.Add(this.NombreTB);
+            this.SoftwareGB.Controls.Add(this.CodigoTB);
+            this.SoftwareGB.Controls.Add(this.DesarrolladorLBL);
+            this.SoftwareGB.Controls.Add(this.VersionLBL);
+            this.SoftwareGB.Controls.Add(this.NombreLBL);
+            this.SoftwareGB.Controls.Add(this.CodigoLBL);
+            this.SoftwareGB.Location = new System.Drawing.Point(548, 20);
+            this.SoftwareGB.Name = "SoftwareGB";
+            this.SoftwareGB.Size = new System.Drawing.Size(405, 417);
+            this.SoftwareGB.TabIndex = 5;
+            this.SoftwareGB.TabStop = false;
+            this.SoftwareGB.Text = "Software";
             // 
-            // Modificacion
+            // ModificacionBTN
             // 
-            this.Modificacion.Location = new System.Drawing.Point(276, 203);
-            this.Modificacion.Name = "Modificacion";
-            this.Modificacion.Size = new System.Drawing.Size(123, 41);
-            this.Modificacion.TabIndex = 5;
-            this.Modificacion.Text = "Modificacion";
-            this.Modificacion.UseVisualStyleBackColor = true;
+            this.ModificacionBTN.Location = new System.Drawing.Point(276, 203);
+            this.ModificacionBTN.Name = "ModificacionBTN";
+            this.ModificacionBTN.Size = new System.Drawing.Size(123, 41);
+            this.ModificacionBTN.TabIndex = 5;
+            this.ModificacionBTN.Text = "Modificacion";
+            this.ModificacionBTN.UseVisualStyleBackColor = true;
+            this.ModificacionBTN.Click += new System.EventHandler(this.ModificacionBTN_Click);
             // 
-            // Baja
+            // BajaBTN
             // 
-            this.Baja.Location = new System.Drawing.Point(148, 203);
-            this.Baja.Name = "Baja";
-            this.Baja.Size = new System.Drawing.Size(123, 41);
-            this.Baja.TabIndex = 6;
-            this.Baja.Text = "Baja";
-            this.Baja.UseVisualStyleBackColor = true;
+            this.BajaBTN.Location = new System.Drawing.Point(148, 203);
+            this.BajaBTN.Name = "BajaBTN";
+            this.BajaBTN.Size = new System.Drawing.Size(123, 41);
+            this.BajaBTN.TabIndex = 6;
+            this.BajaBTN.Text = "Baja";
+            this.BajaBTN.UseVisualStyleBackColor = true;
+            this.BajaBTN.Click += new System.EventHandler(this.BajaBTN_Click);
             // 
             // AltaBTN
             // 
@@ -112,104 +115,105 @@
             this.AltaBTN.TabIndex = 7;
             this.AltaBTN.Text = "Alta";
             this.AltaBTN.UseVisualStyleBackColor = true;
+            this.AltaBTN.Click += new System.EventHandler(this.AltaBTN_Click);
             // 
-            // textBox4
+            // DesarrolladorTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(97, 148);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(302, 20);
-            this.textBox4.TabIndex = 1;
+            this.DesarrolladorTB.Location = new System.Drawing.Point(97, 148);
+            this.DesarrolladorTB.Name = "DesarrolladorTB";
+            this.DesarrolladorTB.Size = new System.Drawing.Size(302, 20);
+            this.DesarrolladorTB.TabIndex = 1;
             // 
-            // textBox3
+            // VersionTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(97, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(302, 20);
-            this.textBox3.TabIndex = 1;
+            this.VersionTB.Location = new System.Drawing.Point(97, 100);
+            this.VersionTB.Name = "VersionTB";
+            this.VersionTB.Size = new System.Drawing.Size(302, 20);
+            this.VersionTB.TabIndex = 1;
             // 
-            // textBox2
+            // NombreTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(97, 65);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(302, 20);
-            this.textBox2.TabIndex = 1;
+            this.NombreTB.Location = new System.Drawing.Point(97, 65);
+            this.NombreTB.Name = "NombreTB";
+            this.NombreTB.Size = new System.Drawing.Size(302, 20);
+            this.NombreTB.TabIndex = 1;
             // 
-            // textBox1
+            // CodigoTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(302, 20);
-            this.textBox1.TabIndex = 1;
+            this.CodigoTB.Location = new System.Drawing.Point(97, 24);
+            this.CodigoTB.Name = "CodigoTB";
+            this.CodigoTB.Size = new System.Drawing.Size(302, 20);
+            this.CodigoTB.TabIndex = 1;
             // 
-            // label4
+            // DesarrolladorLBL
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 155);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Desarrollador";
+            this.DesarrolladorLBL.AutoSize = true;
+            this.DesarrolladorLBL.Location = new System.Drawing.Point(18, 155);
+            this.DesarrolladorLBL.Name = "DesarrolladorLBL";
+            this.DesarrolladorLBL.Size = new System.Drawing.Size(69, 13);
+            this.DesarrolladorLBL.TabIndex = 0;
+            this.DesarrolladorLBL.Text = "Desarrollador";
             // 
-            // label3
+            // VersionLBL
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Version";
+            this.VersionLBL.AutoSize = true;
+            this.VersionLBL.Location = new System.Drawing.Point(16, 107);
+            this.VersionLBL.Name = "VersionLBL";
+            this.VersionLBL.Size = new System.Drawing.Size(42, 13);
+            this.VersionLBL.TabIndex = 0;
+            this.VersionLBL.Text = "Version";
             // 
-            // label2
+            // NombreLBL
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nombre";
+            this.NombreLBL.AutoSize = true;
+            this.NombreLBL.Location = new System.Drawing.Point(16, 72);
+            this.NombreLBL.Name = "NombreLBL";
+            this.NombreLBL.Size = new System.Drawing.Size(44, 13);
+            this.NombreLBL.TabIndex = 0;
+            this.NombreLBL.Text = "Nombre";
             // 
-            // label1
+            // CodigoLBL
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo";
+            this.CodigoLBL.AutoSize = true;
+            this.CodigoLBL.Location = new System.Drawing.Point(16, 31);
+            this.CodigoLBL.Name = "CodigoLBL";
+            this.CodigoLBL.Size = new System.Drawing.Size(40, 13);
+            this.CodigoLBL.TabIndex = 0;
+            this.CodigoLBL.Text = "Codigo";
             // 
             // SoftwareForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 447);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.SoftwareGB);
+            this.Controls.Add(this.SoftwaresGB);
             this.Name = "SoftwareForm";
             this.Text = "SoftwareForm";
             this.Load += new System.EventHandler(this.SoftwareForm_Load);
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.SoftwaresGB.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SoftwareDGV)).EndInit();
+            this.SoftwareGB.ResumeLayout(false);
+            this.SoftwareGB.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Modificacion;
-        private System.Windows.Forms.Button Baja;
+        private System.Windows.Forms.GroupBox SoftwaresGB;
+        private System.Windows.Forms.DataGridView SoftwareDGV;
+        private System.Windows.Forms.GroupBox SoftwareGB;
+        private System.Windows.Forms.TextBox DesarrolladorTB;
+        private System.Windows.Forms.TextBox VersionTB;
+        private System.Windows.Forms.TextBox NombreTB;
+        private System.Windows.Forms.TextBox CodigoTB;
+        private System.Windows.Forms.Label DesarrolladorLBL;
+        private System.Windows.Forms.Label VersionLBL;
+        private System.Windows.Forms.Label NombreLBL;
+        private System.Windows.Forms.Label CodigoLBL;
+        private System.Windows.Forms.Button ModificacionBTN;
+        private System.Windows.Forms.Button BajaBTN;
         private System.Windows.Forms.Button AltaBTN;
     }
 }

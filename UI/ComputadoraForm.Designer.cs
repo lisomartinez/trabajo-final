@@ -31,74 +31,74 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Modificacion = new System.Windows.Forms.Button();
-            this.Baja = new System.Windows.Forms.Button();
+            this.ComputadoraGB = new System.Windows.Forms.GroupBox();
+            this.ModificacionBTN = new System.Windows.Forms.Button();
+            this.BajaBTN = new System.Windows.Forms.Button();
             this.AltaBTN = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.SoftwareGB = new System.Windows.Forms.GroupBox();
+            this.QuitarSoftwareBTN = new System.Windows.Forms.Button();
+            this.SoftwareDGV = new System.Windows.Forms.DataGridView();
+            this.AgregarSoftwareBTN = new System.Windows.Forms.Button();
+            this.ComponentesGB = new System.Windows.Forms.GroupBox();
+            this.QuitarComponenteBTN = new System.Windows.Forms.Button();
+            this.ComponenteDGV = new System.Windows.Forms.DataGridView();
+            this.AgregarComponenteBTN = new System.Windows.Forms.Button();
+            this.ModeloTB = new System.Windows.Forms.TextBox();
+            this.MarcaTB = new System.Windows.Forms.TextBox();
+            this.CodigoTB = new System.Windows.Forms.TextBox();
+            this.ModeloLBL = new System.Windows.Forms.Label();
+            this.MarcaLBL = new System.Windows.Forms.Label();
+            this.CdoigoLBL = new System.Windows.Forms.Label();
+            this.ComputadorasGB = new System.Windows.Forms.GroupBox();
+            this.GestionarSoftwareBTN = new System.Windows.Forms.Button();
+            this.ComputadorasDGV = new System.Windows.Forms.DataGridView();
+            this.GestionarComputadoraBTN = new System.Windows.Forms.Button();
+            this.ComputadoraGB.SuspendLayout();
+            this.SoftwareGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SoftwareDGV)).BeginInit();
+            this.ComponentesGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ComponenteDGV)).BeginInit();
+            this.ComputadorasGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ComputadorasDGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // ComputadoraGB
             // 
-            this.groupBox1.Controls.Add(this.Modificacion);
-            this.groupBox1.Controls.Add(this.Baja);
-            this.groupBox1.Controls.Add(this.AltaBTN);
-            this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(598, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(564, 829);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Computadora";
+            this.ComputadoraGB.Controls.Add(this.ModificacionBTN);
+            this.ComputadoraGB.Controls.Add(this.BajaBTN);
+            this.ComputadoraGB.Controls.Add(this.AltaBTN);
+            this.ComputadoraGB.Controls.Add(this.SoftwareGB);
+            this.ComputadoraGB.Controls.Add(this.ComponentesGB);
+            this.ComputadoraGB.Controls.Add(this.ModeloTB);
+            this.ComputadoraGB.Controls.Add(this.MarcaTB);
+            this.ComputadoraGB.Controls.Add(this.CodigoTB);
+            this.ComputadoraGB.Controls.Add(this.ModeloLBL);
+            this.ComputadoraGB.Controls.Add(this.MarcaLBL);
+            this.ComputadoraGB.Controls.Add(this.CdoigoLBL);
+            this.ComputadoraGB.Location = new System.Drawing.Point(598, 12);
+            this.ComputadoraGB.Name = "ComputadoraGB";
+            this.ComputadoraGB.Size = new System.Drawing.Size(564, 829);
+            this.ComputadoraGB.TabIndex = 1;
+            this.ComputadoraGB.TabStop = false;
+            this.ComputadoraGB.Text = "Computadora";
             // 
-            // Modificacion
+            // ModificacionBTN
             // 
-            this.Modificacion.Location = new System.Drawing.Point(408, 766);
-            this.Modificacion.Name = "Modificacion";
-            this.Modificacion.Size = new System.Drawing.Size(123, 41);
-            this.Modificacion.TabIndex = 4;
-            this.Modificacion.Text = "Modificacion";
-            this.Modificacion.UseVisualStyleBackColor = true;
+            this.ModificacionBTN.Location = new System.Drawing.Point(408, 766);
+            this.ModificacionBTN.Name = "ModificacionBTN";
+            this.ModificacionBTN.Size = new System.Drawing.Size(123, 41);
+            this.ModificacionBTN.TabIndex = 4;
+            this.ModificacionBTN.Text = "Modificacion";
+            this.ModificacionBTN.UseVisualStyleBackColor = true;
             // 
-            // Baja
+            // BajaBTN
             // 
-            this.Baja.Location = new System.Drawing.Point(229, 766);
-            this.Baja.Name = "Baja";
-            this.Baja.Size = new System.Drawing.Size(123, 41);
-            this.Baja.TabIndex = 4;
-            this.Baja.Text = "Baja";
-            this.Baja.UseVisualStyleBackColor = true;
+            this.BajaBTN.Location = new System.Drawing.Point(229, 766);
+            this.BajaBTN.Name = "BajaBTN";
+            this.BajaBTN.Size = new System.Drawing.Size(123, 41);
+            this.BajaBTN.TabIndex = 4;
+            this.BajaBTN.Text = "Baja";
+            this.BajaBTN.UseVisualStyleBackColor = true;
             // 
             // AltaBTN
             // 
@@ -109,211 +109,211 @@ namespace UI
             this.AltaBTN.Text = "Alta";
             this.AltaBTN.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
+            // SoftwareGB
             // 
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.dataGridView2);
-            this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Location = new System.Drawing.Point(20, 459);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(524, 290);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Software";
+            this.SoftwareGB.Controls.Add(this.QuitarSoftwareBTN);
+            this.SoftwareGB.Controls.Add(this.SoftwareDGV);
+            this.SoftwareGB.Controls.Add(this.AgregarSoftwareBTN);
+            this.SoftwareGB.Location = new System.Drawing.Point(20, 459);
+            this.SoftwareGB.Name = "SoftwareGB";
+            this.SoftwareGB.Size = new System.Drawing.Size(524, 290);
+            this.SoftwareGB.TabIndex = 3;
+            this.SoftwareGB.TabStop = false;
+            this.SoftwareGB.Text = "Software";
             // 
-            // dataGridView2
+            // QuitarSoftwareBTN
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(11, 24);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(500, 212);
-            this.dataGridView2.TabIndex = 0;
+            this.QuitarSoftwareBTN.Location = new System.Drawing.Point(232, 242);
+            this.QuitarSoftwareBTN.Name = "QuitarSoftwareBTN";
+            this.QuitarSoftwareBTN.Size = new System.Drawing.Size(123, 41);
+            this.QuitarSoftwareBTN.TabIndex = 5;
+            this.QuitarSoftwareBTN.Text = "Quitar Software";
+            this.QuitarSoftwareBTN.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // SoftwareDGV
             // 
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Location = new System.Drawing.Point(20, 172);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(524, 281);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Componentes";
+            this.SoftwareDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SoftwareDGV.Location = new System.Drawing.Point(11, 24);
+            this.SoftwareDGV.Name = "SoftwareDGV";
+            this.SoftwareDGV.Size = new System.Drawing.Size(500, 212);
+            this.SoftwareDGV.TabIndex = 0;
             // 
-            // dataGridView1
+            // AgregarSoftwareBTN
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 24);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(500, 212);
-            this.dataGridView1.TabIndex = 0;
+            this.AgregarSoftwareBTN.Location = new System.Drawing.Point(90, 242);
+            this.AgregarSoftwareBTN.Name = "AgregarSoftwareBTN";
+            this.AgregarSoftwareBTN.Size = new System.Drawing.Size(123, 41);
+            this.AgregarSoftwareBTN.TabIndex = 6;
+            this.AgregarSoftwareBTN.Text = "Agregar Software";
+            this.AgregarSoftwareBTN.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // ComponentesGB
             // 
-            this.textBox3.Location = new System.Drawing.Point(98, 137);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(224, 20);
-            this.textBox3.TabIndex = 1;
+            this.ComponentesGB.Controls.Add(this.QuitarComponenteBTN);
+            this.ComponentesGB.Controls.Add(this.ComponenteDGV);
+            this.ComponentesGB.Controls.Add(this.AgregarComponenteBTN);
+            this.ComponentesGB.Location = new System.Drawing.Point(20, 172);
+            this.ComponentesGB.Name = "ComponentesGB";
+            this.ComponentesGB.Size = new System.Drawing.Size(524, 281);
+            this.ComponentesGB.TabIndex = 2;
+            this.ComponentesGB.TabStop = false;
+            this.ComponentesGB.Text = "Componentes";
             // 
-            // textBox2
+            // QuitarComponenteBTN
             // 
-            this.textBox2.Location = new System.Drawing.Point(98, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(224, 20);
-            this.textBox2.TabIndex = 1;
+            this.QuitarComponenteBTN.Location = new System.Drawing.Point(232, 240);
+            this.QuitarComponenteBTN.Name = "QuitarComponenteBTN";
+            this.QuitarComponenteBTN.Size = new System.Drawing.Size(123, 41);
+            this.QuitarComponenteBTN.TabIndex = 5;
+            this.QuitarComponenteBTN.Text = "Quitar Componente";
+            this.QuitarComponenteBTN.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // ComponenteDGV
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 20);
-            this.textBox1.TabIndex = 1;
+            this.ComponenteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ComponenteDGV.Location = new System.Drawing.Point(11, 24);
+            this.ComponenteDGV.Name = "ComponenteDGV";
+            this.ComponenteDGV.Size = new System.Drawing.Size(500, 212);
+            this.ComponenteDGV.TabIndex = 0;
             // 
-            // label3
+            // AgregarComponenteBTN
             // 
-            this.label3.Location = new System.Drawing.Point(21, 133);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Modelo:";
+            this.AgregarComponenteBTN.Location = new System.Drawing.Point(90, 240);
+            this.AgregarComponenteBTN.Name = "AgregarComponenteBTN";
+            this.AgregarComponenteBTN.Size = new System.Drawing.Size(123, 41);
+            this.AgregarComponenteBTN.TabIndex = 6;
+            this.AgregarComponenteBTN.Text = "Agregar Componente";
+            this.AgregarComponenteBTN.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // ModeloTB
             // 
-            this.label2.Location = new System.Drawing.Point(21, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Marca:";
+            this.ModeloTB.Location = new System.Drawing.Point(98, 137);
+            this.ModeloTB.Name = "ModeloTB";
+            this.ModeloTB.Size = new System.Drawing.Size(224, 20);
+            this.ModeloTB.TabIndex = 1;
             // 
-            // label1
+            // MarcaTB
             // 
-            this.label1.Location = new System.Drawing.Point(21, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo:";
+            this.MarcaTB.Location = new System.Drawing.Point(98, 91);
+            this.MarcaTB.Name = "MarcaTB";
+            this.MarcaTB.Size = new System.Drawing.Size(224, 20);
+            this.MarcaTB.TabIndex = 1;
             // 
-            // groupBox3
+            // CodigoTB
             // 
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.dataGridView3);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Location = new System.Drawing.Point(14, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(570, 829);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Computadoras:";
+            this.CodigoTB.Location = new System.Drawing.Point(98, 44);
+            this.CodigoTB.Name = "CodigoTB";
+            this.CodigoTB.Size = new System.Drawing.Size(224, 20);
+            this.CodigoTB.TabIndex = 1;
             // 
-            // dataGridView3
+            // ModeloLBL
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 26);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(557, 469);
-            this.dataGridView3.TabIndex = 0;
+            this.ModeloLBL.Location = new System.Drawing.Point(21, 133);
+            this.ModeloLBL.Name = "ModeloLBL";
+            this.ModeloLBL.Size = new System.Drawing.Size(91, 24);
+            this.ModeloLBL.TabIndex = 0;
+            this.ModeloLBL.Text = "Modelo:";
             // 
-            // button1
+            // MarcaLBL
             // 
-            this.button1.Location = new System.Drawing.Point(232, 242);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 41);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Quitar Software";
-            this.button1.UseVisualStyleBackColor = true;
+            this.MarcaLBL.Location = new System.Drawing.Point(21, 91);
+            this.MarcaLBL.Name = "MarcaLBL";
+            this.MarcaLBL.Size = new System.Drawing.Size(91, 24);
+            this.MarcaLBL.TabIndex = 0;
+            this.MarcaLBL.Text = "Marca:";
             // 
-            // button2
+            // CdoigoLBL
             // 
-            this.button2.Location = new System.Drawing.Point(90, 242);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 41);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Agregar Software";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CdoigoLBL.Location = new System.Drawing.Point(21, 48);
+            this.CdoigoLBL.Name = "CdoigoLBL";
+            this.CdoigoLBL.Size = new System.Drawing.Size(91, 24);
+            this.CdoigoLBL.TabIndex = 0;
+            this.CdoigoLBL.Text = "Codigo:";
             // 
-            // button3
+            // ComputadorasGB
             // 
-            this.button3.Location = new System.Drawing.Point(90, 240);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 41);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Agregar Componente";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ComputadorasGB.Controls.Add(this.GestionarSoftwareBTN);
+            this.ComputadorasGB.Controls.Add(this.ComputadorasDGV);
+            this.ComputadorasGB.Controls.Add(this.GestionarComputadoraBTN);
+            this.ComputadorasGB.Location = new System.Drawing.Point(14, 6);
+            this.ComputadorasGB.Name = "ComputadorasGB";
+            this.ComputadorasGB.Size = new System.Drawing.Size(570, 829);
+            this.ComputadorasGB.TabIndex = 2;
+            this.ComputadorasGB.TabStop = false;
+            this.ComputadorasGB.Text = "Computadoras:";
             // 
-            // button4
+            // GestionarSoftwareBTN
             // 
-            this.button4.Location = new System.Drawing.Point(232, 240);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 41);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Quitar Componente";
-            this.button4.UseVisualStyleBackColor = true;
+            this.GestionarSoftwareBTN.Location = new System.Drawing.Point(268, 527);
+            this.GestionarSoftwareBTN.Name = "GestionarSoftwareBTN";
+            this.GestionarSoftwareBTN.Size = new System.Drawing.Size(123, 41);
+            this.GestionarSoftwareBTN.TabIndex = 5;
+            this.GestionarSoftwareBTN.Text = "Gestionar Software";
+            this.GestionarSoftwareBTN.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // ComputadorasDGV
             // 
-            this.button5.Location = new System.Drawing.Point(48, 527);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 41);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Gestionar Componentes";
-            this.button5.UseVisualStyleBackColor = true;
+            this.ComputadorasDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ComputadorasDGV.Location = new System.Drawing.Point(3, 26);
+            this.ComputadorasDGV.Name = "ComputadorasDGV";
+            this.ComputadorasDGV.Size = new System.Drawing.Size(557, 469);
+            this.ComputadorasDGV.TabIndex = 0;
             // 
-            // button6
+            // GestionarComputadoraBTN
             // 
-            this.button6.Location = new System.Drawing.Point(268, 527);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(123, 41);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Gestionar Software";
-            this.button6.UseVisualStyleBackColor = true;
+            this.GestionarComputadoraBTN.Location = new System.Drawing.Point(48, 527);
+            this.GestionarComputadoraBTN.Name = "GestionarComputadoraBTN";
+            this.GestionarComputadoraBTN.Size = new System.Drawing.Size(123, 41);
+            this.GestionarComputadoraBTN.TabIndex = 6;
+            this.GestionarComputadoraBTN.Text = "Gestionar Componentes";
+            this.GestionarComputadoraBTN.UseVisualStyleBackColor = true;
             // 
             // ComputadoraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 857);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.ComputadorasGB);
+            this.Controls.Add(this.ComputadoraGB);
             this.Name = "ComputadoraForm";
             this.Text = "ComputadoraForm";
             this.Load += new System.EventHandler(this.ComputadoraForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.ComputadoraGB.ResumeLayout(false);
+            this.ComputadoraGB.PerformLayout();
+            this.SoftwareGB.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SoftwareDGV)).EndInit();
+            this.ComponentesGB.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ComponenteDGV)).EndInit();
+            this.ComputadorasGB.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ComputadorasDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DataGridView ComponenteDGV;
+        private System.Windows.Forms.DataGridView SoftwareDGV;
+        private System.Windows.Forms.DataGridView ComputadorasDGV;
+        private System.Windows.Forms.GroupBox ComputadoraGB;
+        private System.Windows.Forms.GroupBox ComponentesGB;
+        private System.Windows.Forms.GroupBox ComputadorasGB;
+        private System.Windows.Forms.GroupBox SoftwareGB;
+        private System.Windows.Forms.Label CdoigoLBL;
+        private System.Windows.Forms.Label MarcaLBL;
+        private System.Windows.Forms.Label ModeloLBL;
+        private System.Windows.Forms.TextBox CodigoTB;
+        private System.Windows.Forms.TextBox MarcaTB;
+        private System.Windows.Forms.TextBox ModeloTB;
 
         #endregion
 
-        private System.Windows.Forms.Button Modificacion;
-        private System.Windows.Forms.Button Baja;
+        private System.Windows.Forms.Button ModificacionBTN;
+        private System.Windows.Forms.Button BajaBTN;
         private System.Windows.Forms.Button AltaBTN;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button QuitarSoftwareBTN;
+        private System.Windows.Forms.Button AgregarSoftwareBTN;
+        private System.Windows.Forms.Button QuitarComponenteBTN;
+        private System.Windows.Forms.Button AgregarComponenteBTN;
+        private System.Windows.Forms.Button GestionarSoftwareBTN;
+        private System.Windows.Forms.Button GestionarComputadoraBTN;
     }
 }

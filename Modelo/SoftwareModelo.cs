@@ -10,14 +10,32 @@ namespace Modelo
         public string Version { get; set; }
         public string Desarrollador { get; set; }
 
+        public SoftwareModelo(int codigo, string nombre, string version, string desarrollador)
+        {
+            Codigo = codigo;
+            Nombre = nombre;
+            Version = version;
+            Desarrollador = desarrollador;
+        }
+
         public static SoftwareModelo From(Software software)
         {
-            throw new System.NotImplementedException();
+            return new SoftwareModelo(
+                codigo: software.Id.AsInt(),
+                nombre: software.Nombre,
+                version: software.Version,
+                desarrollador: software.Desarrollador
+                );
         }
 
         public Software ToEntity()
         {
-            throw new System.NotImplementedException();
+            return new Software(
+                codigo: new CodigoSoftware(Codigo),
+                nombre: Nombre,
+                version: Version,
+                desarrollador: Desarrollador
+                );
         }
     }
 }

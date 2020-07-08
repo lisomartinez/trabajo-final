@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Entidades;
 using Modelo;
 
 namespace Vistas
@@ -14,8 +13,7 @@ namespace Vistas
         string Nombre { get; set; }
         string Apellido { get; set; }
         string Email { get; set; }
-        RolModelo Rol { get; set; }
-        string Password { get; set; }
+
         void SolicitarIngresoPassword();
         void MostrarGestionarComputadoraForm(UsuarioModelo vistaUsuarioSeleccionado);
     }

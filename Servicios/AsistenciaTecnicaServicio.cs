@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using AccesoDatos;
 using Controladores;
 using Entidades;
 using Repositorios;
@@ -11,6 +12,11 @@ namespace Servicios
         private AsistenciaTecnicaRepositorio _asistenciaTecnicaRepositorio;
         private EstadisticasAsistenciaTecnicaServicio _estadisticasAsistenciasTecnicas;
 
+        public AsistenciaTecnicaServicio()
+        {
+            _asistenciaTecnicaRepositorio = new AsistenciaTecnicaRepositorio(AccesoADatos.Instance);
+            _estadisticasAsistenciasTecnicas = new EstadisticasAsistenciaTecnicaServicio();
+        }
 
         public void ActualizarEstado(AsistenciaTecnica asistenciaTecnica)
         {

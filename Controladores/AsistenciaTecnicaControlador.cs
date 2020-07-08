@@ -12,11 +12,20 @@ namespace Controladores
     {
         private IAsistenciaTecnicaVista _vista;
         private AsistenciaTecnicaServicio _servicio;
-
+        private TipoProblemaServicio _tipoProblemaServicio;
+        private EstadoAsistenciaTecnicaServicio _estadoAsistenciaTecnicaServicio;
         public AsistenciaTecnicaControlador(IAsistenciaTecnicaVista vista, AsistenciaTecnicaServicio servicio)
         {
             _vista = vista;
             _servicio = servicio;
+            _tipoProblemaServicio = new TipoProblemaServicio();
+            _estadoAsistenciaTecnicaServicio = new EstadoAsistenciaTecnicaServicio();
+        }
+
+        public AsistenciaTecnicaControlador(IAsistenciaTecnicaVista vista)
+        {
+            _vista = vista;
+            _servicio = new AsistenciaTecnicaServicio();
         }
 
         public void MostrarAsistencias()
@@ -39,6 +48,9 @@ namespace Controladores
                 }
 
                 _vista.AsistenciasTecnicas = asistencias.Select(AsistenciaTecnicaModelo.From).ToList();
+                _vista.TiposProblema = _tipoProblemaServicio.ObtenerTodos().Select(TipoProblemaModelo.From).ToList();
+                _vista.Estados = _estadoAsistenciaTecnicaServicio.ObtenerTodos()
+                    .Select(EstadoAsistenciaTecnicaModelo.From).ToList();
             }
             catch (Exception e)
             {
@@ -78,7 +90,7 @@ namespace Controladores
                 seleccionada.Descripcion = _vista.Descripcion;
                 seleccionada.Estado = _vista.Estado;
                 seleccionada.Fecha = _vista.Fecha;
-                seleccionada.Usuario = _vista.Usuario;
+                // seleccionada.Legajo = _vista.Legajo;
                 seleccionada.Tecnico = _vista.Tecnico;
                 seleccionada.Calificacion = _vista.Calificacion;
                 _servicio.Modificar(seleccionada.ToEntity());
@@ -171,6 +183,14 @@ namespace Controladores
                 default:
                     break;
             }
+        }
+    }
+
+    public class EstadoAsistenciaTecnicaServicio
+    {
+        public List<EstadoAsistenciaTecnica> ObtenerTodos()
+        {
+            throw new NotImplementedException();
         }
     }
 }

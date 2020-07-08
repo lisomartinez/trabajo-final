@@ -20,6 +20,8 @@ namespace Vistas
 
 
         string Descripcion { get; set; }
+        List<TipoProblemaModelo> TiposProblema { get; set; }
+        List<EstadoAsistenciaTecnicaModelo> Estados { get; set; }
         void MostrarExcepcion(Exception exception);
     }
 }

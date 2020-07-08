@@ -4,7 +4,7 @@ namespace Entidades
 {
     public abstract class Entidad : IEquatable<Entidad>
     {
-        public Id Id { get; }
+        public Id Id { get; set; }
 
         protected Entidad(Id id)
         {

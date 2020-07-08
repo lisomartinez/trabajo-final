@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Entidades;
 using Modelo;
 
 namespace Vistas

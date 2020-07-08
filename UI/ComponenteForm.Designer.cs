@@ -28,359 +28,359 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox5.SuspendLayout();
+            this.ComponentesGB = new System.Windows.Forms.GroupBox();
+            this.ComputadoraSeleccionadaGB = new System.Windows.Forms.GroupBox();
+            this.AgregarComponeteACompBTN = new System.Windows.Forms.Button();
+            this.ComputadoraIdLBL = new System.Windows.Forms.Label();
+            this.ComputadoraIdTB = new System.Windows.Forms.TextBox();
+            this.ComponentesDGV = new System.Windows.Forms.DataGridView();
+            this.ComponenteGB = new System.Windows.Forms.GroupBox();
+            this.ModeloTB = new System.Windows.Forms.TextBox();
+            this.MarcaTB = new System.Windows.Forms.TextBox();
+            this.NroSerieTB = new System.Windows.Forms.TextBox();
+            this.ModificarBTN = new System.Windows.Forms.Button();
+            this.BajaBTN = new System.Windows.Forms.Button();
+            this.AltaBTN = new System.Windows.Forms.Button();
+            this.ModeloLBL = new System.Windows.Forms.Label();
+            this.MarcaLBL = new System.Windows.Forms.Label();
+            this.NroSerieLBL = new System.Windows.Forms.Label();
+            this.EspecificacionesGB = new System.Windows.Forms.GroupBox();
+            this.EspecificacionDGV = new System.Windows.Forms.DataGridView();
+            this.EspecificacionGB = new System.Windows.Forms.GroupBox();
+            this.DescripcionTB = new System.Windows.Forms.TextBox();
+            this.NombreTB = new System.Windows.Forms.TextBox();
+            this.CodigoTB = new System.Windows.Forms.TextBox();
+            this.ModificacionEspecificacionBTN = new System.Windows.Forms.Button();
+            this.BajaEspecificacionBTN = new System.Windows.Forms.Button();
+            this.AltaEspecificacionBTN = new System.Windows.Forms.Button();
+            this.DescripcionLBL = new System.Windows.Forms.Label();
+            this.NombreLBL = new System.Windows.Forms.Label();
+            this.CodigoLBL = new System.Windows.Forms.Label();
+            this.ComponentesGB.SuspendLayout();
+            this.ComputadoraSeleccionadaGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ComponentesDGV)).BeginInit();
+            this.ComponenteGB.SuspendLayout();
+            this.EspecificacionesGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EspecificacionDGV)).BeginInit();
+            this.EspecificacionGB.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // ComponentesGB
             // 
-            this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(598, 686);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Componentes";
+            this.ComponentesGB.Controls.Add(this.ComputadoraSeleccionadaGB);
+            this.ComponentesGB.Controls.Add(this.ComponentesDGV);
+            this.ComponentesGB.Location = new System.Drawing.Point(12, 12);
+            this.ComponentesGB.Name = "ComponentesGB";
+            this.ComponentesGB.Size = new System.Drawing.Size(598, 686);
+            this.ComponentesGB.TabIndex = 0;
+            this.ComponentesGB.TabStop = false;
+            this.ComponentesGB.Text = "Componentes";
             // 
-            // groupBox4
+            // ComputadoraSeleccionadaGB
             // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBox4.Controls.Add(this.button8);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.textBox7);
-            this.groupBox4.Location = new System.Drawing.Point(0, 547);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(590, 100);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Computadora Seleccionada";
+            this.ComputadoraSeleccionadaGB.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ComputadoraSeleccionadaGB.Controls.Add(this.AgregarComponeteACompBTN);
+            this.ComputadoraSeleccionadaGB.Controls.Add(this.ComputadoraIdLBL);
+            this.ComputadoraSeleccionadaGB.Controls.Add(this.ComputadoraIdTB);
+            this.ComputadoraSeleccionadaGB.Location = new System.Drawing.Point(0, 547);
+            this.ComputadoraSeleccionadaGB.Name = "ComputadoraSeleccionadaGB";
+            this.ComputadoraSeleccionadaGB.Size = new System.Drawing.Size(590, 100);
+            this.ComputadoraSeleccionadaGB.TabIndex = 3;
+            this.ComputadoraSeleccionadaGB.TabStop = false;
+            this.ComputadoraSeleccionadaGB.Text = "Computadora Seleccionada";
             // 
-            // button8
+            // AgregarComponeteACompBTN
             // 
-            this.button8.Location = new System.Drawing.Point(18, 66);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(554, 28);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "Agregar Componente Seleccionado a Computadora";
-            this.button8.UseVisualStyleBackColor = true;
+            this.AgregarComponeteACompBTN.Location = new System.Drawing.Point(18, 66);
+            this.AgregarComponeteACompBTN.Name = "AgregarComponeteACompBTN";
+            this.AgregarComponeteACompBTN.Size = new System.Drawing.Size(554, 28);
+            this.AgregarComponeteACompBTN.TabIndex = 4;
+            this.AgregarComponeteACompBTN.Text = "Agregar Componente Seleccionado a Computadora";
+            this.AgregarComponeteACompBTN.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // ComputadoraIdLBL
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 37);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Id Computadora";
+            this.ComputadoraIdLBL.AutoSize = true;
+            this.ComputadoraIdLBL.Location = new System.Drawing.Point(15, 37);
+            this.ComputadoraIdLBL.Name = "ComputadoraIdLBL";
+            this.ComputadoraIdLBL.Size = new System.Drawing.Size(82, 13);
+            this.ComputadoraIdLBL.TabIndex = 2;
+            this.ComputadoraIdLBL.Text = "Id Computadora";
             // 
-            // textBox7
+            // ComputadoraIdTB
             // 
-            this.textBox7.Location = new System.Drawing.Point(103, 34);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(217, 20);
-            this.textBox7.TabIndex = 2;
+            this.ComputadoraIdTB.Location = new System.Drawing.Point(103, 34);
+            this.ComputadoraIdTB.Name = "ComputadoraIdTB";
+            this.ComputadoraIdTB.Size = new System.Drawing.Size(217, 20);
+            this.ComputadoraIdTB.TabIndex = 2;
             // 
-            // dataGridView1
+            // ComponentesDGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(590, 513);
-            this.dataGridView1.TabIndex = 0;
+            this.ComponentesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ComponentesDGV.Location = new System.Drawing.Point(0, 19);
+            this.ComponentesDGV.Name = "ComponentesDGV";
+            this.ComponentesDGV.Size = new System.Drawing.Size(590, 513);
+            this.ComponentesDGV.TabIndex = 0;
             // 
-            // groupBox2
+            // ComponenteGB
             // 
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(629, 74);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(320, 223);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Componente";
+            this.ComponenteGB.Controls.Add(this.ModeloTB);
+            this.ComponenteGB.Controls.Add(this.MarcaTB);
+            this.ComponenteGB.Controls.Add(this.NroSerieTB);
+            this.ComponenteGB.Controls.Add(this.ModificarBTN);
+            this.ComponenteGB.Controls.Add(this.BajaBTN);
+            this.ComponenteGB.Controls.Add(this.AltaBTN);
+            this.ComponenteGB.Controls.Add(this.ModeloLBL);
+            this.ComponenteGB.Controls.Add(this.MarcaLBL);
+            this.ComponenteGB.Controls.Add(this.NroSerieLBL);
+            this.ComponenteGB.Location = new System.Drawing.Point(629, 74);
+            this.ComponenteGB.Name = "ComponenteGB";
+            this.ComponenteGB.Size = new System.Drawing.Size(320, 223);
+            this.ComponenteGB.TabIndex = 1;
+            this.ComponenteGB.TabStop = false;
+            this.ComponenteGB.Text = "Componente";
             // 
-            // textBox3
+            // ModeloTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(104, 123);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 2;
+            this.ModeloTB.Location = new System.Drawing.Point(104, 123);
+            this.ModeloTB.Name = "ModeloTB";
+            this.ModeloTB.Size = new System.Drawing.Size(200, 20);
+            this.ModeloTB.TabIndex = 2;
             // 
-            // textBox2
+            // MarcaTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(104, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 2;
+            this.MarcaTB.Location = new System.Drawing.Point(104, 69);
+            this.MarcaTB.Name = "MarcaTB";
+            this.MarcaTB.Size = new System.Drawing.Size(200, 20);
+            this.MarcaTB.TabIndex = 2;
             // 
-            // textBox1
+            // NroSerieTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(104, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 2;
+            this.NroSerieTB.Location = new System.Drawing.Point(104, 20);
+            this.NroSerieTB.Name = "NroSerieTB";
+            this.NroSerieTB.Size = new System.Drawing.Size(200, 20);
+            this.NroSerieTB.TabIndex = 2;
             // 
-            // button3
+            // ModificarBTN
             // 
-            this.button3.Location = new System.Drawing.Point(175, 184);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Modificacion";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ModificarBTN.Location = new System.Drawing.Point(175, 184);
+            this.ModificarBTN.Name = "ModificarBTN";
+            this.ModificarBTN.Size = new System.Drawing.Size(75, 23);
+            this.ModificarBTN.TabIndex = 1;
+            this.ModificarBTN.Text = "Modificacion";
+            this.ModificarBTN.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BajaBTN
             // 
-            this.button2.Location = new System.Drawing.Point(94, 184);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Baja";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BajaBTN.Location = new System.Drawing.Point(94, 184);
+            this.BajaBTN.Name = "BajaBTN";
+            this.BajaBTN.Size = new System.Drawing.Size(75, 23);
+            this.BajaBTN.TabIndex = 1;
+            this.BajaBTN.Text = "Baja";
+            this.BajaBTN.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // AltaBTN
             // 
-            this.button1.Location = new System.Drawing.Point(13, 184);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Alta";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AltaBTN.Location = new System.Drawing.Point(13, 184);
+            this.AltaBTN.Name = "AltaBTN";
+            this.AltaBTN.Size = new System.Drawing.Size(75, 23);
+            this.AltaBTN.TabIndex = 1;
+            this.AltaBTN.Text = "Alta";
+            this.AltaBTN.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // ModeloLBL
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 134);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Modelo";
+            this.ModeloLBL.AutoSize = true;
+            this.ModeloLBL.Location = new System.Drawing.Point(10, 134);
+            this.ModeloLBL.Name = "ModeloLBL";
+            this.ModeloLBL.Size = new System.Drawing.Size(42, 13);
+            this.ModeloLBL.TabIndex = 0;
+            this.ModeloLBL.Text = "Modelo";
             // 
-            // label2
+            // MarcaLBL
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Marca";
+            this.MarcaLBL.AutoSize = true;
+            this.MarcaLBL.Location = new System.Drawing.Point(10, 76);
+            this.MarcaLBL.Name = "MarcaLBL";
+            this.MarcaLBL.Size = new System.Drawing.Size(37, 13);
+            this.MarcaLBL.TabIndex = 0;
+            this.MarcaLBL.Text = "Marca";
             // 
-            // label1
+            // NroSerieLBL
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Numero de Serie";
+            this.NroSerieLBL.AutoSize = true;
+            this.NroSerieLBL.Location = new System.Drawing.Point(10, 26);
+            this.NroSerieLBL.Name = "NroSerieLBL";
+            this.NroSerieLBL.Size = new System.Drawing.Size(86, 13);
+            this.NroSerieLBL.TabIndex = 0;
+            this.NroSerieLBL.Text = "Numero de Serie";
             // 
-            // groupBox3
+            // EspecificacionesGB
             // 
-            this.groupBox3.Controls.Add(this.dataGridView2);
-            this.groupBox3.Location = new System.Drawing.Point(960, 12);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(600, 553);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Especificaciones Técnicas";
+            this.EspecificacionesGB.Controls.Add(this.EspecificacionDGV);
+            this.EspecificacionesGB.Location = new System.Drawing.Point(960, 12);
+            this.EspecificacionesGB.Name = "EspecificacionesGB";
+            this.EspecificacionesGB.Size = new System.Drawing.Size(600, 553);
+            this.EspecificacionesGB.TabIndex = 1;
+            this.EspecificacionesGB.TabStop = false;
+            this.EspecificacionesGB.Text = "Especificaciones Técnicas";
             // 
-            // dataGridView2
+            // EspecificacionDGV
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 20);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(590, 512);
-            this.dataGridView2.TabIndex = 0;
+            this.EspecificacionDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EspecificacionDGV.Location = new System.Drawing.Point(4, 20);
+            this.EspecificacionDGV.Name = "EspecificacionDGV";
+            this.EspecificacionDGV.Size = new System.Drawing.Size(590, 512);
+            this.EspecificacionDGV.TabIndex = 0;
             // 
-            // groupBox5
+            // EspecificacionGB
             // 
-            this.groupBox5.Controls.Add(this.textBox6);
-            this.groupBox5.Controls.Add(this.textBox5);
-            this.groupBox5.Controls.Add(this.textBox4);
-            this.groupBox5.Controls.Add(this.button4);
-            this.groupBox5.Controls.Add(this.button5);
-            this.groupBox5.Controls.Add(this.button6);
-            this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.Location = new System.Drawing.Point(629, 360);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(320, 253);
-            this.groupBox5.TabIndex = 2;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Especificación Técnica";
+            this.EspecificacionGB.Controls.Add(this.DescripcionTB);
+            this.EspecificacionGB.Controls.Add(this.NombreTB);
+            this.EspecificacionGB.Controls.Add(this.CodigoTB);
+            this.EspecificacionGB.Controls.Add(this.ModificacionEspecificacionBTN);
+            this.EspecificacionGB.Controls.Add(this.BajaEspecificacionBTN);
+            this.EspecificacionGB.Controls.Add(this.AltaEspecificacionBTN);
+            this.EspecificacionGB.Controls.Add(this.DescripcionLBL);
+            this.EspecificacionGB.Controls.Add(this.NombreLBL);
+            this.EspecificacionGB.Controls.Add(this.CodigoLBL);
+            this.EspecificacionGB.Location = new System.Drawing.Point(629, 360);
+            this.EspecificacionGB.Name = "EspecificacionGB";
+            this.EspecificacionGB.Size = new System.Drawing.Size(320, 253);
+            this.EspecificacionGB.TabIndex = 2;
+            this.EspecificacionGB.TabStop = false;
+            this.EspecificacionGB.Text = "Especificación Técnica";
             // 
-            // textBox6
+            // DescripcionTB
             // 
-            this.textBox6.Location = new System.Drawing.Point(104, 122);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 20);
-            this.textBox6.TabIndex = 2;
+            this.DescripcionTB.Location = new System.Drawing.Point(104, 122);
+            this.DescripcionTB.Name = "DescripcionTB";
+            this.DescripcionTB.Size = new System.Drawing.Size(200, 20);
+            this.DescripcionTB.TabIndex = 2;
             // 
-            // textBox5
+            // NombreTB
             // 
-            this.textBox5.Location = new System.Drawing.Point(104, 78);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 20);
-            this.textBox5.TabIndex = 2;
+            this.NombreTB.Location = new System.Drawing.Point(104, 78);
+            this.NombreTB.Name = "NombreTB";
+            this.NombreTB.Size = new System.Drawing.Size(200, 20);
+            this.NombreTB.TabIndex = 2;
             // 
-            // textBox4
+            // CodigoTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(104, 37);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 20);
-            this.textBox4.TabIndex = 2;
+            this.CodigoTB.Location = new System.Drawing.Point(104, 37);
+            this.CodigoTB.Name = "CodigoTB";
+            this.CodigoTB.Size = new System.Drawing.Size(200, 20);
+            this.CodigoTB.TabIndex = 2;
             // 
-            // button4
+            // ModificacionEspecificacionBTN
             // 
-            this.button4.Location = new System.Drawing.Point(185, 182);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Modificacion";
-            this.button4.UseVisualStyleBackColor = true;
+            this.ModificacionEspecificacionBTN.Location = new System.Drawing.Point(185, 182);
+            this.ModificacionEspecificacionBTN.Name = "ModificacionEspecificacionBTN";
+            this.ModificacionEspecificacionBTN.Size = new System.Drawing.Size(75, 23);
+            this.ModificacionEspecificacionBTN.TabIndex = 2;
+            this.ModificacionEspecificacionBTN.Text = "Modificacion";
+            this.ModificacionEspecificacionBTN.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // BajaEspecificacionBTN
             // 
-            this.button5.Location = new System.Drawing.Point(104, 182);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Baja";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BajaEspecificacionBTN.Location = new System.Drawing.Point(104, 182);
+            this.BajaEspecificacionBTN.Name = "BajaEspecificacionBTN";
+            this.BajaEspecificacionBTN.Size = new System.Drawing.Size(75, 23);
+            this.BajaEspecificacionBTN.TabIndex = 3;
+            this.BajaEspecificacionBTN.Text = "Baja";
+            this.BajaEspecificacionBTN.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // AltaEspecificacionBTN
             // 
-            this.button6.Location = new System.Drawing.Point(23, 182);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Alta";
-            this.button6.UseVisualStyleBackColor = true;
+            this.AltaEspecificacionBTN.Location = new System.Drawing.Point(23, 182);
+            this.AltaEspecificacionBTN.Name = "AltaEspecificacionBTN";
+            this.AltaEspecificacionBTN.Size = new System.Drawing.Size(75, 23);
+            this.AltaEspecificacionBTN.TabIndex = 4;
+            this.AltaEspecificacionBTN.Text = "Alta";
+            this.AltaEspecificacionBTN.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // DescripcionLBL
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 129);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Descripcion";
+            this.DescripcionLBL.AutoSize = true;
+            this.DescripcionLBL.Location = new System.Drawing.Point(20, 129);
+            this.DescripcionLBL.Name = "DescripcionLBL";
+            this.DescripcionLBL.Size = new System.Drawing.Size(63, 13);
+            this.DescripcionLBL.TabIndex = 0;
+            this.DescripcionLBL.Text = "Descripcion";
             // 
-            // label5
+            // NombreLBL
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 85);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Nombre";
+            this.NombreLBL.AutoSize = true;
+            this.NombreLBL.Location = new System.Drawing.Point(20, 85);
+            this.NombreLBL.Name = "NombreLBL";
+            this.NombreLBL.Size = new System.Drawing.Size(44, 13);
+            this.NombreLBL.TabIndex = 1;
+            this.NombreLBL.Text = "Nombre";
             // 
-            // label4
+            // CodigoLBL
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Codigo";
+            this.CodigoLBL.AutoSize = true;
+            this.CodigoLBL.Location = new System.Drawing.Point(20, 44);
+            this.CodigoLBL.Name = "CodigoLBL";
+            this.CodigoLBL.Size = new System.Drawing.Size(40, 13);
+            this.CodigoLBL.TabIndex = 1;
+            this.CodigoLBL.Text = "Codigo";
             // 
             // ComponenteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1572, 811);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.EspecificacionGB);
+            this.Controls.Add(this.EspecificacionesGB);
+            this.Controls.Add(this.ComponenteGB);
+            this.Controls.Add(this.ComponentesGB);
             this.Name = "ComponenteForm";
             this.Text = "ComponenteForm";
             this.Load += new System.EventHandler(this.ComponenteForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.ComponentesGB.ResumeLayout(false);
+            this.ComputadoraSeleccionadaGB.ResumeLayout(false);
+            this.ComputadoraSeleccionadaGB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ComponentesDGV)).EndInit();
+            this.ComponenteGB.ResumeLayout(false);
+            this.ComponenteGB.PerformLayout();
+            this.EspecificacionesGB.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.EspecificacionDGV)).EndInit();
+            this.EspecificacionGB.ResumeLayout(false);
+            this.EspecificacionGB.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.GroupBox ComponentesGB;
+        private System.Windows.Forms.DataGridView ComponentesDGV;
+        private System.Windows.Forms.GroupBox ComponenteGB;
+        private System.Windows.Forms.Label ModeloLBL;
+        private System.Windows.Forms.Label MarcaLBL;
+        private System.Windows.Forms.Label NroSerieLBL;
+        private System.Windows.Forms.GroupBox EspecificacionesGB;
+        private System.Windows.Forms.GroupBox EspecificacionGB;
+        private System.Windows.Forms.Button ModificarBTN;
+        private System.Windows.Forms.Button BajaBTN;
+        private System.Windows.Forms.Button AltaBTN;
+        private System.Windows.Forms.DataGridView EspecificacionDGV;
+        private System.Windows.Forms.Button ModificacionEspecificacionBTN;
+        private System.Windows.Forms.Button BajaEspecificacionBTN;
+        private System.Windows.Forms.Button AltaEspecificacionBTN;
+        private System.Windows.Forms.Label DescripcionLBL;
+        private System.Windows.Forms.Label NombreLBL;
+        private System.Windows.Forms.Label CodigoLBL;
+        private System.Windows.Forms.GroupBox ComputadoraSeleccionadaGB;
+        private System.Windows.Forms.Label ComputadoraIdLBL;
+        private System.Windows.Forms.TextBox ModeloTB;
+        private System.Windows.Forms.TextBox MarcaTB;
+        private System.Windows.Forms.TextBox NroSerieTB;
+        private System.Windows.Forms.TextBox DescripcionTB;
+        private System.Windows.Forms.TextBox NombreTB;
+        private System.Windows.Forms.TextBox CodigoTB;
+        private System.Windows.Forms.Button AgregarComponeteACompBTN;
+        private System.Windows.Forms.TextBox ComputadoraIdTB;
     }
 }

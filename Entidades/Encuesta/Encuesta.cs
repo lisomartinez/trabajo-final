@@ -5,7 +5,7 @@ namespace Entidades
 {
     public class Encuesta : Entidad
     {
-        public CodigoEncuesta CodigoEncuesta { get; }
+        // public CodigoEncuesta CodigoEncuesta { get; }
         public DateTime FechaCreacion { get; set; }
         public bool Vigente { get; set; }
         public List<Pregunta> Preguntas { get; set; }

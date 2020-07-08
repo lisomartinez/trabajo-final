@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using AccesoDatos;
 using Entidades;
 using Repositorios;
 
@@ -9,29 +10,34 @@ namespace Servicios
     {
         private ComputadoraRepositorio _repositorio;
 
+        public ComputadoraServicio()
+        {
+            _repositorio = new ComputadoraRepositorio(AccesoADatos.Instance);
+        }
+
         public List<Computadora> ObtenerTodas()
         {
-            throw new NotImplementedException();
+            return _repositorio.ObtenerTodos();
         }
 
         public void CrearComputadora(Computadora computadora)
         {
-            throw new NotImplementedException();
+            _repositorio.Guardar(computadora);
         }
 
         public void ActualizarComputadora(Computadora computadora)
         {
-            throw new NotImplementedException();
+            _repositorio.Actualizar(computadora);
         }
 
         public void EliminarComputadora(Computadora computadora)
         {
-            throw new NotImplementedException();
+            _repositorio.Eliminar(computadora.Id);
         }
 
         public void ActualizarSoftwareComputadora(Computadora computadora)
         {
-            throw new NotImplementedException();
+            _repositorio.Actualizar(computadora);
         }
 
         public void EliminarComponenteDeComputadora(Computadora computadora, Componente componente)

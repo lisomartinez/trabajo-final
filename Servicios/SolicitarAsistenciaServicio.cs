@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using AccesoDatos;
 using Entidades;
 using Repositorios;
 
@@ -12,12 +13,13 @@ namespace Servicios
         private readonly EstadisticasAsistenciaTecnicaServicio _estadisticasAsistenciaTecnicaServicio;
         private readonly TurnoServicio _turnoServicio;
 
-        public SolicitarAsistenciaServicio(SolicitudAsistenciaRepositorio solicitudAsistenciaRepositorio, AsistenciaTecnicaRepositorio asistenciaTecnicaRepositorio, EstadisticasAsistenciaTecnicaServicio estadisticasAsistenciaTecnicaServicio, TurnoServicio turnoServicio)
+
+        public SolicitarAsistenciaServicio()
         {
-            _solicitudAsistenciaRepositorio = solicitudAsistenciaRepositorio;
-            _asistenciaTecnicaRepositorio = asistenciaTecnicaRepositorio;
-            _estadisticasAsistenciaTecnicaServicio = estadisticasAsistenciaTecnicaServicio;
-            _turnoServicio = turnoServicio;
+            _solicitudAsistenciaRepositorio = new SolicitudAsistenciaRepositorio(AccesoADatos.Instance);
+            _asistenciaTecnicaRepositorio = new AsistenciaTecnicaRepositorio(AccesoADatos.Instance);
+            _estadisticasAsistenciaTecnicaServicio = new EstadisticasAsistenciaTecnicaServicio();
+            _turnoServicio = new TurnoServicio();
         }
 
         public List<Turno> SolicitarTurno(SolicitudAsistenciaTecnica solicitud)

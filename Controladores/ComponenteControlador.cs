@@ -13,18 +13,11 @@ namespace Controladores
         private ComponenteServicio _servicio;
         private ComputadoraModelo _computadoraModelo;
 
-        public ComponenteControlador(IComponenteVista vista, ComponenteServicio servicio,
-            ComputadoraModelo computadoraModelo)
+        public ComponenteControlador(IComponenteVista vista, ComputadoraModelo computadoraModelo)
         {
             _vista = vista;
-            _servicio = servicio;
+            _servicio = new ComponenteServicio();
             _computadoraModelo = computadoraModelo;
-        }
-
-        public ComponenteControlador(IComponenteVista vista, ComponenteServicio servicio)
-        {
-            _vista = vista;
-            _servicio = servicio;
         }
 
         public void MostrarComponentes()

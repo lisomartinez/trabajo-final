@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using System.Security.Cryptography;
+using Entidades;
 
 namespace Modelo
 {
@@ -12,14 +13,42 @@ namespace Modelo
         public ComputadoraModelo Computadora { get; set; }
         public string Password { get; set; }
 
+
+        public UsuarioModelo(int legajo, string nombre, string apellido, string email, RolModelo rol, ComputadoraModelo computadora, string password)
+        {
+            Legajo = legajo;
+            Nombre = nombre;
+            Apellido = apellido;
+            Email = email;
+            Rol = rol;
+            Computadora = computadora;
+            Password = password;
+        }
+
         public static UsuarioModelo From(Usuario usuario)
         {
-            throw new System.NotImplementedException();
+            return new UsuarioModelo(
+                legajo: usuario.Legajo.AsInt(),
+                nombre: usuario.Nombre,
+                apellido: usuario.Apellido,
+                email: usuario.Email,
+                rol: RolModelo.From(usuario.Rol),
+                computadora: ComputadoraModelo.From(usuario.Computadora),
+                password: usuario.Password
+            );
         }
 
         public Usuario ToEntity()
         {
-            throw new System.NotImplementedException();
+            return new Usuario(
+                legajo: new Legajo(Legajo),
+                nombre: Nombre,
+                apellido: Apellido,
+                email:  Email,
+                rol: Rol.ToEntity(),
+                computadora: Computadora.ToEntity(),
+                password: Password
+                );
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using AccesoDatos;
 using Controladores;
 using Entidades;
 using Repositorios;
@@ -8,29 +9,35 @@ namespace Servicios
     public class EncuestaServicio
     {
         private EncuestaRepositorio _repositorio;
+
+        public EncuestaServicio()
+        {
+            _repositorio = new EncuestaRepositorio(AccesoADatos.Instance);
+        }
+
         public List<Encuesta> ObtenerEncuestas()
         {
-            throw new System.NotImplementedException();
+            return _repositorio.ObtenerTodos();
         }
 
         public void GuardarEncuesta(Encuesta encuesta)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Guardar(encuesta);
         }
 
         public void ModificarEncuesta(Encuesta encuesta)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Guardar(encuesta);
         }
 
         public void EliminarEncuesta(Encuesta encuesta)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Eliminar(encuesta.Id);
         }
 
         public Encuesta ObtenerEncuestaVigente()
         {
-            throw new System.NotImplementedException();
+            return _repositorio.ObtenerMasReciente();
         }
 
         public int Calificar(List<Calificacion> calificaciones)

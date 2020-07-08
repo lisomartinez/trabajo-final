@@ -12,13 +12,14 @@ namespace Entidades
         public Rol Rol { get; }
         public Computadora Computadora { get; }
 
-        public Usuario(Legajo id) : base(id)
+        public Usuario(Legajo legajo, string nombre, string apellido, string email, string password, Rol rol, Computadora computadora) : base(legajo)
         {
-        }
-
-        public Usuario(Legajo id, string vistaNombre, string vistaApellido, string vistaEmail, Rol vistaRol) : base(id)
-        {
-            throw new NotImplementedException();
+            Nombre = nombre;
+            Apellido = apellido;
+            Email = email;
+            Password = password;
+            Rol = rol;
+            Computadora = computadora;
         }
     }
 }

@@ -4,10 +4,6 @@ namespace Modelo
 {
     public class EspecificacionTecnicaModelo
     {
-        public EspecificacionTecnicaModelo(int vistaCodigoEspecificacionTecnica, string vistaNombreEspecificacion, string vistaDescripcionEspecificacion)
-        {
-            throw new System.NotImplementedException();
-        }
 
         public int Codigo { get; set; }
 
@@ -15,9 +11,30 @@ namespace Modelo
 
         public string Descripcion { get; set; }
 
+
+        public EspecificacionTecnicaModelo(int codigo, string nombre, string descripcion)
+        {
+            Codigo = codigo;
+            Nombre = nombre;
+            Descripcion = descripcion;
+        }
+
         public EspecificacionTecnica ToEntity()
         {
-            throw new System.NotImplementedException();
+            return new EspecificacionTecnica(
+                codigo: new CodigoEspecificacionTecnica(Codigo),
+                nombre: Nombre,
+                descripcion: Descripcion
+            );
+        }
+
+        public static EspecificacionTecnicaModelo From(EspecificacionTecnica especificacion)
+        {
+            return new EspecificacionTecnicaModelo(
+                codigo: especificacion.Id.AsInt(),
+                nombre: especificacion.Nombre,
+                descripcion: especificacion.Descripcion
+                );
         }
     }
 }

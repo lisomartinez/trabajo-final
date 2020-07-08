@@ -67,7 +67,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 13);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Tasa de Fallas por Usuario";
+            this.label5.Text = "Tasa de Fallas por Legajo";
             // 
             // label4
             // 

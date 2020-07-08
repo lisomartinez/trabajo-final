@@ -31,223 +31,224 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ProveedoresGB = new System.Windows.Forms.GroupBox();
+            this.ProveedoresDGV = new System.Windows.Forms.DataGridView();
+            this.ProveedorGB = new System.Windows.Forms.GroupBox();
+            this.TelefonoTB = new System.Windows.Forms.TextBox();
+            this.EmailTB = new System.Windows.Forms.TextBox();
+            this.DireccionTB = new System.Windows.Forms.TextBox();
+            this.RazonSocialTB = new System.Windows.Forms.TextBox();
+            this.CuitTB = new System.Windows.Forms.TextBox();
+            this.TelefonoLBL = new System.Windows.Forms.Label();
+            this.EmailLBL = new System.Windows.Forms.Label();
+            this.DireccionLBL = new System.Windows.Forms.Label();
+            this.RazonSocialLBL = new System.Windows.Forms.Label();
+            this.CuitLBL = new System.Windows.Forms.Label();
+            this.GestionarPreciosBTN = new System.Windows.Forms.Button();
+            this.ModificacionBTN = new System.Windows.Forms.Button();
+            this.BajaBTN = new System.Windows.Forms.Button();
+            this.AltaBTN = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.ProveedoresGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProveedoresDGV)).BeginInit();
+            this.ProveedorGB.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // ProveedoresGB
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(631, 556);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Proveedores";
+            this.ProveedoresGB.Controls.Add(this.ProveedoresDGV);
+            this.ProveedoresGB.Location = new System.Drawing.Point(12, 12);
+            this.ProveedoresGB.Name = "ProveedoresGB";
+            this.ProveedoresGB.Size = new System.Drawing.Size(631, 556);
+            this.ProveedoresGB.TabIndex = 0;
+            this.ProveedoresGB.TabStop = false;
+            this.ProveedoresGB.Text = "Proveedores";
             // 
-            // dataGridView1
+            // ProveedoresDGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(608, 523);
-            this.dataGridView1.TabIndex = 0;
+            this.ProveedoresDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProveedoresDGV.Location = new System.Drawing.Point(9, 23);
+            this.ProveedoresDGV.Name = "ProveedoresDGV";
+            this.ProveedoresDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ProveedoresDGV.Size = new System.Drawing.Size(608, 523);
+            this.ProveedoresDGV.TabIndex = 0;
             // 
-            // groupBox2
+            // ProveedorGB
             // 
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(682, 18);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(383, 550);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Proveedor";
+            this.ProveedorGB.Controls.Add(this.TelefonoTB);
+            this.ProveedorGB.Controls.Add(this.EmailTB);
+            this.ProveedorGB.Controls.Add(this.DireccionTB);
+            this.ProveedorGB.Controls.Add(this.RazonSocialTB);
+            this.ProveedorGB.Controls.Add(this.CuitTB);
+            this.ProveedorGB.Controls.Add(this.TelefonoLBL);
+            this.ProveedorGB.Controls.Add(this.EmailLBL);
+            this.ProveedorGB.Controls.Add(this.DireccionLBL);
+            this.ProveedorGB.Controls.Add(this.RazonSocialLBL);
+            this.ProveedorGB.Controls.Add(this.CuitLBL);
+            this.ProveedorGB.Controls.Add(this.GestionarPreciosBTN);
+            this.ProveedorGB.Controls.Add(this.ModificacionBTN);
+            this.ProveedorGB.Controls.Add(this.BajaBTN);
+            this.ProveedorGB.Controls.Add(this.AltaBTN);
+            this.ProveedorGB.Location = new System.Drawing.Point(682, 18);
+            this.ProveedorGB.Name = "ProveedorGB";
+            this.ProveedorGB.Size = new System.Drawing.Size(383, 550);
+            this.ProveedorGB.TabIndex = 1;
+            this.ProveedorGB.TabStop = false;
+            this.ProveedorGB.Text = "Proveedor";
             // 
-            // textBox5
+            // TelefonoTB
             // 
-            this.textBox5.Location = new System.Drawing.Point(106, 220);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(227, 20);
-            this.textBox5.TabIndex = 2;
+            this.TelefonoTB.Location = new System.Drawing.Point(106, 220);
+            this.TelefonoTB.Name = "TelefonoTB";
+            this.TelefonoTB.Size = new System.Drawing.Size(227, 20);
+            this.TelefonoTB.TabIndex = 2;
             // 
-            // textBox4
+            // EmailTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(106, 174);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(227, 20);
-            this.textBox4.TabIndex = 2;
+            this.EmailTB.Location = new System.Drawing.Point(106, 174);
+            this.EmailTB.Name = "EmailTB";
+            this.EmailTB.Size = new System.Drawing.Size(227, 20);
+            this.EmailTB.TabIndex = 2;
             // 
-            // textBox3
+            // DireccionTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(106, 124);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(227, 20);
-            this.textBox3.TabIndex = 2;
+            this.DireccionTB.Location = new System.Drawing.Point(106, 124);
+            this.DireccionTB.Name = "DireccionTB";
+            this.DireccionTB.Size = new System.Drawing.Size(227, 20);
+            this.DireccionTB.TabIndex = 2;
             // 
-            // textBox2
+            // RazonSocialTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(106, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(227, 20);
-            this.textBox2.TabIndex = 2;
+            this.RazonSocialTB.Location = new System.Drawing.Point(106, 76);
+            this.RazonSocialTB.Name = "RazonSocialTB";
+            this.RazonSocialTB.Size = new System.Drawing.Size(227, 20);
+            this.RazonSocialTB.TabIndex = 2;
             // 
-            // textBox1
+            // CuitTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(106, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 20);
-            this.textBox1.TabIndex = 2;
+            this.CuitTB.Location = new System.Drawing.Point(106, 29);
+            this.CuitTB.Name = "CuitTB";
+            this.CuitTB.Size = new System.Drawing.Size(227, 20);
+            this.CuitTB.TabIndex = 2;
             // 
-            // label5
+            // TelefonoLBL
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 227);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Telefono:";
+            this.TelefonoLBL.AutoSize = true;
+            this.TelefonoLBL.Location = new System.Drawing.Point(24, 227);
+            this.TelefonoLBL.Name = "TelefonoLBL";
+            this.TelefonoLBL.Size = new System.Drawing.Size(52, 13);
+            this.TelefonoLBL.TabIndex = 1;
+            this.TelefonoLBL.Text = "Telefono:";
             // 
-            // label4
+            // EmailLBL
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 181);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Email:";
+            this.EmailLBL.AutoSize = true;
+            this.EmailLBL.Location = new System.Drawing.Point(24, 181);
+            this.EmailLBL.Name = "EmailLBL";
+            this.EmailLBL.Size = new System.Drawing.Size(35, 13);
+            this.EmailLBL.TabIndex = 1;
+            this.EmailLBL.Text = "Email:";
             // 
-            // label3
+            // DireccionLBL
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 131);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Direccion:";
+            this.DireccionLBL.AutoSize = true;
+            this.DireccionLBL.Location = new System.Drawing.Point(24, 131);
+            this.DireccionLBL.Name = "DireccionLBL";
+            this.DireccionLBL.Size = new System.Drawing.Size(55, 13);
+            this.DireccionLBL.TabIndex = 1;
+            this.DireccionLBL.Text = "Direccion:";
             // 
-            // label2
+            // RazonSocialLBL
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Razon Social:";
+            this.RazonSocialLBL.AutoSize = true;
+            this.RazonSocialLBL.Location = new System.Drawing.Point(24, 83);
+            this.RazonSocialLBL.Name = "RazonSocialLBL";
+            this.RazonSocialLBL.Size = new System.Drawing.Size(73, 13);
+            this.RazonSocialLBL.TabIndex = 1;
+            this.RazonSocialLBL.Text = "Razon Social:";
             // 
-            // label1
+            // CuitLBL
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "CUIT:";
+            this.CuitLBL.AutoSize = true;
+            this.CuitLBL.Location = new System.Drawing.Point(24, 36);
+            this.CuitLBL.Name = "CuitLBL";
+            this.CuitLBL.Size = new System.Drawing.Size(35, 13);
+            this.CuitLBL.TabIndex = 1;
+            this.CuitLBL.Text = "CUIT:";
             // 
-            // button4
+            // GestionarPreciosBTN
             // 
-            this.button4.Location = new System.Drawing.Point(45, 364);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(266, 23);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Gestionar Lista de Precios";
-            this.button4.UseVisualStyleBackColor = true;
+            this.GestionarPreciosBTN.Location = new System.Drawing.Point(45, 364);
+            this.GestionarPreciosBTN.Name = "GestionarPreciosBTN";
+            this.GestionarPreciosBTN.Size = new System.Drawing.Size(266, 23);
+            this.GestionarPreciosBTN.TabIndex = 0;
+            this.GestionarPreciosBTN.Text = "Gestionar Lista de Precios";
+            this.GestionarPreciosBTN.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // ModificacionBTN
             // 
-            this.button3.Location = new System.Drawing.Point(236, 305);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Modifcacion";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ModificacionBTN.Location = new System.Drawing.Point(236, 305);
+            this.ModificacionBTN.Name = "ModificacionBTN";
+            this.ModificacionBTN.Size = new System.Drawing.Size(75, 23);
+            this.ModificacionBTN.TabIndex = 0;
+            this.ModificacionBTN.Text = "Modifcacion";
+            this.ModificacionBTN.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BajaBTN
             // 
-            this.button2.Location = new System.Drawing.Point(145, 305);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Baja";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BajaBTN.Location = new System.Drawing.Point(145, 305);
+            this.BajaBTN.Name = "BajaBTN";
+            this.BajaBTN.Size = new System.Drawing.Size(75, 23);
+            this.BajaBTN.TabIndex = 0;
+            this.BajaBTN.Text = "Baja";
+            this.BajaBTN.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // AltaBTN
             // 
-            this.button1.Location = new System.Drawing.Point(45, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Alta";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AltaBTN.Location = new System.Drawing.Point(45, 305);
+            this.AltaBTN.Name = "AltaBTN";
+            this.AltaBTN.Size = new System.Drawing.Size(75, 23);
+            this.AltaBTN.TabIndex = 0;
+            this.AltaBTN.Text = "Alta";
+            this.AltaBTN.UseVisualStyleBackColor = true;
             // 
             // ProveedoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1113, 582);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.ProveedorGB);
+            this.Controls.Add(this.ProveedoresGB);
             this.Name = "ProveedoresForm";
             this.Text = "ProveedoresForm";
             this.Load += new System.EventHandler(this.ProveedoresForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.ProveedoresGB.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ProveedoresDGV)).EndInit();
+            this.ProveedorGB.ResumeLayout(false);
+            this.ProveedorGB.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox ProveedoresGB;
+        private System.Windows.Forms.DataGridView ProveedoresDGV;
+        private System.Windows.Forms.GroupBox ProveedorGB;
+        private System.Windows.Forms.Button GestionarPreciosBTN;
+        private System.Windows.Forms.Button ModificacionBTN;
+        private System.Windows.Forms.Button BajaBTN;
+        private System.Windows.Forms.Button AltaBTN;
         private BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label EmailLBL;
+        private System.Windows.Forms.Label DireccionLBL;
+        private System.Windows.Forms.Label RazonSocialLBL;
+        private System.Windows.Forms.Label CuitLBL;
+        private System.Windows.Forms.TextBox TelefonoTB;
+        private System.Windows.Forms.TextBox EmailTB;
+        private System.Windows.Forms.TextBox DireccionTB;
+        private System.Windows.Forms.TextBox RazonSocialTB;
+        private System.Windows.Forms.TextBox CuitTB;
+        private System.Windows.Forms.Label TelefonoLBL;
     }
 }

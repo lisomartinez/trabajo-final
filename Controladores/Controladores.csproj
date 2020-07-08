@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Controladores</RootNamespace>
     <AssemblyName>Controladores</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,6 +53,7 @@
     <Compile Include="ReemplazoComponenteControlador.cs" />
     <Compile Include="ReporteAsistenciaTecnicaControlador.cs" />
     <Compile Include="ReporteFallasHardwareControlador.cs" />
+    <Compile Include="Sesion.cs" />
     <Compile Include="SoftwareControlador.cs" />
     <Compile Include="SolicitudAsistenciaControlador.cs" />
     <Compile Include="TecnicoControlador.cs" />
@@ -71,7 +73,7 @@
       <Name>Servicios</Name>
     </ProjectReference>
     <ProjectReference Include="..\Vistas\Vistas.csproj">
-      <Project>{8d7488fb-a056-4fc8-8aeb-00f1aae4fb71}</Project>
+      <Project>{8D7488FB-A056-4FC8-8AEB-00F1AAE4FB71}</Project>
       <Name>Vistas</Name>
     </ProjectReference>
   </ItemGroup>

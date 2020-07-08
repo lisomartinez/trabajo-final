@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Servicios</RootNamespace>
     <AssemblyName>Servicios</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -59,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
-      <Project>{D5132056-1A0A-4F68-AA3E-5422F4426B76}</Project>
+      <Project>{8BE757DE-54FD-4467-8063-033CAA47E32F}</Project>
       <Name>AccesoDatos</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
@@ -67,7 +68,7 @@
       <Name>Entidades</Name>
     </ProjectReference>
     <ProjectReference Include="..\Repositorios\Repositorios.csproj">
-      <Project>{060CA16A-7A98-48D7-8A47-615B139A4B2D}</Project>
+      <Project>{1ECF0444-278E-497C-AF74-B3B4D6BD3433}</Project>
       <Name>Repositorios</Name>
     </ProjectReference>
   </ItemGroup>

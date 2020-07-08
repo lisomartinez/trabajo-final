@@ -8,8 +8,15 @@ namespace Servicios
         private Agenda _agenda;
         private ColaTurnos _colaTurnos;
 
+        public TurnoServicio()
+        {
+            _agenda = new Agenda();
+            _colaTurnos = new ColaTurnos();
+        }
+
         public List<Turno> OfrecerTurno(SolicitudAsistenciaTecnica solicitud)
         {
+
             var turnosDisponibles = _agenda.TurnosDisponibles();
             var mejoresTurnos = _colaTurnos.BuscarMejoresTurnos(turnosDisponibles, solicitud);
             _colaTurnos.Actualizar(mejoresTurnos);

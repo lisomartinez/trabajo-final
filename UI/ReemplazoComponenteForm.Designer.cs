@@ -31,138 +31,140 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ComputadoraGB = new System.Windows.Forms.GroupBox();
+            this.ComponentesGB = new System.Windows.Forms.GroupBox();
+            this.ReemplazarBTN = new System.Windows.Forms.Button();
+            this.ComponentesDGV = new System.Windows.Forms.DataGridView();
+            this.ModeloTB = new System.Windows.Forms.TextBox();
+            this.MarcaTB = new System.Windows.Forms.TextBox();
+            this.CodigoTB = new System.Windows.Forms.TextBox();
+            this.ModeloLBL = new System.Windows.Forms.Label();
+            this.MarcaLBL = new System.Windows.Forms.Label();
+            this.CodigoLBL = new System.Windows.Forms.Label();
+            this.ComputadoraGB.SuspendLayout();
+            this.ComponentesGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ComponentesDGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // ComputadoraGB
             // 
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 19);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(567, 514);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Computadora";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.ComputadoraGB.Controls.Add(this.ComponentesGB);
+            this.ComputadoraGB.Controls.Add(this.ModeloTB);
+            this.ComputadoraGB.Controls.Add(this.MarcaTB);
+            this.ComputadoraGB.Controls.Add(this.CodigoTB);
+            this.ComputadoraGB.Controls.Add(this.ModeloLBL);
+            this.ComputadoraGB.Controls.Add(this.MarcaLBL);
+            this.ComputadoraGB.Controls.Add(this.CodigoLBL);
+            this.ComputadoraGB.Location = new System.Drawing.Point(12, 19);
+            this.ComputadoraGB.Name = "ComputadoraGB";
+            this.ComputadoraGB.Size = new System.Drawing.Size(567, 514);
+            this.ComputadoraGB.TabIndex = 0;
+            this.ComputadoraGB.TabStop = false;
+            this.ComputadoraGB.Text = "Computadora";
             // 
-            // groupBox2
+            // ComponentesGB
             // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(20, 185);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(524, 298);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Componentes";
+            this.ComponentesGB.Controls.Add(this.ReemplazarBTN);
+            this.ComponentesGB.Controls.Add(this.ComponentesDGV);
+            this.ComponentesGB.Location = new System.Drawing.Point(20, 185);
+            this.ComponentesGB.Name = "ComponentesGB";
+            this.ComponentesGB.Size = new System.Drawing.Size(524, 298);
+            this.ComponentesGB.TabIndex = 2;
+            this.ComponentesGB.TabStop = false;
+            this.ComponentesGB.Text = "Componentes";
             // 
-            // button1
+            // ReemplazarBTN
             // 
-            this.button1.Location = new System.Drawing.Point(11, 253);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(204, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Reemplazar Componente";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ReemplazarBTN.Location = new System.Drawing.Point(11, 253);
+            this.ReemplazarBTN.Name = "ReemplazarBTN";
+            this.ReemplazarBTN.Size = new System.Drawing.Size(204, 29);
+            this.ReemplazarBTN.TabIndex = 1;
+            this.ReemplazarBTN.Text = "Reemplazar Componente";
+            this.ReemplazarBTN.UseVisualStyleBackColor = true;
+            this.ReemplazarBTN.Click += new System.EventHandler(this.ReemplazarBTN_Click);
             // 
-            // dataGridView1
+            // ComponentesDGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 24);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(500, 212);
-            this.dataGridView1.TabIndex = 0;
+            this.ComponentesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ComponentesDGV.Location = new System.Drawing.Point(11, 24);
+            this.ComponentesDGV.Name = "ComponentesDGV";
+            this.ComponentesDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ComponentesDGV.Size = new System.Drawing.Size(500, 212);
+            this.ComponentesDGV.TabIndex = 0;
+            this.ComponentesDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ComponentesDGV_CellClick);
             // 
-            // textBox3
+            // ModeloTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(98, 137);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(224, 20);
-            this.textBox3.TabIndex = 1;
+            this.ModeloTB.Location = new System.Drawing.Point(98, 137);
+            this.ModeloTB.Name = "ModeloTB";
+            this.ModeloTB.Size = new System.Drawing.Size(224, 20);
+            this.ModeloTB.TabIndex = 1;
             // 
-            // textBox2
+            // MarcaTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(98, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(224, 20);
-            this.textBox2.TabIndex = 1;
+            this.MarcaTB.Location = new System.Drawing.Point(98, 91);
+            this.MarcaTB.Name = "MarcaTB";
+            this.MarcaTB.Size = new System.Drawing.Size(224, 20);
+            this.MarcaTB.TabIndex = 1;
             // 
-            // textBox1
+            // CodigoTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 20);
-            this.textBox1.TabIndex = 1;
+            this.CodigoTB.Location = new System.Drawing.Point(98, 44);
+            this.CodigoTB.Name = "CodigoTB";
+            this.CodigoTB.Size = new System.Drawing.Size(224, 20);
+            this.CodigoTB.TabIndex = 1;
             // 
-            // label3
+            // ModeloLBL
             // 
-            this.label3.Location = new System.Drawing.Point(21, 133);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Modelo:";
+            this.ModeloLBL.Location = new System.Drawing.Point(21, 133);
+            this.ModeloLBL.Name = "ModeloLBL";
+            this.ModeloLBL.Size = new System.Drawing.Size(91, 24);
+            this.ModeloLBL.TabIndex = 0;
+            this.ModeloLBL.Text = "Modelo:";
             // 
-            // label2
+            // MarcaLBL
             // 
-            this.label2.Location = new System.Drawing.Point(21, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Marca:";
+            this.MarcaLBL.Location = new System.Drawing.Point(21, 91);
+            this.MarcaLBL.Name = "MarcaLBL";
+            this.MarcaLBL.Size = new System.Drawing.Size(91, 24);
+            this.MarcaLBL.TabIndex = 0;
+            this.MarcaLBL.Text = "Marca:";
             // 
-            // label1
+            // CodigoLBL
             // 
-            this.label1.Location = new System.Drawing.Point(21, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo:";
+            this.CodigoLBL.Location = new System.Drawing.Point(21, 48);
+            this.CodigoLBL.Name = "CodigoLBL";
+            this.CodigoLBL.Size = new System.Drawing.Size(91, 24);
+            this.CodigoLBL.TabIndex = 0;
+            this.CodigoLBL.Text = "Codigo:";
             // 
             // ReemplazoComponenteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 553);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.ComputadoraGB);
             this.Name = "ReemplazoComponenteForm";
             this.Text = "Reemplazar Componente";
             this.Load += new System.EventHandler(this.ReemplazoComponenteForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ComputadoraGB.ResumeLayout(false);
+            this.ComputadoraGB.PerformLayout();
+            this.ComponentesGB.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ComponentesDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button ReemplazarBTN;
+        private System.Windows.Forms.DataGridView ComponentesDGV;
+        private System.Windows.Forms.GroupBox ComputadoraGB;
+        private System.Windows.Forms.GroupBox ComponentesGB;
+        private System.Windows.Forms.Label CodigoLBL;
+        private System.Windows.Forms.Label MarcaLBL;
+        private System.Windows.Forms.Label ModeloLBL;
+        private System.Windows.Forms.TextBox CodigoTB;
+        private System.Windows.Forms.TextBox MarcaTB;
+        private System.Windows.Forms.TextBox ModeloTB;
 
         #endregion
     }

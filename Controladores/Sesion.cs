@@ -12,5 +12,10 @@
         private Sesion()
         {
         }
+
+        public bool NoInciada()
+        {
+            return Usuario == null;
+        }
     }
 }

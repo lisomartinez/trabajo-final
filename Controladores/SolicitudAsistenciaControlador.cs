@@ -13,12 +13,13 @@ namespace Controladores
         private ISolicitudAsistenciaVista _vista;
         private SolicitarAsistenciaServicio _servicio;
         private TipoProblemaServicio _tipoProblemaServicio;
-        private SolicitudAsistenciaTecnica solicitud;
+        private SolicitudAsistenciaTecnica _solicitud = null;
 
-        public SolicitudAsistenciaControlador(ISolicitudAsistenciaVista vista, SolicitarAsistenciaServicio servicio)
+        public SolicitudAsistenciaControlador(ISolicitudAsistenciaVista vista)
         {
             _vista = vista;
-            _servicio = servicio;
+            _servicio = new SolicitarAsistenciaServicio();
+            _tipoProblemaServicio = new TipoProblemaServicio();
         }
 
         public void CargarTiposDeProblemas()
@@ -42,8 +43,8 @@ namespace Controladores
                 var descripcion = _vista.Descripcion;
                 var tipoProblemaSeleccionado = _vista.TipoProblemaSeleccionado.ToEntitty();
 
-                solicitud = new SolicitudAsistenciaTecnica(usuario, descripcion, tipoProblemaSeleccionado);
-                var turnos = _servicio.SolicitarTurno(solicitud);
+                _solicitud = new SolicitudAsistenciaTecnica(usuario, descripcion, tipoProblemaSeleccionado);
+                var turnos = _servicio.SolicitarTurno(_solicitud);
 
                 _vista.Turnos = turnos.Select(TurnoModelo.From).ToList();
             }
@@ -57,8 +58,8 @@ namespace Controladores
         {
             try
             {
-                solicitud.Turno = _vista.TurnoSeleccionado().ToEntity();
-                _servicio.ConfirmarTurno(solicitud);
+                _solicitud.Turno = _vista.TurnoSeleccionado.ToEntity();
+                _servicio.ConfirmarTurno(_solicitud);
             }
             catch (Exception e)
             {

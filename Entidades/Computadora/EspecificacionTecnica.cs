@@ -9,16 +9,10 @@
         {
         }
 
-        public EspecificacionTecnica(CodigoEspecificacionTecnica codigo, string vistaNombreEspecificacion, string vistaDescripcionEspecificacion) : base(codigo)
+        public EspecificacionTecnica(CodigoEspecificacionTecnica codigo, string nombre, string descripcion) : base(codigo)
         {
-            throw new System.NotImplementedException();
-        }
-    }
-
-    public class CodigoEspecificacionTecnica : Id
-    {
-        public CodigoEspecificacionTecnica(int value) : base(value)
-        {
+            Nombre = nombre;
+            Descripcion = descripcion;
         }
     }
 }

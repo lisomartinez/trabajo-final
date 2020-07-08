@@ -34,25 +34,27 @@ namespace UI
             this.AsistenciasTecnicasGB = new System.Windows.Forms.GroupBox();
             this.AsistenciasTecnicasDGV = new System.Windows.Forms.DataGridView();
             this.AsistenciaTecnicaGB = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.CalificarBTN = new System.Windows.Forms.Button();
+            this.GestionComputadoraBTN = new System.Windows.Forms.Button();
+            this.EliminarBTN = new System.Windows.Forms.Button();
+            this.ModificarBTN = new System.Windows.Forms.Button();
+            this.ActualizarEstadoBTN = new System.Windows.Forms.Button();
+            this.EstadoCB = new System.Windows.Forms.ComboBox();
+            this.TipoProblemaCB = new System.Windows.Forms.ComboBox();
+            this.CalificacionTB = new System.Windows.Forms.TextBox();
+            this.TecnicoTB = new System.Windows.Forms.TextBox();
+            this.UsuarioTB = new System.Windows.Forms.TextBox();
+            this.FechaTB = new System.Windows.Forms.TextBox();
+            this.CodigoTB = new System.Windows.Forms.TextBox();
+            this.CalificacionLBL = new System.Windows.Forms.Label();
+            this.EstadoLBL = new System.Windows.Forms.Label();
+            this.TipoProblemaLBL = new System.Windows.Forms.Label();
+            this.TecnicoLBL = new System.Windows.Forms.Label();
+            this.FechaLBL = new System.Windows.Forms.Label();
+            this.UsuarioLBL = new System.Windows.Forms.Label();
+            this.CodigoLBL = new System.Windows.Forms.Label();
+            this.DescripcionLBL = new System.Windows.Forms.Label();
+            this.DescripcionTB = new System.Windows.Forms.TextBox();
             this.AsistenciasTecnicasGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AsistenciasTecnicasDGV)).BeginInit();
             this.AsistenciaTecnicaGB.SuspendLayout();
@@ -73,188 +75,207 @@ namespace UI
             this.AsistenciasTecnicasDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AsistenciasTecnicasDGV.Location = new System.Drawing.Point(6, 24);
             this.AsistenciasTecnicasDGV.Name = "AsistenciasTecnicasDGV";
+            this.AsistenciasTecnicasDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.AsistenciasTecnicasDGV.Size = new System.Drawing.Size(640, 431);
             this.AsistenciasTecnicasDGV.TabIndex = 0;
             // 
             // AsistenciaTecnicaGB
             // 
-            this.AsistenciaTecnicaGB.Controls.Add(this.button4);
-            this.AsistenciaTecnicaGB.Controls.Add(this.button5);
-            this.AsistenciaTecnicaGB.Controls.Add(this.button3);
-            this.AsistenciaTecnicaGB.Controls.Add(this.button2);
-            this.AsistenciaTecnicaGB.Controls.Add(this.button1);
-            this.AsistenciaTecnicaGB.Controls.Add(this.comboBox2);
-            this.AsistenciaTecnicaGB.Controls.Add(this.comboBox1);
-            this.AsistenciaTecnicaGB.Controls.Add(this.textBox6);
-            this.AsistenciaTecnicaGB.Controls.Add(this.textBox4);
-            this.AsistenciaTecnicaGB.Controls.Add(this.textBox3);
-            this.AsistenciaTecnicaGB.Controls.Add(this.textBox2);
-            this.AsistenciaTecnicaGB.Controls.Add(this.textBox1);
-            this.AsistenciaTecnicaGB.Controls.Add(this.label5);
-            this.AsistenciaTecnicaGB.Controls.Add(this.label6);
-            this.AsistenciaTecnicaGB.Controls.Add(this.label4);
-            this.AsistenciaTecnicaGB.Controls.Add(this.label3);
-            this.AsistenciaTecnicaGB.Controls.Add(this.label7);
-            this.AsistenciaTecnicaGB.Controls.Add(this.label2);
-            this.AsistenciaTecnicaGB.Controls.Add(this.label1);
+            this.AsistenciaTecnicaGB.Controls.Add(this.DescripcionTB);
+            this.AsistenciaTecnicaGB.Controls.Add(this.DescripcionLBL);
+            this.AsistenciaTecnicaGB.Controls.Add(this.CalificarBTN);
+            this.AsistenciaTecnicaGB.Controls.Add(this.GestionComputadoraBTN);
+            this.AsistenciaTecnicaGB.Controls.Add(this.EliminarBTN);
+            this.AsistenciaTecnicaGB.Controls.Add(this.ModificarBTN);
+            this.AsistenciaTecnicaGB.Controls.Add(this.ActualizarEstadoBTN);
+            this.AsistenciaTecnicaGB.Controls.Add(this.EstadoCB);
+            this.AsistenciaTecnicaGB.Controls.Add(this.TipoProblemaCB);
+            this.AsistenciaTecnicaGB.Controls.Add(this.CalificacionTB);
+            this.AsistenciaTecnicaGB.Controls.Add(this.TecnicoTB);
+            this.AsistenciaTecnicaGB.Controls.Add(this.UsuarioTB);
+            this.AsistenciaTecnicaGB.Controls.Add(this.FechaTB);
+            this.AsistenciaTecnicaGB.Controls.Add(this.CodigoTB);
+            this.AsistenciaTecnicaGB.Controls.Add(this.CalificacionLBL);
+            this.AsistenciaTecnicaGB.Controls.Add(this.EstadoLBL);
+            this.AsistenciaTecnicaGB.Controls.Add(this.TipoProblemaLBL);
+            this.AsistenciaTecnicaGB.Controls.Add(this.TecnicoLBL);
+            this.AsistenciaTecnicaGB.Controls.Add(this.FechaLBL);
+            this.AsistenciaTecnicaGB.Controls.Add(this.UsuarioLBL);
+            this.AsistenciaTecnicaGB.Controls.Add(this.CodigoLBL);
             this.AsistenciaTecnicaGB.Location = new System.Drawing.Point(716, 17);
             this.AsistenciaTecnicaGB.Name = "AsistenciaTecnicaGB";
-            this.AsistenciaTecnicaGB.Size = new System.Drawing.Size(389, 536);
+            this.AsistenciaTecnicaGB.Size = new System.Drawing.Size(389, 618);
             this.AsistenciaTecnicaGB.TabIndex = 1;
             this.AsistenciaTecnicaGB.TabStop = false;
             this.AsistenciaTecnicaGB.Text = "Asistencia Tecnias";
             // 
-            // button4
+            // CalificarBTN
             // 
-            this.button4.Location = new System.Drawing.Point(14, 488);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(347, 41);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Calificar Asistencia";
-            this.button4.UseVisualStyleBackColor = true;
+            this.CalificarBTN.Location = new System.Drawing.Point(14, 569);
+            this.CalificarBTN.Name = "CalificarBTN";
+            this.CalificarBTN.Size = new System.Drawing.Size(347, 41);
+            this.CalificarBTN.TabIndex = 4;
+            this.CalificarBTN.Text = "Calificar Asistencia";
+            this.CalificarBTN.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // GestionComputadoraBTN
             // 
-            this.button5.Location = new System.Drawing.Point(14, 441);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(347, 41);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Gestionar Computadora Asignada";
-            this.button5.UseVisualStyleBackColor = true;
+            this.GestionComputadoraBTN.Location = new System.Drawing.Point(14, 522);
+            this.GestionComputadoraBTN.Name = "GestionComputadoraBTN";
+            this.GestionComputadoraBTN.Size = new System.Drawing.Size(347, 41);
+            this.GestionComputadoraBTN.TabIndex = 4;
+            this.GestionComputadoraBTN.Text = "Gestionar Computadora Asignada";
+            this.GestionComputadoraBTN.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // EliminarBTN
             // 
-            this.button3.Location = new System.Drawing.Point(250, 341);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 68);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.EliminarBTN.Location = new System.Drawing.Point(250, 422);
+            this.EliminarBTN.Name = "EliminarBTN";
+            this.EliminarBTN.Size = new System.Drawing.Size(94, 68);
+            this.EliminarBTN.TabIndex = 3;
+            this.EliminarBTN.Text = "Eliminar";
+            this.EliminarBTN.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // ModificarBTN
             // 
-            this.button2.Location = new System.Drawing.Point(131, 341);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 68);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ModificarBTN.Location = new System.Drawing.Point(131, 422);
+            this.ModificarBTN.Name = "ModificarBTN";
+            this.ModificarBTN.Size = new System.Drawing.Size(94, 68);
+            this.ModificarBTN.TabIndex = 3;
+            this.ModificarBTN.Text = "Modificar";
+            this.ModificarBTN.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // ActualizarEstadoBTN
             // 
-            this.button1.Location = new System.Drawing.Point(14, 341);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 68);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Actualizar Estado";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ActualizarEstadoBTN.Location = new System.Drawing.Point(14, 422);
+            this.ActualizarEstadoBTN.Name = "ActualizarEstadoBTN";
+            this.ActualizarEstadoBTN.Size = new System.Drawing.Size(94, 68);
+            this.ActualizarEstadoBTN.TabIndex = 3;
+            this.ActualizarEstadoBTN.Text = "Actualizar Estado";
+            this.ActualizarEstadoBTN.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // EstadoCB
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(114, 229);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(230, 21);
-            this.comboBox2.TabIndex = 2;
+            this.EstadoCB.FormattingEnabled = true;
+            this.EstadoCB.Location = new System.Drawing.Point(114, 229);
+            this.EstadoCB.Name = "EstadoCB";
+            this.EstadoCB.Size = new System.Drawing.Size(230, 21);
+            this.EstadoCB.TabIndex = 2;
             // 
-            // comboBox1
+            // TipoProblemaCB
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(114, 68);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 21);
-            this.comboBox1.TabIndex = 2;
+            this.TipoProblemaCB.FormattingEnabled = true;
+            this.TipoProblemaCB.Location = new System.Drawing.Point(114, 68);
+            this.TipoProblemaCB.Name = "TipoProblemaCB";
+            this.TipoProblemaCB.Size = new System.Drawing.Size(230, 21);
+            this.TipoProblemaCB.TabIndex = 2;
             // 
-            // textBox6
+            // CalificacionTB
             // 
-            this.textBox6.Location = new System.Drawing.Point(114, 270);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(230, 20);
-            this.textBox6.TabIndex = 1;
+            this.CalificacionTB.Location = new System.Drawing.Point(114, 270);
+            this.CalificacionTB.Name = "CalificacionTB";
+            this.CalificacionTB.Size = new System.Drawing.Size(230, 20);
+            this.CalificacionTB.TabIndex = 1;
             // 
-            // textBox4
+            // TecnicoTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(114, 189);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(230, 20);
-            this.textBox4.TabIndex = 1;
+            this.TecnicoTB.Location = new System.Drawing.Point(114, 189);
+            this.TecnicoTB.Name = "TecnicoTB";
+            this.TecnicoTB.Size = new System.Drawing.Size(230, 20);
+            this.TecnicoTB.TabIndex = 1;
             // 
-            // textBox3
+            // UsuarioTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(114, 149);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(230, 20);
-            this.textBox3.TabIndex = 1;
+            this.UsuarioTB.Location = new System.Drawing.Point(114, 149);
+            this.UsuarioTB.Name = "UsuarioTB";
+            this.UsuarioTB.Size = new System.Drawing.Size(230, 20);
+            this.UsuarioTB.TabIndex = 1;
             // 
-            // textBox2
+            // FechaTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(114, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 20);
-            this.textBox2.TabIndex = 1;
+            this.FechaTB.Location = new System.Drawing.Point(114, 108);
+            this.FechaTB.Name = "FechaTB";
+            this.FechaTB.Size = new System.Drawing.Size(230, 20);
+            this.FechaTB.TabIndex = 1;
             // 
-            // textBox1
+            // CodigoTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(114, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 20);
-            this.textBox1.TabIndex = 1;
+            this.CodigoTB.Location = new System.Drawing.Point(114, 27);
+            this.CodigoTB.Name = "CodigoTB";
+            this.CodigoTB.Size = new System.Drawing.Size(230, 20);
+            this.CodigoTB.TabIndex = 1;
             // 
-            // label5
+            // CalificacionLBL
             // 
-            this.label5.Location = new System.Drawing.Point(11, 270);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 27);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Calificacion:";
+            this.CalificacionLBL.Location = new System.Drawing.Point(11, 270);
+            this.CalificacionLBL.Name = "CalificacionLBL";
+            this.CalificacionLBL.Size = new System.Drawing.Size(102, 27);
+            this.CalificacionLBL.TabIndex = 0;
+            this.CalificacionLBL.Text = "Calificacion:";
             // 
-            // label6
+            // EstadoLBL
             // 
-            this.label6.Location = new System.Drawing.Point(11, 229);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 27);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Estado:";
+            this.EstadoLBL.Location = new System.Drawing.Point(11, 229);
+            this.EstadoLBL.Name = "EstadoLBL";
+            this.EstadoLBL.Size = new System.Drawing.Size(102, 27);
+            this.EstadoLBL.TabIndex = 0;
+            this.EstadoLBL.Text = "Estado:";
             // 
-            // label4
+            // TipoProblemaLBL
             // 
-            this.label4.Location = new System.Drawing.Point(6, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 27);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Tipo de Problema:";
+            this.TipoProblemaLBL.Location = new System.Drawing.Point(6, 68);
+            this.TipoProblemaLBL.Name = "TipoProblemaLBL";
+            this.TipoProblemaLBL.Size = new System.Drawing.Size(102, 27);
+            this.TipoProblemaLBL.TabIndex = 0;
+            this.TipoProblemaLBL.Text = "Tipo de Problema:";
             // 
-            // label3
+            // TecnicoLBL
             // 
-            this.label3.Location = new System.Drawing.Point(11, 189);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 27);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Técnico:";
+            this.TecnicoLBL.Location = new System.Drawing.Point(11, 189);
+            this.TecnicoLBL.Name = "TecnicoLBL";
+            this.TecnicoLBL.Size = new System.Drawing.Size(102, 27);
+            this.TecnicoLBL.TabIndex = 0;
+            this.TecnicoLBL.Text = "Técnico:";
             // 
-            // label7
+            // FechaLBL
             // 
-            this.label7.Location = new System.Drawing.Point(11, 108);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 27);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Fecha:";
+            this.FechaLBL.Location = new System.Drawing.Point(11, 108);
+            this.FechaLBL.Name = "FechaLBL";
+            this.FechaLBL.Size = new System.Drawing.Size(63, 27);
+            this.FechaLBL.TabIndex = 0;
+            this.FechaLBL.Text = "Fecha:";
             // 
-            // label2
+            // UsuarioLBL
             // 
-            this.label2.Location = new System.Drawing.Point(11, 149);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 27);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Usuario:";
+            this.UsuarioLBL.Location = new System.Drawing.Point(11, 149);
+            this.UsuarioLBL.Name = "UsuarioLBL";
+            this.UsuarioLBL.Size = new System.Drawing.Size(63, 27);
+            this.UsuarioLBL.TabIndex = 0;
+            this.UsuarioLBL.Text = "Legajo:";
             // 
-            // label1
+            // CodigoLBL
             // 
-            this.label1.Location = new System.Drawing.Point(11, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo:";
+            this.CodigoLBL.Location = new System.Drawing.Point(11, 27);
+            this.CodigoLBL.Name = "CodigoLBL";
+            this.CodigoLBL.Size = new System.Drawing.Size(63, 27);
+            this.CodigoLBL.TabIndex = 0;
+            this.CodigoLBL.Text = "Codigo:";
+            // 
+            // DescripcionLBL
+            // 
+            this.DescripcionLBL.Location = new System.Drawing.Point(11, 327);
+            this.DescripcionLBL.Name = "DescripcionLBL";
+            this.DescripcionLBL.Size = new System.Drawing.Size(102, 27);
+            this.DescripcionLBL.TabIndex = 5;
+            this.DescripcionLBL.Text = "Descripcion:";
+            // 
+            // DescripcionTB
+            // 
+            this.DescripcionTB.Location = new System.Drawing.Point(114, 324);
+            this.DescripcionTB.Multiline = true;
+            this.DescripcionTB.Name = "DescripcionTB";
+            this.DescripcionTB.Size = new System.Drawing.Size(230, 77);
+            this.DescripcionTB.TabIndex = 6;
             // 
             // AsistenciaTecnicaForm
             // 
@@ -277,27 +298,29 @@ namespace UI
         private System.Windows.Forms.DataGridView AsistenciasTecnicasDGV;
         private System.Windows.Forms.GroupBox AsistenciasTecnicasGB;
         private System.Windows.Forms.GroupBox AsistenciaTecnicaGB;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ComboBox TipoProblemaCB;
+        private System.Windows.Forms.Label CodigoLBL;
+        private System.Windows.Forms.Label UsuarioLBL;
+        private System.Windows.Forms.Label TecnicoLBL;
+        private System.Windows.Forms.Label TipoProblemaLBL;
+        private System.Windows.Forms.Label CalificacionLBL;
+        private System.Windows.Forms.Label EstadoLBL;
+        private System.Windows.Forms.Label FechaLBL;
+        private System.Windows.Forms.TextBox CodigoTB;
+        private System.Windows.Forms.TextBox FechaTB;
+        private System.Windows.Forms.TextBox UsuarioTB;
+        private System.Windows.Forms.TextBox TecnicoTB;
+        private System.Windows.Forms.TextBox CalificacionTB;
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button EliminarBTN;
+        private System.Windows.Forms.Button ModificarBTN;
+        private System.Windows.Forms.Button ActualizarEstadoBTN;
+        private System.Windows.Forms.ComboBox EstadoCB;
+        private System.Windows.Forms.Button GestionComputadoraBTN;
+        private System.Windows.Forms.Button CalificarBTN;
+        private System.Windows.Forms.TextBox DescripcionTB;
+        private System.Windows.Forms.Label DescripcionLBL;
     }
 }

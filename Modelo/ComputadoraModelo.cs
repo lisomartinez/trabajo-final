@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Entidades;
 
 namespace Modelo
@@ -11,14 +12,35 @@ namespace Modelo
         public List<ComponenteModelo> Componentes { get; set; }
         public List<SoftwareModelo> Software { get; set; }
 
+        public ComputadoraModelo(int codigo, string marca, string modelo, List<ComponenteModelo> componentes, List<SoftwareModelo> software)
+        {
+            Codigo = codigo;
+            Marca = marca;
+            Modelo = modelo;
+            Componentes = componentes;
+            Software = software;
+        }
+
         public static ComputadoraModelo From(Computadora computadora)
         {
-            throw new System.NotImplementedException();
+            return new ComputadoraModelo(
+                codigo: computadora.Id.AsInt(),
+                marca: computadora.Marca,
+                modelo: computadora.Modelo,
+                componentes: computadora.Componentes.Select(ComponenteModelo.From).ToList(),
+                software: computadora.Software.Select(SoftwareModelo.From).ToList()
+            );
         }
 
         public Computadora ToEntity()
         {
-            throw new System.NotImplementedException();
+            return new Computadora(
+                id: new ComputadoraId(Codigo),
+                marca: Marca,
+                modelo: Modelo,
+                componentes: Componentes.Select(comp => comp.ToEntity()).ToList(),
+                software: Software.Select(sw => sw.ToEntity()).ToList()
+            );
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using AccesoDatos;
 using Entidades;
 using Repositorios;
 
@@ -8,9 +9,14 @@ namespace Servicios
     {
         private TipoProblemaRepositorio _repositorio;
 
+        public TipoProblemaServicio()
+        {
+            _repositorio = new TipoProblemaRepositorio(AccesoADatos.Instance);
+        }
+
         public List<TipoProblema> ObtenerTodos()
         {
-            throw new System.NotImplementedException();
+            return _repositorio.ObtenerTodos();
         }
     }
 }

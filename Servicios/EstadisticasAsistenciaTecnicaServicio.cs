@@ -1,4 +1,5 @@
 ﻿using System;
+using AccesoDatos;
 using Entidades;
 using Repositorios;
 
@@ -10,6 +11,12 @@ namespace Servicios
         private EstadisticasTecnicosRepositorio _estadisticasTecnicoRepositorio;
         private EstadisticaFallasRepositorio _estadisticaFallasRepositorio;
 
+        public EstadisticasAsistenciaTecnicaServicio()
+        {
+            _estadisticasAsistenciasTecnicas = new EstadisticasAsistenciasTecnicasRepositorio(AccesoADatos.Instance);
+            _estadisticasTecnicoRepositorio = new EstadisticasTecnicosRepositorio(AccesoADatos.Instance);
+            _estadisticaFallasRepositorio = new EstadisticaFallasRepositorio(AccesoADatos.Instance);
+        }
 
         public void ComputarEstadisticas(SolicitudAsistenciaTecnica solicitud)
         {

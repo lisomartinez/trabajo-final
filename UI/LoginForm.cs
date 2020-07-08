@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Windows.Forms;
+using Controladores;
 using Vistas;
 
 namespace UI
 {
     public partial class LoginForm : Form, ILoginVista
     {
+        private LoginControlador _controlador;
         public LoginForm()
         {
             InitializeComponent();
+            _controlador = new LoginControlador(this);
         }
 
         private void LoginForm_Load(object sender, System.EventArgs e)
@@ -18,10 +21,19 @@ namespace UI
 
         public void MostrarExcepcion(Exception exception)
         {
-            throw new NotImplementedException();
+            MessageBox.Show(exception.Message);
         }
 
-        public string Usuario { get; set; }
-        public string Password { get; set; }
+        public string Legajo
+        {
+            get => LegajoTB.Text;
+            set => LegajoTB.Text = value;
+        }
+
+        public string Password
+        {
+            get => PasswordTB.Text;
+            set => PasswordTB.Text = value;
+        }
     }
 }

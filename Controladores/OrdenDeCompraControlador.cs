@@ -12,6 +12,13 @@ namespace Controladores
         private ComprasServicio _servicio;
         private ComponenteModelo _componenteModelo;
 
+        public OrdenDeCompraControlador(IOrdenDeCompraVista vista, ComponenteModelo componenteModelo)
+        {
+            _vista = vista;
+            _componenteModelo = componenteModelo;
+            _servicio =new ComprasServicio();
+        }
+
         public void MostrarProveedorVendiendoComponente()
         {
             try

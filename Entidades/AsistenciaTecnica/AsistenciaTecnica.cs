@@ -5,7 +5,7 @@ namespace Entidades
 {
     public class AsistenciaTecnica : Entidad
     {
-        public CodigoAsistencia Codigo { get; }
+        public CodigoAsistencia Codigo => Id as CodigoAsistencia;
         public DateTime Fecha { get; }
         public Usuario Tecnico { get; }
         public Usuario Usuario { get; }

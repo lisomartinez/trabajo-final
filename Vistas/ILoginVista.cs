@@ -5,7 +5,7 @@ namespace Vistas
     public interface ILoginVista
     {
         void MostrarExcepcion(Exception exception);
-        string Usuario { get; set; }
+        string Legajo { get; set; }
         string Password { get; set; }
     }
 }

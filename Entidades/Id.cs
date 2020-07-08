@@ -29,5 +29,10 @@ namespace Entidades
         {
             return _value;
         }
+
+        public int AsInt()
+        {
+            return _value;
+        }
     }
 }

@@ -21,12 +21,24 @@ namespace Modelo
 
         public Pregunta ToEntity()
         {
-            throw new System.NotImplementedException();
+            return new Pregunta(
+                numero: Numero,
+                texto: Texto,
+                pesoRelativo: PesoRelativo,
+                puntajeMaximo: PuntajeMaximo,
+                puntajeMinimo: PuntajeMinimo
+            );
         }
 
         public static PreguntaModelo From(Pregunta pregunta)
         {
-            throw new System.NotImplementedException();
+            return new PreguntaModelo(
+                numero: pregunta.Numero,
+                texto: pregunta.Texto,
+                pesoRelativo: pregunta.PesoRelativo,
+                puntajeMaximo: pregunta.PuntajeMaximo,
+                puntajeMinimo: pregunta.PuntajeMinimo
+                );
         }
     }
 }

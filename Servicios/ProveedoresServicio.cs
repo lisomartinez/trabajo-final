@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using AccesoDatos;
 using Entidades;
 using Repositorios;
 
@@ -7,24 +8,30 @@ namespace Servicios
     public class ProveedoresServicio
     {
         private ProveedoresRepositorio _repositorio;
+
+        public ProveedoresServicio()
+        {
+            _repositorio = new ProveedoresRepositorio(AccesoADatos.Instance);
+        }
+
         public List<Proveedor> ObtenerProveedores()
         {
-            throw new System.NotImplementedException();
+            return _repositorio.ObtenerTodos();
         }
 
         public void AltaProveedor(Proveedor proveedor)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Guardar(proveedor);
         }
 
         public void ModificarProveedor(Proveedor proveedor)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Actualizar(proveedor);
         }
 
         public void BajaProveedor(CUIT seleccionado)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Eliminar(seleccionado);
         }
 
         public void ActualizarPrecio(Proveedor proveedor, NumeroDeSerie numeroDeSerieComponente, Precio precio)

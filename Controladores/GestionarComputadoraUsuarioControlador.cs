@@ -13,12 +13,13 @@ namespace Controladores
         private ComputadoraServicio _computadoraServicio;
         private UsuarioModelo _usuarioModelo;
 
-        public GestionarComputadoraUsuarioControlador(IGestionarComputadoraUsuarioVista vista,
-            UsuarioServicio usuarioServicio, ComputadoraServicio computadoraServicio)
+
+        public GestionarComputadoraUsuarioControlador(IGestionarComputadoraUsuarioVista vista, UsuarioModelo usuarioModelo)
         {
             _vista = vista;
-            _usuarioServicio = usuarioServicio;
-            _computadoraServicio = computadoraServicio;
+            _usuarioModelo = usuarioModelo;
+            _usuarioServicio = new UsuarioServicio();
+            _computadoraServicio = new ComputadoraServicio();
         }
 
         public void MostrarComputadoras()
@@ -63,6 +64,13 @@ namespace Controladores
             {
                 _vista.MostrarExcepcion(e);
             }
+        }
+
+        public void MostrarUsuario()
+        {
+            _vista.Legajo = _usuarioModelo.Legajo;
+            _vista.Nombre = _usuarioModelo.Nombre;
+            _vista.Apellido = _usuarioModelo.Apellido;
         }
     }
 }

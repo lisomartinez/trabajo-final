@@ -12,10 +12,10 @@ namespace Controladores
         private IComputadoraVista _vista;
         private ComputadoraServicio _servicio;
 
-        public ComputadoraControlador(IComputadoraVista vista, ComputadoraServicio servicio)
+        public ComputadoraControlador(IComputadoraVista vista)
         {
             _vista = vista;
-            _servicio = servicio;
+            _servicio = new ComputadoraServicio();
         }
 
         public void MostrarComputadoras()

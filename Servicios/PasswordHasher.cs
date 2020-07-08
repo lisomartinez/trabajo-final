@@ -3,6 +3,9 @@ using System.Security.Cryptography;
 
 namespace Servicios
 {
+    /// <summary>
+    /// Recuperado de Internet
+    /// </summary>
     public class PasswordHasher
     {
         private const int SaltByteSize = 24;

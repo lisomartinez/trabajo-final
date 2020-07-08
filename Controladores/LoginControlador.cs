@@ -11,17 +11,17 @@ namespace Controladores
         private LoginServicio _servicio;
 
 
-        public LoginControlador(ILoginVista vista, LoginServicio servicio)
+        public LoginControlador(ILoginVista vista)
         {
             _vista = vista;
-            _servicio = servicio;
+            _servicio = new LoginServicio();
         }
 
         public void Logearse()
         {
             try
             {
-                var nombreUsuario = _vista.Usuario;
+                var nombreUsuario = _vista.Legajo;
                 var password =  _vista.Password;
 
                  var usuario = _servicio.Ingresar(nombreUsuario, password);

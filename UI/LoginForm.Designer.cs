@@ -31,64 +31,64 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LegajoLBL = new System.Windows.Forms.Label();
+            this.PasswordLBL = new System.Windows.Forms.Label();
+            this.LegajoTB = new System.Windows.Forms.TextBox();
+            this.PasswordTB = new System.Windows.Forms.TextBox();
+            this.IngresarBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // LegajoLBL
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Legajo:";
+            this.LegajoLBL.AutoSize = true;
+            this.LegajoLBL.Location = new System.Drawing.Point(28, 29);
+            this.LegajoLBL.Name = "LegajoLBL";
+            this.LegajoLBL.Size = new System.Drawing.Size(42, 13);
+            this.LegajoLBL.TabIndex = 0;
+            this.LegajoLBL.Text = "Legajo:";
             // 
-            // label2
+            // PasswordLBL
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Contraseña:";
+            this.PasswordLBL.AutoSize = true;
+            this.PasswordLBL.Location = new System.Drawing.Point(6, 73);
+            this.PasswordLBL.Name = "PasswordLBL";
+            this.PasswordLBL.Size = new System.Drawing.Size(64, 13);
+            this.PasswordLBL.TabIndex = 1;
+            this.PasswordLBL.Text = "Contraseña:";
             // 
-            // textBox1
+            // LegajoTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 20);
-            this.textBox1.TabIndex = 2;
+            this.LegajoTB.Location = new System.Drawing.Point(81, 29);
+            this.LegajoTB.Name = "LegajoTB";
+            this.LegajoTB.Size = new System.Drawing.Size(228, 20);
+            this.LegajoTB.TabIndex = 2;
             // 
-            // textBox2
+            // PasswordTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(81, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(228, 20);
-            this.textBox2.TabIndex = 2;
+            this.PasswordTB.Location = new System.Drawing.Point(81, 66);
+            this.PasswordTB.Name = "PasswordTB";
+            this.PasswordTB.Size = new System.Drawing.Size(228, 20);
+            this.PasswordTB.TabIndex = 2;
             // 
-            // button1
+            // IngresarBTN
             // 
-            this.button1.Location = new System.Drawing.Point(9, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(297, 29);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Ingresar!";
-            this.button1.UseVisualStyleBackColor = true;
+            this.IngresarBTN.Location = new System.Drawing.Point(9, 104);
+            this.IngresarBTN.Name = "IngresarBTN";
+            this.IngresarBTN.Size = new System.Drawing.Size(297, 29);
+            this.IngresarBTN.TabIndex = 3;
+            this.IngresarBTN.Text = "Ingresar!";
+            this.IngresarBTN.UseVisualStyleBackColor = true;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(328, 157);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.IngresarBTN);
+            this.Controls.Add(this.PasswordTB);
+            this.Controls.Add(this.LegajoTB);
+            this.Controls.Add(this.PasswordLBL);
+            this.Controls.Add(this.LegajoLBL);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
@@ -99,10 +99,10 @@ namespace UI
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label LegajoLBL;
+        private System.Windows.Forms.Label PasswordLBL;
+        private System.Windows.Forms.TextBox LegajoTB;
+        private System.Windows.Forms.TextBox PasswordTB;
+        private System.Windows.Forms.Button IngresarBTN;
     }
 }
