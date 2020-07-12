@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Controladores;
 using Modelo;
 
 namespace Vistas
@@ -23,5 +22,7 @@ namespace Vistas
         List<TipoProblemaModelo> TiposProblema { get; set; }
         List<EstadoAsistenciaTecnicaModelo> Estados { get; set; }
         void MostrarExcepcion(Exception exception);
+        void MostrarGestionarComputadora(UsuarioModelo usuario);
+        void MostrarCompletarEncuesta(AsistenciaTecnicaModelo seleccionada);
     }
 }

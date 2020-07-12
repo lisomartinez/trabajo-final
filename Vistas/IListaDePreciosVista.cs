@@ -13,5 +13,6 @@ namespace Vistas
         string Modelo { get; set; }
         decimal Precio { get; set; }
         void MostrarExcepcion(Exception exception);
+        void MostrarAgregarForm(ProveedorModelo proveedor);
     }
 }

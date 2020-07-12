@@ -6,8 +6,8 @@ namespace Modelo
     public class EstadoAsistenciaTecnicaModelo
     {
         public int Codigo { get; }
-        public string Nombre { get; }
-        public string Descripcion { get; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
 
         public EstadoAsistenciaTecnicaModelo(int codigo, string nombre, string descripcion)
         {
@@ -32,6 +32,11 @@ namespace Modelo
                 nombre: estado.Nombre,
                 descripcion: estado.Descripcion
                 );
+        }
+
+        public override string ToString()
+        {
+            return $"{Nombre}";
         }
     }
 }

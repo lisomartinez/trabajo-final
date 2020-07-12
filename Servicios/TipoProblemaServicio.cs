@@ -18,5 +18,20 @@ namespace Servicios
         {
             return _repositorio.ObtenerTodos();
         }
+
+        public void Guardar(TipoProblema tipoProblema)
+        {
+            _repositorio.Guardar(tipoProblema);
+        }
+
+        public void Eliminar(Id id)
+        {
+            _repositorio.Eliminar(id);
+        }
+
+        public void Actualizar(TipoProblema tipoProblema)
+        {
+            _repositorio.Actualizar(tipoProblema);
+        }
     }
 }

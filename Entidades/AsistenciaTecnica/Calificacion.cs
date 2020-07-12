@@ -1,7 +1,4 @@
-﻿using System;
-using Entidades;
-
-namespace Controladores
+﻿namespace Entidades
 {
     public class Calificacion
     {

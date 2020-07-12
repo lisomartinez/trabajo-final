@@ -42,5 +42,10 @@ namespace Modelo
                 software: Software.Select(sw => sw.ToEntity()).ToList()
             );
         }
+
+        public override string ToString()
+        {
+            return $"{Marca} {Modelo}";
+        }
     }
 }

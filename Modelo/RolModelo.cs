@@ -1,17 +1,48 @@
-﻿using Entidades;
+﻿using System;
+using Entidades;
 
 namespace Modelo
 {
     public class RolModelo
     {
-        public Rol ToEntity()
+        public string Rol { get; set; }
+
+        private RolModelo(string rol)
         {
-            throw new System.NotImplementedException();
+            Rol = rol;
+        }
+
+        public Entidades.Rol ToEntity()
+        {
+            switch (Rol)
+            {
+                case "TECNICO":
+                    return Entidades.Rol.TECNICO;
+                case "USUARIO":
+                    return Entidades.Rol.USUARIO;
+                default:
+                    return Entidades.Rol.JEFE;
+            }
         }
 
         public static RolModelo From(Rol usuarioRol)
         {
-            throw new System.NotImplementedException();
+            switch (usuarioRol)
+            {
+                case Entidades.Rol.TECNICO:
+                    return new RolModelo("TECNICO");
+                case Entidades.Rol.USUARIO:
+                    return new RolModelo("USUARIO");
+                case Entidades.Rol.JEFE:
+                    return new RolModelo("JEFE");
+                default:
+                    throw new NotImplementedException();
+            }
+        }
+
+        public override string ToString()
+        {
+            return $"{Rol}";
         }
     }
 }

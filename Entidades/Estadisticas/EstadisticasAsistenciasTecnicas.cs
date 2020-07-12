@@ -2,21 +2,35 @@
 
 namespace Entidades
 {
-    public class EstadisticasAsistenciasTecnicas
+    public class EstadisticasAsistenciasTecnicas : Entidad
     {
-        public int TiempoMedioDuracion { get; set; }
-        public int TiempoMedioDeInicio { get; set; }
-        public int TiempoMedioInicioFinalizacion { get; set; }
-        public decimal CalificacionPromedio { get; set; }
+        public decimal TiempoInicio { get; set; }
+        public decimal TiempoDuracion { get; set; }
+        public decimal TiempoFinalizacion { get; set; }
+        public decimal Calificacion { get; set; }
+        public int Cantidad { get; set; }
 
-        public DateTime Fecha { get; }
-
-        public EstadisticasAsistenciasTecnicas(int tiempoMedioDuracion, int tiempoMedioDeInicio, int tiempoMedioInicioFinalizacion, decimal calificacionPromedio)
+        public EstadisticasAsistenciasTecnicas(EstadisticasAsistenciaId id, decimal tiempoInicio,
+            decimal tiempoDuracion, decimal tiempoFinalizacion, decimal calificacion, int cantidad) : base(id)
         {
-            TiempoMedioDuracion = tiempoMedioDuracion;
-            TiempoMedioDeInicio = tiempoMedioDeInicio;
-            TiempoMedioInicioFinalizacion = tiempoMedioInicioFinalizacion;
-            CalificacionPromedio = calificacionPromedio;
+            TiempoInicio = tiempoInicio;
+            TiempoDuracion = tiempoDuracion;
+            TiempoFinalizacion = tiempoFinalizacion;
+            Calificacion = calificacion;
+            Cantidad = cantidad;
+        }
+
+        public EstadisticasAsistenciasTecnicas Calcular(SolicitudAsistenciaTecnica solicitud)
+        {
+            return new EstadisticasAsistenciasTecnicas(
+                Id as EstadisticasAsistenciaId,
+                TiempoInicio + Convert.ToDecimal(solicitud.Turno.Inicio.Subtract(DateTime.Now).TotalMinutes),
+                TiempoDuracion + Convert.ToDecimal(solicitud.Turno.Duracion.TotalMinutes),
+                TiempoFinalizacion + Convert.ToDecimal(DateTime.Now.Subtract(solicitud.Turno.Inicio).TotalMinutes) +
+                Convert.ToDecimal(solicitud.Turno.Duracion.TotalMinutes),
+                Calificacion,
+                Cantidad + 1
+            );
         }
     }
 }

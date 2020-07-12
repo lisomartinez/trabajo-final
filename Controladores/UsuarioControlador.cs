@@ -21,6 +21,8 @@ namespace Controladores
         {
             try
             {
+                if (Sesion.Instance.Rol != Rol.JEFE) return;
+
                 _vista.Usuarios = _servicio.ObtenerTodos().Select(UsuarioModelo.From).ToList();
             }
             catch (Exception e)
@@ -33,6 +35,8 @@ namespace Controladores
         {
             try
             {
+                if (Sesion.Instance.Rol != Rol.JEFE) return;
+
                 var seleccionado = _vista.UsuarioSeleccionado;
                 _vista.Legajo = seleccionado.Legajo;
                 _vista.Nombre = seleccionado.Nombre;
@@ -51,6 +55,8 @@ namespace Controladores
         {
             try
             {
+                if (Sesion.Instance.Rol != Rol.JEFE) return;
+
                 ValidarCampos();
                 // var Usuario = new Usuario(new Legajo(_vista.Legajo), _vista.Nombre, _vista.Apellido, _vista.Email, _vista.Rol.ToEntity());
                 // _servicio.CrearUsuario(Usuario);
@@ -70,6 +76,8 @@ namespace Controladores
         {
             try
             {
+                if (Sesion.Instance.Rol != Rol.JEFE) return;
+
                 ValidarCampos();
                 var seleccionado = _vista.UsuarioSeleccionado;
                 seleccionado.Nombre = _vista.Nombre;
@@ -88,6 +96,8 @@ namespace Controladores
         {
             try
             {
+                if (Sesion.Instance.Rol != Rol.JEFE) return;
+
                 var usuario = _vista.UsuarioSeleccionado.ToEntity();
                 _servicio.EliminarUsuario(usuario);
             }
@@ -101,6 +111,8 @@ namespace Controladores
         {
             try
             {
+                if (Sesion.Instance.Rol != Rol.JEFE) return;
+
                 var seleccionado = _vista.UsuarioSeleccionado;
                 _vista.SolicitarIngresoPassword();
                 // seleccionado.Password =   _vista.Password;
@@ -116,6 +128,8 @@ namespace Controladores
         {
             try
             {
+                if (Sesion.Instance.Rol != Rol.JEFE) return;
+
                 _vista.MostrarGestionarComputadoraForm(_vista.UsuarioSeleccionado);
                 _servicio.GestionarComputadora(_vista.UsuarioSeleccionado.ToEntity());
             }

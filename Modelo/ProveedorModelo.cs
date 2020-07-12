@@ -44,9 +44,6 @@ namespace Modelo
                 );
         }
 
-        public Dictionary<Componente,Precio> ListaDePrecios(Proveedor toEntity)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

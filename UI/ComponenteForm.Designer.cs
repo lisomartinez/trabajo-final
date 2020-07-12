@@ -97,6 +97,7 @@
             this.AgregarComponeteACompBTN.TabIndex = 4;
             this.AgregarComponeteACompBTN.Text = "Agregar Componente Seleccionado a Computadora";
             this.AgregarComponeteACompBTN.UseVisualStyleBackColor = true;
+            this.AgregarComponeteACompBTN.Click += new System.EventHandler(this.AgregarComponeteACompBTN_Click);
             // 
             // ComputadoraIdLBL
             // 
@@ -119,8 +120,10 @@
             this.ComponentesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ComponentesDGV.Location = new System.Drawing.Point(0, 19);
             this.ComponentesDGV.Name = "ComponentesDGV";
+            this.ComponentesDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ComponentesDGV.Size = new System.Drawing.Size(590, 513);
             this.ComponentesDGV.TabIndex = 0;
+            this.ComponentesDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ComponentesDGV_CellClick);
             // 
             // ComponenteGB
             // 
@@ -169,6 +172,7 @@
             this.ModificarBTN.TabIndex = 1;
             this.ModificarBTN.Text = "Modificacion";
             this.ModificarBTN.UseVisualStyleBackColor = true;
+            this.ModificarBTN.Click += new System.EventHandler(this.ModificarBTN_Click);
             // 
             // BajaBTN
             // 
@@ -178,6 +182,7 @@
             this.BajaBTN.TabIndex = 1;
             this.BajaBTN.Text = "Baja";
             this.BajaBTN.UseVisualStyleBackColor = true;
+            this.BajaBTN.Click += new System.EventHandler(this.BajaBTN_Click);
             // 
             // AltaBTN
             // 
@@ -187,6 +192,7 @@
             this.AltaBTN.TabIndex = 1;
             this.AltaBTN.Text = "Alta";
             this.AltaBTN.UseVisualStyleBackColor = true;
+            this.AltaBTN.Click += new System.EventHandler(this.AltaBTN_Click);
             // 
             // ModeloLBL
             // 
@@ -230,8 +236,10 @@
             this.EspecificacionDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EspecificacionDGV.Location = new System.Drawing.Point(4, 20);
             this.EspecificacionDGV.Name = "EspecificacionDGV";
+            this.EspecificacionDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EspecificacionDGV.Size = new System.Drawing.Size(590, 512);
             this.EspecificacionDGV.TabIndex = 0;
+            this.EspecificacionDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EspecificacionDGV_CellClick);
             // 
             // EspecificacionGB
             // 
@@ -280,6 +288,7 @@
             this.ModificacionEspecificacionBTN.TabIndex = 2;
             this.ModificacionEspecificacionBTN.Text = "Modificacion";
             this.ModificacionEspecificacionBTN.UseVisualStyleBackColor = true;
+            this.ModificacionEspecificacionBTN.Click += new System.EventHandler(this.ModificacionEspecificacionBTN_Click);
             // 
             // BajaEspecificacionBTN
             // 
@@ -289,6 +298,7 @@
             this.BajaEspecificacionBTN.TabIndex = 3;
             this.BajaEspecificacionBTN.Text = "Baja";
             this.BajaEspecificacionBTN.UseVisualStyleBackColor = true;
+            this.BajaEspecificacionBTN.Click += new System.EventHandler(this.BajaEspecificacionBTN_Click);
             // 
             // AltaEspecificacionBTN
             // 
@@ -298,6 +308,7 @@
             this.AltaEspecificacionBTN.TabIndex = 4;
             this.AltaEspecificacionBTN.Text = "Alta";
             this.AltaEspecificacionBTN.UseVisualStyleBackColor = true;
+            this.AltaEspecificacionBTN.Click += new System.EventHandler(this.AltaEspecificacionBTN_Click);
             // 
             // DescripcionLBL
             // 

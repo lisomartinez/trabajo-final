@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Entidades;
 using Modelo;
 using Servicios;
@@ -59,11 +60,10 @@ namespace Controladores
             try
             {
                 if (Sesion.Instance.Rol == Rol.USUARIO) return;
-
                 var componenteSeleccionado = _vista.ComponenteSeleccionado;
+                var anterior = new ComponenteModelo(componenteSeleccionado.NumeroSerie, componenteSeleccionado.Marca, componenteSeleccionado.Modelo, componenteSeleccionado.EspecificacionesTecnicas.ToList());
                 _vista.MostrarOrdenDeCompraForm(componenteSeleccionado);
-                // _asistenciaTecnicaModelo.Estado = new EstadoAsistenciaTecnicaModelo();
-                _servicio.ReemplazarComponente(_asistenciaTecnicaModelo.ToEntity(), componenteSeleccionado.ToEntity());
+                _servicio.ReemplazarComponente(_asistenciaTecnicaModelo.ToEntity(),anterior.ToEntity(), componenteSeleccionado.ToEntity());
             }
             catch (Exception e)
             {

@@ -1,4 +1,5 @@
 ﻿using System;
+using Controladores.Validadores;
 using Entidades;
 using Servicios;
 using Vistas;
@@ -32,6 +33,14 @@ namespace Controladores
             catch (Exception e)
             {
                 _vista.MostrarExcepcion(e);
+            }
+        }
+
+        public void ValidarFormatoLegajo()
+        {
+            if (!Validador.ValidarLegajo(_vista.Legajo))
+            {
+                throw new NotImplementedException();
             }
         }
     }

@@ -17,16 +17,15 @@ namespace UI
     {
         private OrdenDeCompraControlador _controlador;
 
-        public OrdenDeCompra(ComponenteModelo componenteModelo)
+        public OrdenDeCompra(ComponenteModelo componenteModelo, AsistenciaTecnicaModelo asistenciaTecnicaModelo)
         {
             InitializeComponent();
-            _controlador = new OrdenDeCompraControlador(this, componenteModelo);
-            _controlador.MostrarProveedorVendiendoComponente();
+            _controlador = new OrdenDeCompraControlador(this, componenteModelo, asistenciaTecnicaModelo);
         }
 
         private void OrdenDeCompra_Load(object sender, EventArgs e)
         {
-
+            _controlador.MostrarProveedorVendiendoComponente();
         }
 
         public void MostrarExcepcion(Exception exception)
@@ -34,10 +33,27 @@ namespace UI
             MessageBox.Show(exception.Message);
         }
 
-        public List<ProveedorModelo> Proveedores
+        public ProveedorModelo ProveedorSeleccionado
+        {
+            get
+            {
+                var modelo = ProveedoresDGV.SelectedRows[0].DataBoundItem as ProveedorPrecioModelo;
+                return modelo?.Proveedor ?? null;
+            } 
+            set => throw new NotImplementedException();
+        }
+
+        public decimal Precio { get; set; }
+
+        public List<ProveedorPrecioModelo> Proveedores
         {
             get => throw new NotImplementedException();
             set => ProveedoresDGV.DataSource = value;
+        }
+
+        private void GenearOrdenBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.GenerarOrdenDeCompra();
         }
     }
 }

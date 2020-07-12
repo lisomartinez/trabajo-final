@@ -13,6 +13,11 @@ namespace Repositorios
         private const string ASISTENCIA = "@Asistencia";
         private const string COMPONENTE = "@Componente";
         private const string PROVEEDOR = "@Proveedor";
+        private const string GuardarOrdenCompra = "GuardarOrdenCompra";
+        private const string ActualizarOrdenCompra = "ActualizarOrdenCompra";
+        private const string ObtenerOrdenCompraPorId = "ObtenerOrdenCompraPorId";
+        private const string ObtenerTodosOrdenDeCompra = "ObtenerTodosOrdenDeCompra";
+        private const string EliminarOrdenCompraPorId = "EliminarOrdenCompraPorId";
 
         public ComprasRepositorio(AccesoADatos accesoADatos) : base(accesoADatos)
         {
@@ -20,7 +25,7 @@ namespace Repositorios
 
         public override OrdenDeCompra Guardar(OrdenDeCompra entidad)
         {
-            var id = _accesoADatos.Escribir("GuardarOrdenCompra", Parametros(entidad));
+            var id = _accesoADatos.Escribir(GuardarOrdenCompra, Parametros(entidad));
             entidad.Id = new CodigoOrdenDeCompra(id);
             return entidad;
         }
@@ -36,12 +41,12 @@ namespace Repositorios
 
         public override void Actualizar(OrdenDeCompra entidad)
         {
-            _accesoADatos.Escribir("ActualizarOrdenCompra", Parametros(entidad));
+            _accesoADatos.Escribir(ActualizarOrdenCompra, Parametros(entidad));
         }
 
         public override OrdenDeCompra Obtener(Id id)
         {
-           return _accesoADatos.Leer("ObtenerOrdenCompraPorId", ParametroId(id))
+           return _accesoADatos.Leer(ObtenerOrdenCompraPorId, ParametroId(id))
                 .AsEnumerable()
                 .Select(ToOrdenCompra)
                 .ToList()[0];
@@ -50,11 +55,11 @@ namespace Repositorios
         private OrdenDeCompra ToOrdenCompra(DataRow fila)
         {
             return new OrdenDeCompra(
-                codigo: new CodigoOrdenDeCompra(fila["codigo"] as int? ?? 0),
-                proveedor: null,
-                asistenciaTecnica: null,
-                componente: null,
-                precio: null
+                codigo: new CodigoOrdenDeCompra(fila["Codigo"] as int? ?? 0),
+                proveedor: new Proveedor(new CUIT(fila["Cuit"] as int? ?? 0)), 
+                asistenciaTecnica: new AsistenciaTecnica(new CodigoAsistencia(fila["CodigoAsistencia"] as int? ?? 0)), 
+                componente: new Componente(new NumeroDeSerie(fila["NumeroDeSerie"] as int? ?? 0)), 
+                precio: new Precio(fila["Precio"] as decimal? ?? 0)
                 );
         }
 
@@ -68,7 +73,7 @@ namespace Repositorios
 
         public override List<OrdenDeCompra> ObtenerTodos()
         {
-            return _accesoADatos.Leer("ObtenerTodosOrdenCompra", null)
+            return _accesoADatos.Leer(ObtenerTodosOrdenDeCompra, null)
                 .AsEnumerable()
                 .Select(ToOrdenCompra)
                 .ToList();
@@ -76,7 +81,7 @@ namespace Repositorios
 
         public override void Eliminar(Id id)
         {
-            _accesoADatos.Escribir("EliminarOrdenCompraPorId", ParametroId(id));
+            _accesoADatos.Escribir(EliminarOrdenCompraPorId, ParametroId(id));
         }
     }
 }

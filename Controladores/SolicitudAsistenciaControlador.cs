@@ -47,6 +47,9 @@ namespace Controladores
                 var turnos = _servicio.SolicitarTurno(_solicitud);
 
                 _vista.Turnos = turnos.Select(TurnoModelo.From).ToList();
+                _vista.Seconds = 120;
+                _vista.IniciarTimer();
+                _vista.ConfirmarHabilitado = true;
             }
             catch (Exception e)
             {
@@ -60,11 +63,30 @@ namespace Controladores
             {
                 _solicitud.Turno = _vista.TurnoSeleccionado.ToEntity();
                 _servicio.ConfirmarTurno(_solicitud);
+                _vista.MostrarMensaje($"Su turno ha sido confirmado para ${_solicitud.Turno.Inicio}");
             }
             catch (Exception e)
             {
                 _vista.MostrarExcepcion(e);
             }
         }
+
+        public string CrearLabelTiempo()
+        {
+            string tiempo = "";
+
+            if (_vista.Seconds < 120 && _vista.Seconds > 60)
+            {
+                tiempo = $"01:{_vista.Seconds - 60}";
+            }
+            else
+            {
+                tiempo = $"00:{_vista.Seconds}";
+            }
+
+            return tiempo;
+        }
+
+
     }
 }

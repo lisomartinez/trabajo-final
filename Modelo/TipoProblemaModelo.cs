@@ -28,5 +28,10 @@ namespace Modelo
                 nombre: Nombre
             );
         }
+
+        public override string ToString()
+        {
+            return $"{Nombre}";
+        }
     }
 }

@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entidades;
+using Controladores;
+using Vistas;
 
 namespace UI
 {
@@ -20,63 +21,19 @@ namespace UI
             _controlador = new PrincipalControlador(this);
         }
 
-        // private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
-        // {
-        //     if (Application.OpenForms.OfType<LoginForm>().Count() == 1)
-        //         return;
-        //
-        //     var login = new LoginForm {MdiParent = this};
-        //     login.Show();
-        //
-        // }
-        //
-        // private void solicitarToolStripMenuItem_Click(object sender, EventArgs e)
-        // {
-        //     if (Application.OpenForms.OfType<SolicitudAsistenciaForm>().Count() == 1)
-        //         return;
-        //
-        //     var solicitarAsistencia = new SolicitudAsistenciaForm {MdiParent = this};
-        //     solicitarAsistencia.Show();
-        // }
-        //
-        // private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
-        // {
-        //     if (Application.OpenForms.OfType<AsistenciaTecnicaForm>().Count() == 1)
-        //         return;
-        //
-        //     var asistencias = new AsistenciaTecnicaForm {MdiParent = this};
-        //     asistencias.Show();
-        // }
-        //
-        // private void administrarToolStripMenuItem_Click(object sender, EventArgs e)
-        // {
-        //     if (Application.OpenForms.OfType<UsuarioForm>().Count() == 1)
-        //         return;
-        //
-        //     var usuarios = new UsuarioForm {MdiParent = this};
-        //     usuarios.Show();
-        // }
-        //
-        // private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
-        // {
-        //     if (Application.OpenForms.OfType<CompletarEncuestaForm>().Count() == 1)
-        //         return;
-        //
-        //     var encuestas = new EncuestaForm {MdiParent = this};
-        //     encuestas.Show();
-        // }
+        private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<LoginForm>().Count() == 1)
+                return;
+        
+            var login = new LoginForm {MdiParent = this};
+            login.Show();
+        }
+   
 
         private void PrincipalForm_Load(object sender, EventArgs e)
         {
             _controlador.MostrarMenus();
-            // if (Sesion.Instance.NoInciada())
-            // {
-            //     foreach (ToolStripItem item in MenuPrincipal.Items)
-            //     {
-            //         item.Visible = false;
-            //     }
-            // }
-            // MenuPrincipal.Items["PrincipalSubMenu"].Visible = true;
         }
 
         private void IngresarOpcion_Click(object sender, EventArgs e)
@@ -105,36 +62,98 @@ namespace UI
             get => throw new NotImplementedException();
             set
             {
-                foreach (ToolStripItem item in MenuPrincipal.Items)
-                {
-                    // if (value.Contains(item.Name)) item.Visible = true;
-                    // else item.Visible = false;
-                }
+                // foreach (ToolStripItem item in MenuPrincipal.Items)
+                // {
+                    // item.Visible = value.Contains(item.Name);
+                // }
             }
         }
-    }
 
-    public class PrincipalControlador
-    {
-        private IPrincipalVista _vista;
-
-        public PrincipalControlador(IPrincipalVista vista)
+        private void SolicitarAsistenciaOpcion_Click(object sender, EventArgs e)
         {
-            _vista = vista;
+            if (Application.OpenForms.OfType<SolicitudAsistenciaForm>().Count() == 1)
+                return;
+
+            var solicitarAsistencia = new SolicitudAsistenciaForm { MdiParent = this };
+            solicitarAsistencia.Show();
         }
 
-        public void MostrarMenus()
+        private void ConsultarAsistenciaOpcion_Click(object sender, EventArgs e)
         {
-            if (Sesion.Instance.NoInciada())
-            {
-                _vista.Habilitados = new List<string> { "PrincipalSubMenu" };
-            } 
-            
-        }
-    }
+            if (Application.OpenForms.OfType<AsistenciaTecnicaForm>().Count() == 1)
+                return;
 
-    public interface IPrincipalVista
-    {
-        List<string> Habilitados { get; set; }
+            var asistencias = new AsistenciaTecnicaForm { MdiParent = this };
+            asistencias.Show();
+        }
+
+        private void AdministrarOpcion_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<UsuarioForm>().Count() == 1)
+                return;
+
+            var usuarios = new UsuarioForm { MdiParent = this };
+            usuarios.Show();
+        }
+
+        private void ConsultarEncuestaOpcion_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<CompletarEncuestaForm>().Count() == 1)
+                return;
+
+            var encuestas = new EncuestaForm { MdiParent = this };
+            encuestas.Show();
+        }
+
+        private void AsistenciaSubMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TipoProblemaOpcion_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<TipoProblemaForm>().Count() == 1)
+                return;
+
+            var form = new TipoProblemaForm {MdiParent = this};
+            form.Show();
+        }
+
+        private void EstadoAsistenciaOpcion_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<EstadoAsistenciaForm>().Count() == 1)
+                return;
+
+            var form = new EstadoAsistenciaForm { MdiParent = this };
+            form.Show();
+        }
+
+        //TODO: add Jerarquia CRUD.
+        private void CategoriaOpcion_Click(object sender, EventArgs e)
+        {
+            // if (Application.OpenForms.OfType<>().Count() == 1)
+            //     return;
+            //
+            // var form = new EstadoAsistenciaForm { MdiParent = this };
+            // form.Show();
+        }
+
+        private void AdministrarProveedorOpcion_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<ProveedoresForm>().Count() == 1)
+                return;
+
+            var form = new ProveedoresForm { MdiParent = this };
+            form.Show();
+        }
+
+        private void EstadisticasAsistenciaTecnicaOpcion_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<ReporteAsistenciaTecnicaForm>().Count() == 1)
+                return;
+
+            var form = new ReporteAsistenciaTecnicaForm { MdiParent = this };
+            form.Show();
+        }
     }
 }

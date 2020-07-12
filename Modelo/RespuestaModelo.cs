@@ -1,4 +1,4 @@
-﻿namespace Controladores
+﻿namespace Modelo
 {
     public class RespuestaModelo
 

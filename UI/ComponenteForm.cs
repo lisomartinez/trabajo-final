@@ -17,21 +17,16 @@ namespace UI
     {
         private ComponenteControlador _controlador;
 
-        public ComponenteForm()
-        {
-            InitializeComponent();
-            
-        }
-
         public ComponenteForm(ComputadoraModelo computadoraModelo)
         {
             InitializeComponent();
+            //CHECK NULL
             _controlador = new ComponenteControlador(this, computadoraModelo);
         }
 
         private void ComponenteForm_Load(object sender, EventArgs e)
         {
-
+            _controlador.MostrarComponentes();
         }
 
         public void MostrarExcepcion(Exception exception)
@@ -97,6 +92,51 @@ namespace UI
         {
             get => EspecificacionDGV.SelectedRows[0].DataBoundItem as EspecificacionTecnicaModelo;
             set => throw new NotImplementedException();
+        }
+
+        private void AgregarComponeteACompBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.AgregarComponenteAComputadora();
+        }
+
+        private void AltaBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.AgregarComponente();
+        }
+
+        private void BajaBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.EliminarComponente();
+        }
+
+        private void ModificarBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.ModificarComponente();
+        }
+
+        private void AltaEspecificacionBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.AgregarEspecificacionTecnica();
+        }
+
+        private void BajaEspecificacionBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.EliminarEspecificacionTecnica();
+        }
+
+        private void ModificacionEspecificacionBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.ModificarEspecificacionTecnica();
+        }
+
+        private void ComponentesDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void EspecificacionDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

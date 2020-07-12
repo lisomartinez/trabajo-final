@@ -49,12 +49,15 @@
     <Compile Include="EncuestaModelo.cs" />
     <Compile Include="EspecificacionTecnicaModelo.cs" />
     <Compile Include="EstadoAsistenciaTecnicaModelo.cs" />
+    <Compile Include="JerarquiaModelo.cs" />
     <Compile Include="PreguntaModelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorModelo.cs" />
+    <Compile Include="ProveedorPrecioModelo.cs" />
     <Compile Include="RespuestaModelo.cs" />
     <Compile Include="RolModelo.cs" />
     <Compile Include="SoftwareModelo.cs" />
+    <Compile Include="TecnicoModelo.cs" />
     <Compile Include="TipoProblemaModelo.cs" />
     <Compile Include="TurnoModelo.cs" />
     <Compile Include="UsuarioModelo.cs" />

@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarComponenteAListaPrecios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarComponenteAListaPrecios.Designer.cs">
+      <DependentUpon>AgregarComponenteAListaPrecios.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompletarEncuestaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,12 @@
     </Compile>
     <Compile Include="EncuestaForm.Designer.cs">
       <DependentUpon>EncuestaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstadoAsistenciaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstadoAsistenciaForm.Designer.cs">
+      <DependentUpon>EstadoAsistenciaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionarComputadoraUsuarioForm.cs">
       <SubType>Form</SubType>
@@ -154,12 +166,21 @@
     <Compile Include="TecnicoForm.Designer.cs">
       <DependentUpon>TecnicoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TipoProblemaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoProblemaForm.Designer.cs">
+      <DependentUpon>TipoProblemaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UsuarioForm.Designer.cs">
       <DependentUpon>UsuarioForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarComponenteAListaPrecios.resx">
+      <DependentUpon>AgregarComponenteAListaPrecios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CompletarEncuestaForm.resx">
       <DependentUpon>CompletarEncuestaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EncuestaForm.resx">
       <DependentUpon>EncuestaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadoAsistenciaForm.resx">
+      <DependentUpon>EstadoAsistenciaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionarComputadoraUsuarioForm.resx">
       <DependentUpon>GestionarComputadoraUsuarioForm.cs</DependentUpon>
@@ -220,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TecnicoForm.resx">
       <DependentUpon>TecnicoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoProblemaForm.resx">
+      <DependentUpon>TipoProblemaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioForm.resx">
       <DependentUpon>UsuarioForm.cs</DependentUpon>

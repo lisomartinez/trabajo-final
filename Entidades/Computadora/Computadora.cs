@@ -19,7 +19,12 @@ namespace Entidades
             Modelo = modelo;
             Componentes = componentes;
             Software = software;
-            throw new System.NotImplementedException();
+        }
+
+        public void Reemplazar(Componente anterior, Componente componenteNuevo)
+        {
+            var index = Componentes.FindIndex(c => c.Equals(anterior));
+            Componentes[index] = componenteNuevo;
         }
     }
 }

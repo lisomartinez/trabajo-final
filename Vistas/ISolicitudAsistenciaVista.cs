@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Controladores;
 using Modelo;
 
 namespace Vistas
@@ -13,5 +12,9 @@ namespace Vistas
         TipoProblemaModelo TipoProblemaSeleccionado { get; set; }
         TurnoModelo TurnoSeleccionado { get; set; }
         void MostrarExcepcion(Exception exception);
+        void IniciarTimer();
+        decimal Seconds { get; set; }
+        bool ConfirmarHabilitado { get; set; }
+        void MostrarMensaje(string msj);
     }
 }

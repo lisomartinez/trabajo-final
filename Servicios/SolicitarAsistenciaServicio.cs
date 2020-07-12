@@ -24,18 +24,19 @@ namespace Servicios
 
         public List<Turno> SolicitarTurno(SolicitudAsistenciaTecnica solicitud)
         {
-            _estadisticasAsistenciaTecnicaServicio.ComputarEstadisticas(solicitud);
-            _solicitudAsistenciaRepositorio.Guardar(solicitud);
+            
+            var guardada = _solicitudAsistenciaRepositorio.Guardar(solicitud);
 
-            return _turnoServicio.OfrecerTurno(solicitud);
+            return _turnoServicio.OfrecerTurno(guardada);
         }
 
         public void ConfirmarTurno(SolicitudAsistenciaTecnica solicitud)
         {
-            _turnoServicio.ObtenerTurnosReservador(solicitud);
+            var turnos = _turnoServicio.ObtenerTurnosReservador(solicitud);
             _solicitudAsistenciaRepositorio.Actualizar(solicitud);
-            _turnoServicio.LiberarNoEscogidos(solicitud);
+            _turnoServicio.LiberarNoEscogidos(solicitud, turnos);
             _asistenciaTecnicaRepositorio.Guardar(solicitud.CrearAsistencia());
+            _estadisticasAsistenciaTecnicaServicio.ComputarEstadisticas(solicitud);
         }
 
 

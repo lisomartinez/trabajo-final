@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Controladores;
 using Modelo;
@@ -30,7 +31,7 @@ namespace UI
 
         public List<ProveedorModelo> Proveedores
         {
-            get => throw new NotImplementedException();
+            get => ProveedoresDGV.DataSource as List<ProveedorModelo>;
             set => ProveedoresDGV.DataSource = value;
         }
 
@@ -68,6 +69,40 @@ namespace UI
         {
             get => TelefonoTB.Text;
             set => TelefonoTB.Text = value;
+        }
+
+        public void MostrarListaPreciosForm(ProveedorModelo proveedor)
+        {
+            if (Application.OpenForms.OfType<ListaDePreciosForm>().Count() == 1)
+                return;
+
+            var form = new ListaDePreciosForm(proveedor);
+            form.Show();
+        }
+
+        private void ProveedoresDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _controlador.MostrarProveedor();
+        }
+
+        private void AltaBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.AltaProveedor();
+        }
+
+        private void BajaBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.EliminarProveedor();
+        }
+
+        private void ModificacionBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.ModificarProveedor();
+        }
+
+        private void GestionarPreciosBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.GestionarListaDePrecios();
         }
     }
 }

@@ -34,9 +34,24 @@ namespace Servicios
             _repositorio.Eliminar(seleccionado);
         }
 
-        public void ActualizarPrecio(Proveedor proveedor, NumeroDeSerie numeroDeSerieComponente, Precio precio)
+        public void ActualizarPrecio(Proveedor proveedor, NumeroDeSerie numeroDeSerie, Precio precio)
         {
-            throw new System.NotImplementedException();
+            _repositorio.ActualizarPrecio(proveedor, numeroDeSerie, precio);
+        }
+
+        public void AgregarComponenteAListaDePrecios(Proveedor proveedor, NumeroDeSerie numeroDeSerie, Precio precio)
+        {
+            _repositorio.AgregarComponenteAListaDePrecios(proveedor, numeroDeSerie, precio);
+        }
+
+        public void EliminarComponenteDeListaDePrecios(Proveedor proveedor, NumeroDeSerie numeroDeSerie)
+        {
+            _repositorio.EliminarComponenteDeListaDePrecios(proveedor, numeroDeSerie);
+        }
+
+        public Dictionary<Componente, Precio> ObtenerListaPrecios(Proveedor proveedor)
+        {
+            return _repositorio.ObtenerListaPrecios(proveedor.CUIT);
         }
     }
 }

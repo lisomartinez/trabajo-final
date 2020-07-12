@@ -3,6 +3,7 @@ using System.Security.Policy;
 
 namespace Entidades
 {
+    //TODO: add Turno to AsistenciaTecnica????
     public class AsistenciaTecnica : Entidad
     {
         public CodigoAsistencia Codigo => Id as CodigoAsistencia;
@@ -28,6 +29,21 @@ namespace Entidades
             DescripcionProblema = descripcionProblema;
             Estado = estado;
             Calificacion = calificacion;
+        }
+
+        public AsistenciaTecnica(CodigoAsistencia codigo, DateTime turno, Usuario usuario, Usuario tecnico, TipoProblema tipoProblema, string descripcion) : base(codigo)
+        {
+            Fecha = turno;
+            Tecnico = tecnico;
+            Usuario = usuario;
+            TipoProblema = tipoProblema;
+            DescripcionProblema = descripcion;
+            Calificacion = -1;
+        }
+
+        public void ReemplazarComponente(Componente anterior, Componente componenteNuevo)
+        {
+            Usuario.Computadora.Reemplazar(anterior, componenteNuevo);
         }
     }
 }

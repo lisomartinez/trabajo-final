@@ -34,6 +34,8 @@ namespace UI
             this.AsistenciasTecnicasGB = new System.Windows.Forms.GroupBox();
             this.AsistenciasTecnicasDGV = new System.Windows.Forms.DataGridView();
             this.AsistenciaTecnicaGB = new System.Windows.Forms.GroupBox();
+            this.DescripcionTB = new System.Windows.Forms.TextBox();
+            this.DescripcionLBL = new System.Windows.Forms.Label();
             this.CalificarBTN = new System.Windows.Forms.Button();
             this.GestionComputadoraBTN = new System.Windows.Forms.Button();
             this.EliminarBTN = new System.Windows.Forms.Button();
@@ -53,8 +55,6 @@ namespace UI
             this.FechaLBL = new System.Windows.Forms.Label();
             this.UsuarioLBL = new System.Windows.Forms.Label();
             this.CodigoLBL = new System.Windows.Forms.Label();
-            this.DescripcionLBL = new System.Windows.Forms.Label();
-            this.DescripcionTB = new System.Windows.Forms.TextBox();
             this.AsistenciasTecnicasGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AsistenciasTecnicasDGV)).BeginInit();
             this.AsistenciaTecnicaGB.SuspendLayout();
@@ -78,6 +78,7 @@ namespace UI
             this.AsistenciasTecnicasDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.AsistenciasTecnicasDGV.Size = new System.Drawing.Size(640, 431);
             this.AsistenciasTecnicasDGV.TabIndex = 0;
+            this.AsistenciasTecnicasDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AsistenciasTecnicasDGV_CellClick);
             // 
             // AsistenciaTecnicaGB
             // 
@@ -109,6 +110,22 @@ namespace UI
             this.AsistenciaTecnicaGB.TabStop = false;
             this.AsistenciaTecnicaGB.Text = "Asistencia Tecnias";
             // 
+            // DescripcionTB
+            // 
+            this.DescripcionTB.Location = new System.Drawing.Point(114, 324);
+            this.DescripcionTB.Multiline = true;
+            this.DescripcionTB.Name = "DescripcionTB";
+            this.DescripcionTB.Size = new System.Drawing.Size(230, 77);
+            this.DescripcionTB.TabIndex = 6;
+            // 
+            // DescripcionLBL
+            // 
+            this.DescripcionLBL.Location = new System.Drawing.Point(11, 327);
+            this.DescripcionLBL.Name = "DescripcionLBL";
+            this.DescripcionLBL.Size = new System.Drawing.Size(102, 27);
+            this.DescripcionLBL.TabIndex = 5;
+            this.DescripcionLBL.Text = "Descripcion:";
+            // 
             // CalificarBTN
             // 
             this.CalificarBTN.Location = new System.Drawing.Point(14, 569);
@@ -117,6 +134,7 @@ namespace UI
             this.CalificarBTN.TabIndex = 4;
             this.CalificarBTN.Text = "Calificar Asistencia";
             this.CalificarBTN.UseVisualStyleBackColor = true;
+            this.CalificarBTN.Click += new System.EventHandler(this.CalificarBTN_Click);
             // 
             // GestionComputadoraBTN
             // 
@@ -126,6 +144,7 @@ namespace UI
             this.GestionComputadoraBTN.TabIndex = 4;
             this.GestionComputadoraBTN.Text = "Gestionar Computadora Asignada";
             this.GestionComputadoraBTN.UseVisualStyleBackColor = true;
+            this.GestionComputadoraBTN.Click += new System.EventHandler(this.GestionComputadoraBTN_Click);
             // 
             // EliminarBTN
             // 
@@ -135,6 +154,7 @@ namespace UI
             this.EliminarBTN.TabIndex = 3;
             this.EliminarBTN.Text = "Eliminar";
             this.EliminarBTN.UseVisualStyleBackColor = true;
+            this.EliminarBTN.Click += new System.EventHandler(this.EliminarBTN_Click);
             // 
             // ModificarBTN
             // 
@@ -144,6 +164,7 @@ namespace UI
             this.ModificarBTN.TabIndex = 3;
             this.ModificarBTN.Text = "Modificar";
             this.ModificarBTN.UseVisualStyleBackColor = true;
+            this.ModificarBTN.Click += new System.EventHandler(this.ModificarBTN_Click);
             // 
             // ActualizarEstadoBTN
             // 
@@ -153,6 +174,7 @@ namespace UI
             this.ActualizarEstadoBTN.TabIndex = 3;
             this.ActualizarEstadoBTN.Text = "Actualizar Estado";
             this.ActualizarEstadoBTN.UseVisualStyleBackColor = true;
+            this.ActualizarEstadoBTN.Click += new System.EventHandler(this.ActualizarEstadoBTN_Click);
             // 
             // EstadoCB
             // 
@@ -260,22 +282,6 @@ namespace UI
             this.CodigoLBL.Size = new System.Drawing.Size(63, 27);
             this.CodigoLBL.TabIndex = 0;
             this.CodigoLBL.Text = "Codigo:";
-            // 
-            // DescripcionLBL
-            // 
-            this.DescripcionLBL.Location = new System.Drawing.Point(11, 327);
-            this.DescripcionLBL.Name = "DescripcionLBL";
-            this.DescripcionLBL.Size = new System.Drawing.Size(102, 27);
-            this.DescripcionLBL.TabIndex = 5;
-            this.DescripcionLBL.Text = "Descripcion:";
-            // 
-            // DescripcionTB
-            // 
-            this.DescripcionTB.Location = new System.Drawing.Point(114, 324);
-            this.DescripcionTB.Multiline = true;
-            this.DescripcionTB.Name = "DescripcionTB";
-            this.DescripcionTB.Size = new System.Drawing.Size(230, 77);
-            this.DescripcionTB.TabIndex = 6;
             // 
             // AsistenciaTecnicaForm
             // 

@@ -54,12 +54,14 @@
             this.GenearOrdenBTN.TabIndex = 1;
             this.GenearOrdenBTN.Text = "Generar Orden De Compra";
             this.GenearOrdenBTN.UseVisualStyleBackColor = true;
+            this.GenearOrdenBTN.Click += new System.EventHandler(this.GenearOrdenBTN_Click);
             // 
             // ProveedoresDGV
             // 
             this.ProveedoresDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProveedoresDGV.Location = new System.Drawing.Point(11, 24);
             this.ProveedoresDGV.Name = "ProveedoresDGV";
+            this.ProveedoresDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
             this.ProveedoresDGV.Size = new System.Drawing.Size(500, 212);
             this.ProveedoresDGV.TabIndex = 0;
             // 

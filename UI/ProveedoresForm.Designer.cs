@@ -72,6 +72,7 @@ namespace UI
             this.ProveedoresDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ProveedoresDGV.Size = new System.Drawing.Size(608, 523);
             this.ProveedoresDGV.TabIndex = 0;
+            this.ProveedoresDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProveedoresDGV_CellClick);
             // 
             // ProveedorGB
             // 
@@ -184,6 +185,7 @@ namespace UI
             this.GestionarPreciosBTN.TabIndex = 0;
             this.GestionarPreciosBTN.Text = "Gestionar Lista de Precios";
             this.GestionarPreciosBTN.UseVisualStyleBackColor = true;
+            this.GestionarPreciosBTN.Click += new System.EventHandler(this.GestionarPreciosBTN_Click);
             // 
             // ModificacionBTN
             // 
@@ -193,6 +195,7 @@ namespace UI
             this.ModificacionBTN.TabIndex = 0;
             this.ModificacionBTN.Text = "Modifcacion";
             this.ModificacionBTN.UseVisualStyleBackColor = true;
+            this.ModificacionBTN.Click += new System.EventHandler(this.ModificacionBTN_Click);
             // 
             // BajaBTN
             // 
@@ -202,6 +205,7 @@ namespace UI
             this.BajaBTN.TabIndex = 0;
             this.BajaBTN.Text = "Baja";
             this.BajaBTN.UseVisualStyleBackColor = true;
+            this.BajaBTN.Click += new System.EventHandler(this.BajaBTN_Click);
             // 
             // AltaBTN
             // 
@@ -211,6 +215,7 @@ namespace UI
             this.AltaBTN.TabIndex = 0;
             this.AltaBTN.Text = "Alta";
             this.AltaBTN.UseVisualStyleBackColor = true;
+            this.AltaBTN.Click += new System.EventHandler(this.AltaBTN_Click);
             // 
             // ProveedoresForm
             // 

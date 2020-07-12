@@ -17,6 +17,7 @@ namespace Controladores
         {
             _vista = vista;
             _servicio = new ComponenteServicio();
+            //CHECK NULL - hide computer group box if true.
             _computadoraModelo = computadoraModelo;
         }
 

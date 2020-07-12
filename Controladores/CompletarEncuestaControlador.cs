@@ -28,9 +28,10 @@ namespace Controladores
             try
             {
                 var calificacions = _respuestas.Select(r => new Calificacion(r.Key, r.Value.Puntaje)).ToList();
-                int calificacionFinal = _encuestaServicio.Calificar(calificacions);
+                int calificacionFinal = _encuestaServicio.ObtenerCalificacionFinal(calificacions);
                 _asistenciaTecnicaModelo.Calificacion = calificacionFinal;
                 _asistenciaTecnicaServicio.CalificarAsistencia(_asistenciaTecnicaModelo.ToEntity());
+                _vista.Completada = true;
             }
             catch (Exception e)
             {

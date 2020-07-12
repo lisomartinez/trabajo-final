@@ -39,14 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agenda.cs" />
+    <Compile Include="AgendaServicio.cs" />
     <Compile Include="AsistenciaTecnicaServicio.cs" />
-    <Compile Include="ColaTurnos.cs" />
+    <Compile Include="ColaTurnosServicio.cs" />
     <Compile Include="ComponenteServicio.cs" />
     <Compile Include="ComprasServicio.cs" />
     <Compile Include="ComputadoraServicio.cs" />
     <Compile Include="EncuestaServicio.cs" />
     <Compile Include="EstadisticasAsistenciaTecnicaServicio.cs" />
+    <Compile Include="EstadoAsistenciaTecnicaServicio.cs" />
     <Compile Include="LoginServicio.cs" />
     <Compile Include="PasswordHasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

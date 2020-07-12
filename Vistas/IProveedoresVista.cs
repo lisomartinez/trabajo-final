@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Controladores;
 using Modelo;
 
 namespace Vistas
@@ -15,5 +14,6 @@ namespace Vistas
         string Direccion { get; set; }
         string Email { get; set; }
         string Telefono { get; set; }
+        void MostrarListaPreciosForm(ProveedorModelo proveedor);
     }
 }

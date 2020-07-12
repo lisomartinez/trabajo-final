@@ -65,7 +65,7 @@ namespace UI
             this.TecnicoGB.Controls.Add(this.ApellidoLBL);
             this.TecnicoGB.Controls.Add(this.NombreLBL);
             this.TecnicoGB.Controls.Add(this.LegajoLBL);
-            this.TecnicoGB.Location = new System.Drawing.Point(639, 12);
+            this.TecnicoGB.Location = new System.Drawing.Point(828, 12);
             this.TecnicoGB.Name = "TecnicoGB";
             this.TecnicoGB.Size = new System.Drawing.Size(381, 394);
             this.TecnicoGB.TabIndex = 5;
@@ -177,7 +177,7 @@ namespace UI
             this.UsuariosGB.Controls.Add(this.UsuariosDGV);
             this.UsuariosGB.Location = new System.Drawing.Point(3, 12);
             this.UsuariosGB.Name = "UsuariosGB";
-            this.UsuariosGB.Size = new System.Drawing.Size(630, 673);
+            this.UsuariosGB.Size = new System.Drawing.Size(819, 673);
             this.UsuariosGB.TabIndex = 4;
             this.UsuariosGB.TabStop = false;
             this.UsuariosGB.Text = "Usuarios";
@@ -188,7 +188,7 @@ namespace UI
             this.UsuariosDGV.Location = new System.Drawing.Point(6, 29);
             this.UsuariosDGV.Name = "UsuariosDGV";
             this.UsuariosDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.UsuariosDGV.Size = new System.Drawing.Size(607, 627);
+            this.UsuariosDGV.Size = new System.Drawing.Size(804, 627);
             this.UsuariosDGV.TabIndex = 0;
             this.UsuariosDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsuariosDGV_CellClick);
             // 
@@ -196,7 +196,7 @@ namespace UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 700);
+            this.ClientSize = new System.Drawing.Size(1214, 690);
             this.Controls.Add(this.TecnicoGB);
             this.Controls.Add(this.UsuariosGB);
             this.Name = "UsuarioForm";

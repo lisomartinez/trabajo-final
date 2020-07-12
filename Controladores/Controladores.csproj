@@ -39,15 +39,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarComponenteAListaPreciosControlador.cs" />
     <Compile Include="AsistenciaTecnicaControlador.cs" />
     <Compile Include="CompletarEncuestaControlador.cs" />
     <Compile Include="ComponenteControlador.cs" />
     <Compile Include="ComputadoraControlador.cs" />
     <Compile Include="EncuestaControlador.cs" />
+    <Compile Include="EstadoAsistenciaControlador.cs" />
     <Compile Include="GestionarComputadoraUsuarioControlador.cs" />
+    <Compile Include="IdentificadorInvalidoException.cs" />
     <Compile Include="ListaDePreciosControlador.cs" />
     <Compile Include="LoginControlador.cs" />
     <Compile Include="OrdenDeCompraControlador.cs" />
+    <Compile Include="PrecioInvalidoException.cs" />
+    <Compile Include="PrincipalControlador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedoresControlador.cs" />
     <Compile Include="ReemplazoComponenteControlador.cs" />
@@ -57,7 +62,9 @@
     <Compile Include="SoftwareControlador.cs" />
     <Compile Include="SolicitudAsistenciaControlador.cs" />
     <Compile Include="TecnicoControlador.cs" />
+    <Compile Include="TipoProblemaControlador.cs" />
     <Compile Include="UsuarioControlador.cs" />
+    <Compile Include="Validadores\Validador.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
@@ -77,6 +84,7 @@
       <Name>Vistas</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.

@@ -11,6 +11,7 @@ namespace UI
     public partial class SolicitudAsistenciaForm : Form, ISolicitudAsistenciaVista
     {
         private SolicitudAsistenciaControlador _controlador;
+        public decimal Seconds { get; set; }
 
         public SolicitudAsistenciaForm()
         {
@@ -22,6 +23,17 @@ namespace UI
         private void SolicitudAsistenciaForm_Load(object sender, EventArgs e)
         {
             _controlador.CargarTiposDeProblemas();
+        }
+
+        public bool ConfirmarHabilitado
+        {
+            get => ConfirmarSolicitudBTN.Enabled;
+            set => ConfirmarSolicitudBTN.Enabled = value;
+        }
+
+        public void MostrarMensaje(string msj)
+        {
+            MessageBox.Show(msj);
         }
 
         public List<TipoProblemaModelo> TiposDeProblemas
@@ -38,7 +50,7 @@ namespace UI
 
         public List<TurnoModelo> Turnos
         {
-            get => throw new NotImplementedException();
+            get => TurnosDGV.DataSource as List<TurnoModelo>;
             set => TurnosDGV.DataSource = value;
         }
 
@@ -64,6 +76,12 @@ namespace UI
             MessageBox.Show(exception.Message);
         }
 
+        public void IniciarTimer()
+        {
+            timer1.Interval = 1000;
+            timer1.Start();
+        }
+
         private void SolicitarTurnoBTN_Click(object sender, EventArgs e)
         {
             _controlador.SolicitarTurno();
@@ -72,6 +90,26 @@ namespace UI
         private void ConfirmarSolicitudBTN_Click(object sender, EventArgs e)
         {
             _controlador.ConfirmarTurno();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (Seconds == 0)
+            {
+                timer1.Stop();
+            }
+            else
+            {
+                Seconds--;
+                var tiempo = _controlador.CrearLabelTiempo();
+
+                TiempoRestanteLBL.Text = $"Tiempo Restante: {tiempo}";
+            }
+        }
+
+        private void TurnosDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

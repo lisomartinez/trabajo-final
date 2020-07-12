@@ -1,37 +1,36 @@
 ﻿using System.Collections.Generic;
 using Entidades;
+using Repositorios;
 
 namespace Servicios
 {
     public class TurnoServicio
     {
-        private Agenda _agenda;
-        private ColaTurnos _colaTurnos;
+        private AgendaServicio _agendaServicio;
+        private ColaTurnosServicio _colaTurnosServicio;
 
         public TurnoServicio()
         {
-            _agenda = new Agenda();
-            _colaTurnos = new ColaTurnos();
+            _agendaServicio = new AgendaServicio();
+            _colaTurnosServicio = new ColaTurnosServicio();
         }
 
         public List<Turno> OfrecerTurno(SolicitudAsistenciaTecnica solicitud)
         {
 
-            var turnosDisponibles = _agenda.TurnosDisponibles();
-            var mejoresTurnos = _colaTurnos.BuscarMejoresTurnos(turnosDisponibles, solicitud);
-            _colaTurnos.Actualizar(mejoresTurnos);
-            _agenda.Reservar(mejoresTurnos);
-            return new List<Turno>();
+            var turnosDisponibles = _agendaServicio.TurnosDisponibles();
+            var mejoresTurnos = _colaTurnosServicio.BuscarMejoresTurnos(turnosDisponibles, solicitud);
+            return _agendaServicio.Reservar(solicitud, mejoresTurnos);
         }
 
         public List<Turno> ObtenerTurnosReservador(SolicitudAsistenciaTecnica solicitud)
         {
-            return _agenda.ObtenerTurnosReservador(solicitud);
+            return _agendaServicio.ObtenerTurnosReservados(solicitud);
         }
 
-        public void LiberarNoEscogidos(SolicitudAsistenciaTecnica solicitud)
+        public void LiberarNoEscogidos(SolicitudAsistenciaTecnica solicitud, List<Turno> turnos)
         {
-            _agenda.LiberarNoEscogidos(solicitud);
+            _agendaServicio.LiberarNoEscogidos(solicitud, turnos);
         }
     }
 }

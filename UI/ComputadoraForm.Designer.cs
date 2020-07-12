@@ -90,6 +90,7 @@ namespace UI
             this.ModificacionBTN.TabIndex = 4;
             this.ModificacionBTN.Text = "Modificacion";
             this.ModificacionBTN.UseVisualStyleBackColor = true;
+            this.ModificacionBTN.Click += new System.EventHandler(this.ModificacionBTN_Click);
             // 
             // BajaBTN
             // 
@@ -99,6 +100,7 @@ namespace UI
             this.BajaBTN.TabIndex = 4;
             this.BajaBTN.Text = "Baja";
             this.BajaBTN.UseVisualStyleBackColor = true;
+            this.BajaBTN.Click += new System.EventHandler(this.BajaBTN_Click);
             // 
             // AltaBTN
             // 
@@ -108,6 +110,7 @@ namespace UI
             this.AltaBTN.TabIndex = 4;
             this.AltaBTN.Text = "Alta";
             this.AltaBTN.UseVisualStyleBackColor = true;
+            this.AltaBTN.Click += new System.EventHandler(this.AltaBTN_Click);
             // 
             // SoftwareGB
             // 
@@ -129,6 +132,7 @@ namespace UI
             this.QuitarSoftwareBTN.TabIndex = 5;
             this.QuitarSoftwareBTN.Text = "Quitar Software";
             this.QuitarSoftwareBTN.UseVisualStyleBackColor = true;
+            this.QuitarSoftwareBTN.Click += new System.EventHandler(this.QuitarSoftwareBTN_Click);
             // 
             // SoftwareDGV
             // 
@@ -146,6 +150,7 @@ namespace UI
             this.AgregarSoftwareBTN.TabIndex = 6;
             this.AgregarSoftwareBTN.Text = "Agregar Software";
             this.AgregarSoftwareBTN.UseVisualStyleBackColor = true;
+            this.AgregarSoftwareBTN.Click += new System.EventHandler(this.AgregarSoftwareBTN_Click);
             // 
             // ComponentesGB
             // 
@@ -167,6 +172,7 @@ namespace UI
             this.QuitarComponenteBTN.TabIndex = 5;
             this.QuitarComponenteBTN.Text = "Quitar Componente";
             this.QuitarComponenteBTN.UseVisualStyleBackColor = true;
+            this.QuitarComponenteBTN.Click += new System.EventHandler(this.QuitarComponenteBTN_Click);
             // 
             // ComponenteDGV
             // 
@@ -184,6 +190,7 @@ namespace UI
             this.AgregarComponenteBTN.TabIndex = 6;
             this.AgregarComponenteBTN.Text = "Agregar Componente";
             this.AgregarComponenteBTN.UseVisualStyleBackColor = true;
+            this.AgregarComponenteBTN.Click += new System.EventHandler(this.AgregarComponenteBTN_Click);
             // 
             // ModeloTB
             // 
@@ -250,6 +257,7 @@ namespace UI
             this.GestionarSoftwareBTN.TabIndex = 5;
             this.GestionarSoftwareBTN.Text = "Gestionar Software";
             this.GestionarSoftwareBTN.UseVisualStyleBackColor = true;
+            this.GestionarSoftwareBTN.Click += new System.EventHandler(this.GestionarSoftwareBTN_Click);
             // 
             // ComputadorasDGV
             // 
@@ -267,6 +275,7 @@ namespace UI
             this.GestionarComputadoraBTN.TabIndex = 6;
             this.GestionarComputadoraBTN.Text = "Gestionar Componentes";
             this.GestionarComputadoraBTN.UseVisualStyleBackColor = true;
+            this.GestionarComputadoraBTN.Click += new System.EventHandler(this.GestionarComputadoraBTN_Click);
             // 
             // ComputadoraForm
             // 

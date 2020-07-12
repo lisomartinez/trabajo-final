@@ -34,12 +34,13 @@ namespace UI
             this.PreguntasGB = new System.Windows.Forms.GroupBox();
             this.PreguntasDGV = new System.Windows.Forms.DataGridView();
             this.PreguntaGB = new System.Windows.Forms.GroupBox();
-            this.PreguntaLBL = new System.Windows.Forms.Label();
-            this.RespuestaLBL = new System.Windows.Forms.Label();
-            this.PreguntaTB = new System.Windows.Forms.TextBox();
-            this.RespuestaTB = new System.Windows.Forms.TextBox();
-            this.ResponderBTN = new System.Windows.Forms.Button();
             this.PreguntaNroTB = new System.Windows.Forms.TextBox();
+            this.ResponderBTN = new System.Windows.Forms.Button();
+            this.RespuestaTB = new System.Windows.Forms.TextBox();
+            this.PreguntaTB = new System.Windows.Forms.TextBox();
+            this.RespuestaLBL = new System.Windows.Forms.Label();
+            this.PreguntaLBL = new System.Windows.Forms.Label();
+            this.EnviarCalificacionBTN = new System.Windows.Forms.Button();
             this.PreguntasGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PreguntasDGV)).BeginInit();
             this.PreguntaGB.SuspendLayout();
@@ -60,12 +61,15 @@ namespace UI
             this.PreguntasDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PreguntasDGV.Location = new System.Drawing.Point(7, 20);
             this.PreguntasDGV.Name = "PreguntasDGV";
+            this.PreguntasDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PreguntasDGV.Size = new System.Drawing.Size(587, 513);
             this.PreguntasDGV.TabIndex = 0;
+            this.PreguntasDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PreguntasDGV_CellClick);
             // 
             // PreguntaGB
             // 
             this.PreguntaGB.Controls.Add(this.PreguntaNroTB);
+            this.PreguntaGB.Controls.Add(this.EnviarCalificacionBTN);
             this.PreguntaGB.Controls.Add(this.ResponderBTN);
             this.PreguntaGB.Controls.Add(this.RespuestaTB);
             this.PreguntaGB.Controls.Add(this.PreguntaTB);
@@ -73,19 +77,42 @@ namespace UI
             this.PreguntaGB.Controls.Add(this.PreguntaLBL);
             this.PreguntaGB.Location = new System.Drawing.Point(643, 12);
             this.PreguntaGB.Name = "PreguntaGB";
-            this.PreguntaGB.Size = new System.Drawing.Size(458, 540);
+            this.PreguntaGB.Size = new System.Drawing.Size(458, 571);
             this.PreguntaGB.TabIndex = 1;
             this.PreguntaGB.TabStop = false;
             this.PreguntaGB.Text = "Pregunta";
             // 
-            // PreguntaLBL
+            // PreguntaNroTB
             // 
-            this.PreguntaLBL.AutoSize = true;
-            this.PreguntaLBL.Location = new System.Drawing.Point(25, 32);
-            this.PreguntaLBL.Name = "PreguntaLBL";
-            this.PreguntaLBL.Size = new System.Drawing.Size(53, 13);
-            this.PreguntaLBL.TabIndex = 0;
-            this.PreguntaLBL.Text = "Pregunta:";
+            this.PreguntaNroTB.Location = new System.Drawing.Point(128, 29);
+            this.PreguntaNroTB.Name = "PreguntaNroTB";
+            this.PreguntaNroTB.Size = new System.Drawing.Size(109, 20);
+            this.PreguntaNroTB.TabIndex = 4;
+            // 
+            // ResponderBTN
+            // 
+            this.ResponderBTN.Location = new System.Drawing.Point(128, 414);
+            this.ResponderBTN.Name = "ResponderBTN";
+            this.ResponderBTN.Size = new System.Drawing.Size(312, 63);
+            this.ResponderBTN.TabIndex = 3;
+            this.ResponderBTN.Text = "Responder";
+            this.ResponderBTN.UseVisualStyleBackColor = true;
+            this.ResponderBTN.Click += new System.EventHandler(this.ResponderBTN_Click);
+            // 
+            // RespuestaTB
+            // 
+            this.RespuestaTB.Location = new System.Drawing.Point(128, 330);
+            this.RespuestaTB.Name = "RespuestaTB";
+            this.RespuestaTB.Size = new System.Drawing.Size(312, 20);
+            this.RespuestaTB.TabIndex = 2;
+            // 
+            // PreguntaTB
+            // 
+            this.PreguntaTB.Location = new System.Drawing.Point(128, 66);
+            this.PreguntaTB.Multiline = true;
+            this.PreguntaTB.Name = "PreguntaTB";
+            this.PreguntaTB.Size = new System.Drawing.Size(312, 258);
+            this.PreguntaTB.TabIndex = 1;
             // 
             // RespuestaLBL
             // 
@@ -96,36 +123,24 @@ namespace UI
             this.RespuestaLBL.TabIndex = 0;
             this.RespuestaLBL.Text = "Respuesta:";
             // 
-            // PreguntaTB
+            // PreguntaLBL
             // 
-            this.PreguntaTB.Location = new System.Drawing.Point(128, 66);
-            this.PreguntaTB.Multiline = true;
-            this.PreguntaTB.Name = "PreguntaTB";
-            this.PreguntaTB.Size = new System.Drawing.Size(312, 258);
-            this.PreguntaTB.TabIndex = 1;
+            this.PreguntaLBL.AutoSize = true;
+            this.PreguntaLBL.Location = new System.Drawing.Point(25, 32);
+            this.PreguntaLBL.Name = "PreguntaLBL";
+            this.PreguntaLBL.Size = new System.Drawing.Size(53, 13);
+            this.PreguntaLBL.TabIndex = 0;
+            this.PreguntaLBL.Text = "Pregunta:";
             // 
-            // RespuestaTB
+            // EnviarCalificacionBTN
             // 
-            this.RespuestaTB.Location = new System.Drawing.Point(128, 330);
-            this.RespuestaTB.Name = "RespuestaTB";
-            this.RespuestaTB.Size = new System.Drawing.Size(312, 20);
-            this.RespuestaTB.TabIndex = 2;
-            // 
-            // ResponderBTN
-            // 
-            this.ResponderBTN.Location = new System.Drawing.Point(128, 414);
-            this.ResponderBTN.Name = "ResponderBTN";
-            this.ResponderBTN.Size = new System.Drawing.Size(312, 63);
-            this.ResponderBTN.TabIndex = 3;
-            this.ResponderBTN.Text = "Responder";
-            this.ResponderBTN.UseVisualStyleBackColor = true;
-            // 
-            // PreguntaNroTB
-            // 
-            this.PreguntaNroTB.Location = new System.Drawing.Point(128, 29);
-            this.PreguntaNroTB.Name = "PreguntaNroTB";
-            this.PreguntaNroTB.Size = new System.Drawing.Size(109, 20);
-            this.PreguntaNroTB.TabIndex = 4;
+            this.EnviarCalificacionBTN.Location = new System.Drawing.Point(28, 502);
+            this.EnviarCalificacionBTN.Name = "EnviarCalificacionBTN";
+            this.EnviarCalificacionBTN.Size = new System.Drawing.Size(412, 63);
+            this.EnviarCalificacionBTN.TabIndex = 3;
+            this.EnviarCalificacionBTN.Text = "Enviar Calificación";
+            this.EnviarCalificacionBTN.UseVisualStyleBackColor = true;
+            this.EnviarCalificacionBTN.Click += new System.EventHandler(this.EnviarCalificacionBTN_Click);
             // 
             // CompletarEncuestaForm
             // 
@@ -156,5 +171,6 @@ namespace UI
         private System.Windows.Forms.TextBox PreguntaTB;
         private System.Windows.Forms.Label RespuestaLBL;
         private System.Windows.Forms.TextBox PreguntaNroTB;
+        private System.Windows.Forms.Button EnviarCalificacionBTN;
     }
 }

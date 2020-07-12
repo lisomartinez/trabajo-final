@@ -9,6 +9,7 @@ namespace Entidades
         public int TiempoMedioInicioFinalizacion { get; set; }
 
         public DateTime Fecha { get; set; }
+        public decimal CalificacionPromedioTipoProblema { get; set; }
 
         public EstadisticaTecnico(int tiempoMedioDuracion, int tiempoMedioDeInicio, int tiempoMedioInicioFinalizacion)
         {

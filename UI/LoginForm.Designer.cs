@@ -62,6 +62,7 @@ namespace UI
             this.LegajoTB.Name = "LegajoTB";
             this.LegajoTB.Size = new System.Drawing.Size(228, 20);
             this.LegajoTB.TabIndex = 2;
+            this.LegajoTB.Leave += new System.EventHandler(this.LegajoTB_Leave);
             // 
             // PasswordTB
             // 
@@ -78,6 +79,7 @@ namespace UI
             this.IngresarBTN.TabIndex = 3;
             this.IngresarBTN.Text = "Ingresar!";
             this.IngresarBTN.UseVisualStyleBackColor = true;
+            this.IngresarBTN.Click += new System.EventHandler(this.IngresarBTN_Click);
             // 
             // LoginForm
             // 

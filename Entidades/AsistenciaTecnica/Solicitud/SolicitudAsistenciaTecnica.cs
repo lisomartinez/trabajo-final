@@ -14,14 +14,14 @@
 
         public SolicitudAsistenciaTecnica(Usuario usuario, string descripcion, TipoProblema tipoProblema) : base(Entidades.Id.Empty)
         {
-            this.Usuario = usuario;
+            Usuario = usuario;
             Descripcion = descripcion;
             TipoProblema = tipoProblema;
         }
 
         public SolicitudAsistenciaTecnica(Usuario usuario, string descripcion, TipoProblema tipoProblema, Turno turno) : base(Entidades.Id.Empty)
         {
-            this.Usuario = usuario;
+            Usuario = usuario;
             Descripcion = descripcion;
             TipoProblema = tipoProblema;
             Turno = turno;
@@ -29,14 +29,14 @@
 
         public SolicitudAsistenciaTecnica(NumeroSolicitud id, Usuario usuario, string descripcion, TipoProblema tipoProblema) : base(id)
         {
-            this.Usuario = usuario;
+            Usuario = usuario;
             Descripcion = descripcion;
             TipoProblema = tipoProblema;
         }
 
         public SolicitudAsistenciaTecnica(NumeroSolicitud id, Usuario usuario, string descripcion, TipoProblema tipoProblema, Turno turno) : base(id)
         {
-            this.Usuario = usuario;
+            Usuario = usuario;
             Descripcion = descripcion;
             TipoProblema = tipoProblema;
             Turno = turno;
@@ -50,7 +50,7 @@
 
         public AsistenciaTecnica CrearAsistencia()
         {
-            throw new System.NotImplementedException();
+            return new AsistenciaTecnica(new CodigoAsistencia(Id.AsInt()), Turno.Inicio, Usuario, Turno.Tecnico, TipoProblema, Descripcion);
         }
     }
 }

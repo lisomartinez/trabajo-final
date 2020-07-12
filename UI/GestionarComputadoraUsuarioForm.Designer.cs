@@ -136,6 +136,7 @@
             this.DesasignarBTN.TabIndex = 0;
             this.DesasignarBTN.Text = "Desasignar";
             this.DesasignarBTN.UseVisualStyleBackColor = true;
+            this.DesasignarBTN.Click += new System.EventHandler(this.DesasignarBTN_Click);
             // 
             // AsignarBTN
             // 
@@ -145,6 +146,7 @@
             this.AsignarBTN.TabIndex = 0;
             this.AsignarBTN.Text = "Asignar";
             this.AsignarBTN.UseVisualStyleBackColor = true;
+            this.AsignarBTN.Click += new System.EventHandler(this.AsignarBTN_Click);
             // 
             // GestionarComputadoraUsuarioForm
             // 

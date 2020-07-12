@@ -8,8 +8,13 @@ namespace Repositorios
 {
     public class TipoProblemaRepositorio : SqlRepositorio<TipoProblema>
     {
-        public const string ID = "@Id";
+        public const string CODIGO = "@Codigo";
         public const string NOMBRE = "@Nombre";
+        private const string GuardarTipoProblema = "GuardarTipoProblema";
+        private const string ActualizarTipoProblema = "ActualizarTipoProblema";
+        private const string ObtenerTipoProblemaPorId = "ObtenerTipoProblemaPorId";
+        private const string ObtenerTodosTipoProblema = "ObtenerTodosTipoProblema";
+        private const string EliminarTipoProblemaPorId = "EliminarTipoProblemaPorId";
 
         public TipoProblemaRepositorio(AccesoADatos accesoADatos) : base(accesoADatos)
         {
@@ -17,7 +22,7 @@ namespace Repositorios
 
         public override TipoProblema Guardar(TipoProblema entidad)
         {
-            var id = _accesoADatos.Escribir("GuardarTipoProblema", ParametroDesde(entidad));
+            var id = _accesoADatos.Escribir(GuardarTipoProblema, ParametroDesde(entidad));
             entidad.Id = new TipoProblemaId(id);
             return entidad;
         }
@@ -26,20 +31,20 @@ namespace Repositorios
         {
             return new Dictionary<string, object>
             {
-                {ID, entidad.Id.AsInt()},
+                {CODIGO, entidad.Id.AsInt()},
                 {NOMBRE, entidad.Nombre}
             };
         }
 
         public override void Actualizar(TipoProblema entidad)
         {
-            _accesoADatos.Escribir("ActualizarTipoProblema", ParametroDesde(entidad));
+            _accesoADatos.Escribir(ActualizarTipoProblema, ParametroDesde(entidad));
 
         }
 
         public override TipoProblema Obtener(Id id)
         {
-            return _accesoADatos.Leer("ObtenerTipoProblemaPorId", ParametroId(id))
+            return _accesoADatos.Leer(ObtenerTipoProblemaPorId, ParametroId(id))
                 .AsEnumerable()
                 .Select(ToTipoProblema)
                 .ToList()[0];
@@ -48,8 +53,8 @@ namespace Repositorios
         private TipoProblema ToTipoProblema(DataRow fila)
         {
             return new TipoProblema(
-                id: new TipoProblemaId( fila["id"] as int? ?? 0),
-                nombre: fila["nombre"] as string
+                id: new TipoProblemaId( fila["Codigo"] as int? ?? 0),
+                nombre: fila["Nombre"] as string
                 );
         }
 
@@ -57,13 +62,13 @@ namespace Repositorios
         {
             return new Dictionary<string, object>
             {
-                {ID, id.AsInt() }
+                {CODIGO, id.AsInt() }
             };
         }
 
         public override List<TipoProblema> ObtenerTodos()
         {
-            return _accesoADatos.Leer("ObtenerTodosTipoProblema", null)
+            return _accesoADatos.Leer(ObtenerTodosTipoProblema, null)
                 .AsEnumerable()
                 .Select(ToTipoProblema)
                 .ToList();
@@ -71,7 +76,7 @@ namespace Repositorios
 
         public override void Eliminar(Id id)
         {
-            _accesoADatos.Escribir("EliminarTipoProblemaPorId", ParametroId(id));
+            _accesoADatos.Escribir(EliminarTipoProblemaPorId, ParametroId(id));
         }
     }
 }

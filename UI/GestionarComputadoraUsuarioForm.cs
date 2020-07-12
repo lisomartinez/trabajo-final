@@ -63,5 +63,15 @@ namespace UI
             get => ApellidoTB.Text;
             set => ApellidoTB.Text = value;
         }
+
+        private void AsignarBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.AsignarComputadora();
+        }
+
+        private void DesasignarBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.DesasignarComputadora();
+        }
     }
 }

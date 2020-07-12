@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Controladores;
 using Modelo;
 
 namespace Vistas
@@ -8,6 +7,8 @@ namespace Vistas
     public interface IOrdenDeCompraVista
     {
         void MostrarExcepcion(Exception exception);
-        List<ProveedorModelo> Proveedores { get; set; }
+        List<ProveedorPrecioModelo> Proveedores { get; set; }
+        ProveedorModelo ProveedorSeleccionado { get; set; }
+        decimal Precio { get; set; }
     }
 }

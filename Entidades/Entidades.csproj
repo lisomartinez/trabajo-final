@@ -48,6 +48,8 @@
     <Compile Include="AsistenciaTecnica\Solicitud\NumeroSolicitud.cs" />
     <Compile Include="AsistenciaTecnica\Calificacion.cs" />
     <Compile Include="AsistenciaTecnica\Solicitud\TurnoId.cs" />
+    <Compile Include="ColaTurnos\ColaTurnoId.cs" />
+    <Compile Include="ColaTurnos\ColaTurnos.cs" />
     <Compile Include="Computadora\CodigoEspecificacionTecnica.cs" />
     <Compile Include="Computadora\CodigoSoftware.cs" />
     <Compile Include="Encuesta\CodigoEncuesta.cs" />
@@ -58,7 +60,9 @@
     <Compile Include="Computadora\NumeroDeSerie.cs" />
     <Compile Include="Encuesta\Encuesta.cs" />
     <Compile Include="Encuesta\Pregunta.cs" />
+    <Compile Include="ColaTurnos\EntradaCola.cs" />
     <Compile Include="Estadisticas\EstadisticaFallas.cs" />
+    <Compile Include="Estadisticas\EstadisticasAsistenciaId.cs" />
     <Compile Include="Estadisticas\EstadisticasAsistenciasTecnicas.cs" />
     <Compile Include="Estadisticas\EstadisticaTecnico.cs" />
     <Compile Include="Proveedor\CUIT.cs" />
@@ -74,6 +78,8 @@
     <Compile Include="AsistenciaTecnica\TipoProblema.cs" />
     <Compile Include="AsistenciaTecnica\TipoProblemaId.cs" />
     <Compile Include="AsistenciaTecnica\Solicitud\Turno.cs" />
+    <Compile Include="Usuario\Jerarquia.cs" />
+    <Compile Include="Usuario\JerarquiId.cs" />
     <Compile Include="Usuario\Legajo.cs" />
     <Compile Include="Usuario\Usuario.cs" />
     <Compile Include="Usuario\Rol.cs" />

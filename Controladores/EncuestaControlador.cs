@@ -14,7 +14,13 @@ namespace Controladores
         private IEncuestaVista _vista;
         private EncuestaServicio _servicio;
 
-        public void ObtenerEncuestas()
+        public EncuestaControlador(IEncuestaVista vista)
+        {
+            _vista = vista;
+            _servicio = new EncuestaServicio();
+        }
+
+        public void MostrarEncuestas()
         {
             try
             {
@@ -33,12 +39,12 @@ namespace Controladores
             try
             {
                 if (Sesion.Instance.Rol != Rol.JEFE) return;
-
                 var seleccionada = _vista.EncuestaSeleccionada;
                 _vista.Codigo = seleccionada.Codigo;
                 _vista.FechaCreacion = seleccionada.FechaCreacion;
                 _vista.Vigente = seleccionada.Vigente;
-                _vista.Preguntas = seleccionada.Preguntas;
+                _vista.Preguntas = _servicio.ObtenerPreguntasDeEncuesta(seleccionada.ToEntity())
+                    .Select(PreguntaModelo.From).ToList();
 
             }
             catch (Exception e)

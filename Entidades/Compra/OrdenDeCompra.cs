@@ -13,8 +13,15 @@
         public OrdenDeCompra(CodigoOrdenDeCompra codigo, Proveedor proveedor, AsistenciaTecnica asistenciaTecnica, Componente componente, Precio precio) : base(codigo)
         {
             Proveedor = proveedor;
-            Codigo = codigo;
             AsistenciaTecnica = asistenciaTecnica;
+            Componente = componente;
+            Precio = precio;
+        }
+
+        public OrdenDeCompra(Proveedor proveedor, AsistenciaTecnica asistencia, Componente componente, Precio precio) : base(Id.Empty)
+        {
+            Proveedor = proveedor;
+            AsistenciaTecnica = asistencia;
             Componente = componente;
             Precio = precio;
         }

@@ -1,4 +1,6 @@
-﻿namespace Entidades
+﻿using Entidades;
+
+namespace Controladores
 
 {
     public class Sesion

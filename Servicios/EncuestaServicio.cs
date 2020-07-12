@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using AccesoDatos;
-using Controladores;
 using Entidades;
 using Repositorios;
 
@@ -40,9 +39,14 @@ namespace Servicios
             return _repositorio.ObtenerMasReciente();
         }
 
-        public int Calificar(List<Calificacion> calificaciones)
+        public int ObtenerCalificacionFinal(List<Calificacion> calificaciones)
         {
             throw new System.NotImplementedException();
+        }
+
+        public List<Pregunta> ObtenerPreguntasDeEncuesta(Encuesta encuesta)
+        {
+            return _repositorio.ObtenerPreguntasDeEncuesta(encuesta);
         }
     }
 }

@@ -39,21 +39,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAgregarComponenteAListaDePrecios.cs" />
     <Compile Include="IAsistenciaTecnicaVista.cs" />
     <Compile Include="ICompletarEncuestaVista.cs" />
     <Compile Include="IComponenteVista.cs" />
     <Compile Include="IComputadoraVista.cs" />
     <Compile Include="IEncuestaVista.cs" />
+    <Compile Include="IEstadoAsistenciaVista.cs" />
     <Compile Include="IGestionarComputadoraUsuarioVista.cs" />
     <Compile Include="IListaDePreciosVista.cs" />
     <Compile Include="ILoginVista.cs" />
     <Compile Include="IOrdenDeCompraVista.cs" />
+    <Compile Include="IPrincipalVista.cs" />
     <Compile Include="IProveedoresVista.cs" />
     <Compile Include="IReporteAsistenciaTecnicaVista.cs" />
     <Compile Include="IReporteFallasHardwareVista.cs" />
     <Compile Include="ISoftwareVista.cs" />
     <Compile Include="ISolicitudAsistenciaVista.cs" />
     <Compile Include="ITecnicoVista.cs" />
+    <Compile Include="ITipoProblemaVista.cs" />
     <Compile Include="IUsuarioVista.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IReemplazoComponenteVista.cs" />

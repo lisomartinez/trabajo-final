@@ -8,20 +8,21 @@ namespace Servicios
     public class ComprasServicio
     {
         private ComprasRepositorio _repositorio;
+        private ProveedoresRepositorio _proveedoresRepositorio;
 
         public ComprasServicio()
         {
             _repositorio = new ComprasRepositorio(AccesoADatos.Instance);
         }
 
-        public List<Proveedor> ObtenerProveedoresVendiendoComponente(Componente componente)
+        public Dictionary<Proveedor, Precio> ObtenerProveedoresVendiendoComponente(Componente componente)
         {
-            throw new System.NotImplementedException();
+            return _proveedoresRepositorio.ObtenerPorComponente(componente.NumeroDeSerie);
         }
 
-        public void GenerarOrdenDeCompra(Componente componente)
+        public void GenerarOrdenDeCompra(OrdenDeCompra ordenDeCompra)
         {
-            throw new System.NotImplementedException();
+            _repositorio.Guardar(ordenDeCompra);
         }
     }
 }

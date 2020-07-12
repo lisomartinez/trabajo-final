@@ -16,5 +16,6 @@ namespace Vistas
         string PreguntaTexto { get; set; }
         int PreguntaNro { get; set; }
         int Respuesta { get; set; }
+        bool Completada { get; set; }
     }
 }

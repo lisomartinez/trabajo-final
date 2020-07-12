@@ -156,5 +156,15 @@ namespace Controladores
                 _vista.MostrarExcepcion(e);
             }
         }
+
+        public void GestionarComponentes()
+        {
+            _vista.MostrarComponentesForm(null);
+        }
+
+        public void GestionarSoftwares()
+        {
+            _vista.MostrarGestionarSoftwareForm(null);
+        }
     }
 }

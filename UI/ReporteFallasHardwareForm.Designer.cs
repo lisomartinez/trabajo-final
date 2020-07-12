@@ -28,96 +28,146 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.EstadisticasGB = new System.Windows.Forms.GroupBox();
+            this.MayorFallasLBL = new System.Windows.Forms.Label();
+            this.TasaFallasPorLegajoLBL = new System.Windows.Forms.Label();
+            this.TotalAcumuladoMensualLBL = new System.Windows.Forms.Label();
+            this.CostoPromedioLBL = new System.Windows.Forms.Label();
+            this.TasaFallasLBL = new System.Windows.Forms.Label();
+            this.TasaFallasTB = new System.Windows.Forms.TextBox();
+            this.TasaFallasPorLegajoTB = new System.Windows.Forms.TextBox();
+            this.CostoPromedioTB = new System.Windows.Forms.TextBox();
+            this.MayorFallasTB = new System.Windows.Forms.TextBox();
+            this.TotalAcumuladoMensualTB = new System.Windows.Forms.TextBox();
+            this.EstadisticasGB.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // EstadisticasGB
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(272, 232);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.EstadisticasGB.Controls.Add(this.TotalAcumuladoMensualTB);
+            this.EstadisticasGB.Controls.Add(this.MayorFallasTB);
+            this.EstadisticasGB.Controls.Add(this.CostoPromedioTB);
+            this.EstadisticasGB.Controls.Add(this.TasaFallasPorLegajoTB);
+            this.EstadisticasGB.Controls.Add(this.TasaFallasTB);
+            this.EstadisticasGB.Controls.Add(this.MayorFallasLBL);
+            this.EstadisticasGB.Controls.Add(this.TasaFallasPorLegajoLBL);
+            this.EstadisticasGB.Controls.Add(this.TotalAcumuladoMensualLBL);
+            this.EstadisticasGB.Controls.Add(this.CostoPromedioLBL);
+            this.EstadisticasGB.Controls.Add(this.TasaFallasLBL);
+            this.EstadisticasGB.Location = new System.Drawing.Point(13, 13);
+            this.EstadisticasGB.Name = "EstadisticasGB";
+            this.EstadisticasGB.Size = new System.Drawing.Size(253, 201);
+            this.EstadisticasGB.TabIndex = 0;
+            this.EstadisticasGB.TabStop = false;
+            this.EstadisticasGB.Text = "Estadísticas:";
             // 
-            // label2
+            // MayorFallasLBL
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Componente que más falla";
+            this.MayorFallasLBL.AutoSize = true;
+            this.MayorFallasLBL.Location = new System.Drawing.Point(43, 132);
+            this.MayorFallasLBL.Name = "MayorFallasLBL";
+            this.MayorFallasLBL.Size = new System.Drawing.Size(132, 13);
+            this.MayorFallasLBL.TabIndex = 0;
+            this.MayorFallasLBL.Text = "Componente que más falla";
             // 
-            // label5
+            // TasaFallasPorLegajoLBL
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Tasa de Fallas por Legajo";
+            this.TasaFallasPorLegajoLBL.AutoSize = true;
+            this.TasaFallasPorLegajoLBL.Location = new System.Drawing.Point(43, 64);
+            this.TasaFallasPorLegajoLBL.Name = "TasaFallasPorLegajoLBL";
+            this.TasaFallasPorLegajoLBL.Size = new System.Drawing.Size(129, 13);
+            this.TasaFallasPorLegajoLBL.TabIndex = 0;
+            this.TasaFallasPorLegajoLBL.Text = "Tasa de Fallas por Legajo";
             // 
-            // label4
+            // TotalAcumuladoMensualLBL
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 183);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Costo Total Acumulado (Mensual)";
+            this.TotalAcumuladoMensualLBL.AutoSize = true;
+            this.TotalAcumuladoMensualLBL.Location = new System.Drawing.Point(9, 167);
+            this.TotalAcumuladoMensualLBL.Name = "TotalAcumuladoMensualLBL";
+            this.TotalAcumuladoMensualLBL.Size = new System.Drawing.Size(166, 13);
+            this.TotalAcumuladoMensualLBL.TabIndex = 0;
+            this.TotalAcumuladoMensualLBL.Text = "Costo Total Acumulado (Mensual)";
             // 
-            // label3
+            // CostoPromedioLBL
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Costo Promedio Del Reemplazo";
+            this.CostoPromedioLBL.AutoSize = true;
+            this.CostoPromedioLBL.Location = new System.Drawing.Point(19, 100);
+            this.CostoPromedioLBL.Name = "CostoPromedioLBL";
+            this.CostoPromedioLBL.Size = new System.Drawing.Size(156, 13);
+            this.CostoPromedioLBL.TabIndex = 0;
+            this.CostoPromedioLBL.Text = "Costo Promedio Del Reemplazo";
             // 
-            // label1
+            // TasaFallasLBL
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tasa de fallas promedio";
+            this.TasaFallasLBL.AutoSize = true;
+            this.TasaFallasLBL.Location = new System.Drawing.Point(53, 28);
+            this.TasaFallasLBL.Name = "TasaFallasLBL";
+            this.TasaFallasLBL.Size = new System.Drawing.Size(119, 13);
+            this.TasaFallasLBL.TabIndex = 0;
+            this.TasaFallasLBL.Text = "Tasa de fallas promedio";
+            // 
+            // TasaFallasTB
+            // 
+            this.TasaFallasTB.Location = new System.Drawing.Point(181, 21);
+            this.TasaFallasTB.Name = "TasaFallasTB";
+            this.TasaFallasTB.Size = new System.Drawing.Size(56, 20);
+            this.TasaFallasTB.TabIndex = 1;
+            // 
+            // TasaFallasPorLegajoTB
+            // 
+            this.TasaFallasPorLegajoTB.Location = new System.Drawing.Point(181, 57);
+            this.TasaFallasPorLegajoTB.Name = "TasaFallasPorLegajoTB";
+            this.TasaFallasPorLegajoTB.Size = new System.Drawing.Size(56, 20);
+            this.TasaFallasPorLegajoTB.TabIndex = 1;
+            // 
+            // CostoPromedioTB
+            // 
+            this.CostoPromedioTB.Location = new System.Drawing.Point(181, 93);
+            this.CostoPromedioTB.Name = "CostoPromedioTB";
+            this.CostoPromedioTB.Size = new System.Drawing.Size(56, 20);
+            this.CostoPromedioTB.TabIndex = 1;
+            // 
+            // MayorFallasTB
+            // 
+            this.MayorFallasTB.Location = new System.Drawing.Point(181, 125);
+            this.MayorFallasTB.Name = "MayorFallasTB";
+            this.MayorFallasTB.Size = new System.Drawing.Size(56, 20);
+            this.MayorFallasTB.TabIndex = 1;
+            // 
+            // TotalAcumuladoMensualTB
+            // 
+            this.TotalAcumuladoMensualTB.Location = new System.Drawing.Point(181, 160);
+            this.TotalAcumuladoMensualTB.Name = "TotalAcumuladoMensualTB";
+            this.TotalAcumuladoMensualTB.Size = new System.Drawing.Size(56, 20);
+            this.TotalAcumuladoMensualTB.TabIndex = 1;
             // 
             // ReporteFallasHardwareForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 306);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(277, 218);
+            this.Controls.Add(this.EstadisticasGB);
             this.Name = "ReporteFallasHardwareForm";
             this.Text = "ReporteFallasHardwareForm";
             this.Load += new System.EventHandler(this.ReporteFallasHardwareForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.EstadisticasGB.ResumeLayout(false);
+            this.EstadisticasGB.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox EstadisticasGB;
+        private System.Windows.Forms.Label MayorFallasLBL;
+        private System.Windows.Forms.Label TasaFallasPorLegajoLBL;
+        private System.Windows.Forms.Label TotalAcumuladoMensualLBL;
+        private System.Windows.Forms.Label CostoPromedioLBL;
+        private System.Windows.Forms.Label TasaFallasLBL;
+        private System.Windows.Forms.TextBox TotalAcumuladoMensualTB;
+        private System.Windows.Forms.TextBox MayorFallasTB;
+        private System.Windows.Forms.TextBox CostoPromedioTB;
+        private System.Windows.Forms.TextBox TasaFallasPorLegajoTB;
+        private System.Windows.Forms.TextBox TasaFallasTB;
     }
 }

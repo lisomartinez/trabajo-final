@@ -35,5 +35,15 @@ namespace UI
             get => PasswordTB.Text;
             set => PasswordTB.Text = value;
         }
+
+        private void IngresarBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.Logearse();
+        }
+
+        private void LegajoTB_Leave(object sender, EventArgs e)
+        {
+            _controlador.ValidarFormatoLegajo();
+        }
     }
 }

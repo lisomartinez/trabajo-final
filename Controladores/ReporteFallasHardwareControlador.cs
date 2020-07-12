@@ -10,11 +10,11 @@ namespace Controladores
         private IReporteFallasHardwareVista _vista;
         private EstadisticasAsistenciaTecnicaServicio _servicio;
 
-        public ReporteFallasHardwareControlador(IReporteFallasHardwareVista vista,
-            EstadisticasAsistenciaTecnicaServicio servicio)
+
+        public ReporteFallasHardwareControlador(IReporteFallasHardwareVista vista)
         {
             _vista = vista;
-            _servicio = servicio;
+            _servicio = new EstadisticasAsistenciaTecnicaServicio();
         }
 
         public void MostrarEstadisticas()
@@ -26,12 +26,12 @@ namespace Controladores
                 _vista.TasaFallasPromedio = estadisticas.TasaFallasPromedio;
                 _vista.TasaFallasPorUsuario = estadisticas.TasaFallasPorUsuario;
                 _vista.ComponenteMasFallas = estadisticas.ComponenteMasFallas;
+                _vista.CostoMensual = estadisticas.CostoMensualAcumulado;
 
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                _vista.MostrarExcepcion(e);
             }
         }
     }

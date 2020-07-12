@@ -42,18 +42,20 @@ namespace Servicios
 
         public void EliminarComponenteDeComputadora(Computadora computadora, Componente componente)
         {
-            throw new NotImplementedException();
+            computadora.Componentes.Remove(componente);
+            _repositorio.Actualizar(computadora);
         }
 
         public void EliminarSoftwareDeComputadora(Computadora computadora, Software software)
         {
-            throw new NotImplementedException();
+            computadora.Software.Remove(software);
+            _repositorio.Actualizar(computadora);
         }
 
         public List<Computadora> ObtenerComputadorasSinAsignar()
         {
 
-            throw new NotImplementedException();
+            return _repositorio.ObtenerSinAsignar();
 
         }
     }

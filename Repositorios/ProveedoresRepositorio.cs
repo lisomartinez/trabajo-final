@@ -55,11 +55,11 @@ namespace Repositorios
         private Proveedor ToProveedor(DataRow fila)
         {
             return new Proveedor(
-                cuit: new CUIT(fila["cuit"] as int? ?? 0),
-                razonSoncial: fila["razonSocial"] as string,
-                direccion: fila["direccion"] as string,
-                email: fila["email"] as string,
-                telefono: fila["telefono"] as string
+                cuit: new CUIT(fila["Cuit"] as int? ?? 0),
+                razonSoncial: fila["RazonSocial"] as string,
+                direccion: fila["Direccion"] as string,
+                email: fila["Email"] as string,
+                telefono: fila["Telefono"] as string
             );
         }
 
@@ -82,6 +82,84 @@ namespace Repositorios
         public override void Eliminar(Id id)
         {
             _accesoADatos.Escribir("EliminarProveedorPorId", ParametroId(id));
+        }
+
+        public Dictionary<Proveedor, Precio> ObtenerPorComponente(NumeroDeSerie nroSerie)
+        {
+            return _accesoADatos.Leer("ObtenerPorComponente", ParametroNroSerie(nroSerie))
+                .AsEnumerable()
+                .Select(ToProveedorPrecio)
+                .ToDictionary(k => k.Key, v => v.Value);
+
+        }
+
+        private KeyValuePair<Proveedor, Precio> ToProveedorPrecio(DataRow fila)
+        {
+            return new KeyValuePair<Proveedor, Precio>(ToProveedor(fila), ToPrecio(fila));
+        }
+
+        private Precio ToPrecio(DataRow fila)
+        {
+            return new Precio(fila["Precio"] as decimal? ?? 0);
+        }
+
+        private Dictionary<string, object> ParametroNroSerie(NumeroDeSerie nroSerie)
+        {
+            return new Dictionary<string, object>
+            {
+                {"@NumeroDeSerie", nroSerie.AsInt() }
+            };
+        }
+
+        public void ActualizarPrecio(Proveedor proveedor, NumeroDeSerie numeroDeSerie, Precio precio)
+        {
+            _accesoADatos.Escribir("ActualizarListaDePrecios",
+                ParametrosAgregarComponente(proveedor, numeroDeSerie, precio));
+        }
+
+        public void AgregarComponenteAListaDePrecios(Proveedor proveedor, NumeroDeSerie numeroDeSerie, Precio precio)
+        {
+            _accesoADatos.Escribir("AgregarComponenteAListaDePrecios",
+                ParametrosAgregarComponente(proveedor, numeroDeSerie, precio));
+        }
+
+        private Dictionary<string, object> ParametrosAgregarComponente(Proveedor proveedor, NumeroDeSerie numeroDeSerie, Precio precio)
+        {
+            return new Dictionary<string, object>
+            {
+                {"@Cuit", proveedor.CUIT.AsInt() },
+                {"@NumeroDeSerie", numeroDeSerie.AsInt() },
+                {"@Precio", precio.Valor }
+            };
+        }
+
+
+        public void EliminarComponenteDeListaDePrecios(Proveedor proveedor, NumeroDeSerie numeroDeSerie)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Dictionary<Componente, Precio> ObtenerListaPrecios(CUIT cuit)
+        {
+            return _accesoADatos.Leer("ObtenerListaPrecios", ParametroId(cuit))
+                .AsEnumerable()
+                .Select(ToComponentProveedor)
+                .ToDictionary(cp => cp.Key, cp => cp.Value);
+        }
+
+        private KeyValuePair<Componente, Precio> ToComponentProveedor(DataRow fila)
+        {
+            return new KeyValuePair<Componente, Precio>(ToComponente(fila), ToPrecio(fila));
+        }
+
+        private Componente ToComponente(DataRow fila)
+        {
+            return new Componente(
+                numeroDeSerie: new NumeroDeSerie(fila["NumeroDeSerie"] as int? ?? 0),
+                marca: fila["Marca"] as string,
+                modelo: fila["Modelo"] as string,
+                especificacionTecnicas: new List<EspecificacionTecnica>()
+            );
         }
     }
 }

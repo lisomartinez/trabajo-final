@@ -4,7 +4,7 @@ namespace Entidades
 {
     public class Proveedor : Entidad
     {
-        public CUIT CUIT { get; }
+        public CUIT CUIT => Id as CUIT;
         public string RazonSoncial { get; }
         public string Direccion { get; }
         public string Email { get; }
@@ -19,7 +19,6 @@ namespace Entidades
         public Proveedor(CUIT cuit, string razonSoncial, string direccion, string email, string telefono,
             Dictionary<NumeroDeSerie, Componente> componentes) : base(cuit)
         {
-            CUIT = cuit;
             RazonSoncial = razonSoncial;
             Direccion = direccion;
             Email = email;
@@ -29,7 +28,6 @@ namespace Entidades
 
         public Proveedor(CUIT cuit, string razonSoncial, string direccion, string email, string telefono) : base(cuit)
         {
-            CUIT = cuit;
             RazonSoncial = razonSoncial;
             Direccion = direccion;
             Email = email;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Controladores.Validadores;
 using Entidades;
 using Modelo;
 using Servicios;
@@ -56,14 +57,16 @@ namespace Controladores
                 if (Sesion.Instance.Rol != Rol.JEFE) return;
                 ValidarCampos();
 
-                var cuit = new CUIT(_vista.Cuit);
-                var proveedor = new Proveedor(
-                    cuit: cuit, 
-                    razonSoncial: _vista.RazonSocial,
+                var proveedor = new ProveedorModelo(
+                    cuit: _vista.Cuit, 
+                    razonSocial: _vista.RazonSocial,
                     direccion: _vista.Direccion,
                     email: _vista.Email,
                     telefono: _vista.Telefono);
-                _servicio.AltaProveedor(proveedor);
+                _servicio.AltaProveedor(proveedor.ToEntity());
+                _vista.Proveedores = _vista.Proveedores
+                    .Append(proveedor)
+                    .ToList();
             }
             catch (Exception e)
             {
@@ -84,6 +87,10 @@ namespace Controladores
                 seleccionado.Direccion = _vista.Direccion;
                 seleccionado.Telefono = _vista.Telefono;
                 _servicio.ModificarProveedor(seleccionado.ToEntity());
+                _vista.Proveedores = _vista.Proveedores
+                    .Where(p => p.CUIT != seleccionado.CUIT)
+                    .Append(seleccionado)
+                    .ToList();
             }
             catch (Exception e)
             {
@@ -93,7 +100,16 @@ namespace Controladores
 
         private void ValidarCampos()
         {
-            throw new NotImplementedException();
+            try
+            {
+                var id = _vista.Cuit;
+                if (!Validador.ValidarId(id)) throw new ArgumentException("");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         public void EliminarProveedor()
@@ -101,8 +117,16 @@ namespace Controladores
             try
             {
                 if (Sesion.Instance.Rol != Rol.JEFE) return;
-                var seleccionado = new CUIT(_vista.Cuit);
-                _servicio.BajaProveedor(seleccionado);
+                var seleccionado = _vista.ProveedorSeleccionado;
+                _servicio.BajaProveedor(seleccionado.ToEntity().CUIT);
+                _vista.Proveedores = _vista.Proveedores
+                    .Where(p => p.CUIT != seleccionado.CUIT)
+                    .ToList();
+                _vista.Cuit = 0;
+                _vista.Email = "";
+                _vista.RazonSocial = "";
+                _vista.Telefono = "";
+                _vista.Direccion = "";
             }
             catch (Exception e)
             {
@@ -112,7 +136,7 @@ namespace Controladores
 
         public void GestionarListaDePrecios()
         {
-            throw new NotImplementedException();
+            _vista.MostrarListaPreciosForm(_vista.ProveedorSeleccionado);
         }
     }
 }

@@ -7,17 +7,23 @@ namespace Vistas
     public interface IReporteAsistenciaTecnicaVista
     {
         void MostrarExcepcion(Exception exception);
-        int TiempoMedioDuracion { get; set; }
-        int TiempoMedioDeInicio { get; set; }
-        int TiempoMedioInicioFinalizacion { get; set; }
-        List<UsuarioModelo> Tecnicos { get; set; }
-        UsuarioModelo TecnicoSeleccionado { get; set; }
+        decimal TiempoMedioDuracion { get; set; }
+        decimal TiempoMedioDeInicio { get; set; }
+        decimal TiempoMedioInicioFinalizacion { get; set; }
+        List<TecnicoModelo> Tecnicos { get; set; }
+        TecnicoModelo TecnicoSeleccionado { get; set; }
         decimal CalificacionPromedio { get; set; }
-        int TiempoMedioDuracionTecnico { get; set; }
-        int TiempoMedioDeInicioTecnico { get; set; }
-        int TiempoMedioInicioFinalizacionTecnico { get; set; }
-        int DesviacionDuracionTecnico { get; set; }
-        int DesviacionInicioTecnico { get; set; }
-        int DesviacionInicioFinalizacion { get; set; }
+        decimal TiempoMedioDuracionTecnico { get; set; }
+        decimal TiempoMedioDeInicioTecnico { get; set; }
+        decimal TiempoMedioInicioFinalizacionTecnico { get; set; }
+        decimal DesviacionDuracionTecnico { get; set; }
+        decimal DesviacionInicioTecnico { get; set; }
+        decimal DesviacionInicioFinalizacion { get; set; }
+        List<TipoProblemaModelo> TipoProblemas { get; set; }
+        TipoProblemaModelo TipoProblemaSeleccionado { get; set; }
+        decimal CalificacionPromedioTecnico { get; set; }
+        decimal DesviacionCalificacionPromedioTecnico { get; set; }
+        decimal CalificacionPromedioTecnicoTotal { get; set; }
+        decimal DesviacionCalificacionPromedioTecnicoTotal { get; set; }
     }
 }

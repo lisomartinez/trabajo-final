@@ -14,9 +14,14 @@ namespace Repositorios
         private const string NOMBRE = "@Nombre";
         private const string APELLIDO = "@Apellido";
         private const string PASSWORD = "@Password";
-        private const string EMAIL = "@EMAIL";
-        private const string COMPUTADORA = "@COMPUTADORA";
-        private const string ROL = "@ROL";
+        private const string EMAIL = "@Email";
+        private const string COMPUTADORA = "@ComputadoraId";
+        private const string ROL = "@Rol";
+        private const string GuardarUsuario = "GuardarUsuario";
+        private const string ActualizarUsuario = "ActualizarUsuario";
+        private const string ObtenerUsuarioPorId = "ObtenerUsuarioPorId";
+        private const string ObtenerTodosUsuario = "ObtenerTodosUsuario";
+        private const string EliminarUsuarioPorId = "EliminarUsuarioPorId";
 
 
         public UsuarioRepositorio(AccesoADatos accesoADatos) : base(accesoADatos)
@@ -25,9 +30,7 @@ namespace Repositorios
 
         public override Usuario Guardar(Usuario entidad)
         {
-            var consulta = "GuardarUsuario";
-            Dictionary<string, object> parametros = CrearParametrosGuardar(entidad);
-            var id = _accesoADatos.Escribir(consulta, parametros);
+            var id = _accesoADatos.Escribir(GuardarUsuario, CrearParametrosGuardar(entidad));
             entidad.Id = new Legajo(id);
             return entidad;
         }
@@ -48,15 +51,12 @@ namespace Repositorios
 
         public override void Actualizar(Usuario entidad)
         {
-            var consulta = "ActualizarUsuario";
-            Dictionary<string, object> parametros = CrearParametrosGuardar(entidad);
-            _accesoADatos.Escribir(consulta, parametros);
+            _accesoADatos.Escribir(ActualizarUsuario, CrearParametrosGuardar(entidad));
         }
 
         public override Usuario Obtener(Id id)
         {
-            Dictionary<string, object> parametros = new Dictionary<string, object> {{LEGAJO, id.AsInt()}};
-            return _accesoADatos.Leer("ObtenerUsuarioPorId", parametros)
+            return _accesoADatos.Leer(ObtenerUsuarioPorId, new Dictionary<string, object> {{LEGAJO, id.AsInt()}})
                 .AsEnumerable()
                 .Select(ToUsuario)
                 .ToList()[0];
@@ -64,44 +64,64 @@ namespace Repositorios
 
         private Usuario ToUsuario(DataRow fila)
         {
-            
-
             return new Usuario(
-                legajo: new Legajo(fila["legajo"] as int? ?? 0),
-                nombre: fila["nombre"] as string,
-                apellido: fila["apellido"] as string,
-                email: fila["email"] as string,
-                password: fila["password"] as string,
-                rol: ObtenerRol(fila["rol"] as string),
-                computadora: ObtenerComputadora(fila["computadoraId"] as string)
+                legajo: new Legajo(fila["Legajo"] as int? ?? 0),
+                nombre: fila["Nombre"] as string,
+                apellido: fila["Apellido"] as string,
+                email: fila["Email"] as string,
+                password: fila["Password"] as string,
+                rol: ToRol(fila["Rol"] as string),
+                categoria: ToJerarquiaUsuario(fila),
+                computadora: ToComputadora(fila)
             );
         }
 
-        private Computadora ObtenerComputadora(string s)
+        private Jerarquia ToJerarquiaUsuario(DataRow fila)
         {
-            throw new NotImplementedException();
+            var value = fila["IdUJ"] as int? ?? 0;
+            return new Jerarquia(
+                id: new JerarquiId(value),
+                denominacion: fila["DenominacionUJ"] as string,
+                valor: fila["ValorUJ"] as int? ?? 0
+            );
         }
 
-        private Rol ObtenerRol(string s)
+        private Computadora ToComputadora(DataRow fila)
         {
-            throw new NotImplementedException();
+            return new Computadora(
+                id: new ComputadoraId(fila["Id"] as int? ?? 0),
+                marca: fila["Marca"] as string,
+                modelo: fila["Modelo"] as string,
+                componentes: new List<Componente>(),
+                software: new List<Software>()
+            );
+        }
+
+        private Rol ToRol(string rol)
+        {
+            switch (rol)
+            {
+                case "TECNICO":
+                    return Rol.TECNICO;
+                case "USUARIO":
+                    return Rol.USUARIO;
+                default:
+                    return Rol.JEFE;
+            }
         }
 
 
         public override List<Usuario> ObtenerTodos()
         {
-            return _accesoADatos.Leer("ObtenerTodosUsuario", null)
+            return _accesoADatos.Leer(ObtenerTodosUsuario, null)
                 .AsEnumerable()
                 .Select(ToUsuario)
                 .ToList();
-
         }
 
         public override void Eliminar(Id id)
         {
-            var consulta = "EliminarUsuarioPorId";
-            Dictionary<string, object> parametros = new Dictionary<string, object> { { LEGAJO, id.AsInt() } };
-            _accesoADatos.Escribir(consulta, parametros);
+            _accesoADatos.Escribir(EliminarUsuarioPorId, new Dictionary<string, object> {{LEGAJO, id.AsInt()}});
         }
     }
 }

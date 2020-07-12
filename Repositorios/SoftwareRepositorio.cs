@@ -59,10 +59,10 @@ namespace Repositorios
         private Software ToSoftware(DataRow fila)
         {
             return new Software(
-                codigo: new CodigoSoftware(fila["codigo"] as int? ?? 0),
-                nombre: fila["nombre"] as string,
-                version: fila["version"] as string,
-                desarrollador: fila["desarrollador"] as string
+                codigo: new CodigoSoftware(fila["Codigo"] as int? ?? 0),
+                nombre: fila["Nombre"] as string,
+                version: fila["Version"] as string,
+                desarrollador: fila["Desarrollador"] as string
                 );
         }
 

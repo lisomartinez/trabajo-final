@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Controladores;
 using Modelo;
@@ -15,12 +16,11 @@ namespace UI
         {
             InitializeComponent();
             _controlador = new AsistenciaTecnicaControlador(this);
-            _controlador.MostrarAsistencias();
         }
 
         private void AsistenciaTecnicaForm_Load(object sender, System.EventArgs e)
         {
-
+            _controlador.MostrarAsistencias();
         }
 
         public List<AsistenciaTecnicaModelo> AsistenciasTecnicas
@@ -120,6 +120,63 @@ namespace UI
         public void MostrarExcepcion(Exception exception)
         {
             MessageBox.Show(exception.Message);
+        }
+
+        public void MostrarGestionarComputadora(UsuarioModelo usuario)
+        {
+            if (Application.OpenForms.OfType<GestionarComputadoraUsuarioForm>().Count() == 1)
+                return;
+
+            var gestion = new GestionarComputadoraUsuarioForm(usuario);
+            gestion.Show();
+        }
+
+        public void MostrarCompletarEncuesta(AsistenciaTecnicaModelo seleccionada)
+        {
+            if (Application.OpenForms.OfType<CompletarEncuestaForm>().Count() == 1)
+                return;
+
+            var completarEncuesta = new CompletarEncuestaForm(seleccionada);
+            completarEncuesta.FormClosed += (s, ee) => { Calificado(s as CompletarEncuestaForm, ee.CloseReason); };
+            completarEncuesta.Show();
+        }
+
+        private void Calificado(CompletarEncuestaForm sender, CloseReason eeCloseReason)
+        {
+            var nota = sender.Calificacion;
+
+            if (sender.Completada)
+                Calificacion = nota;
+        }
+
+        private void ActualizarEstadoBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.ActualizarEstado();
+        }
+
+        private void AsistenciasTecnicasDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _controlador.MostrarAsistencia();
+        }
+
+        private void ModificarBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.ModificarAsistencia();
+        }
+
+        private void EliminarBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.EliminarAsistencia();
+        }
+
+        private void GestionComputadoraBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.GestionarComputadora();
+        }
+
+        private void CalificarBTN_Click(object sender, EventArgs e)
+        {
+            _controlador.CalificarAsistencia();
         }
     }
 }

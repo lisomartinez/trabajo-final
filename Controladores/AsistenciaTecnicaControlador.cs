@@ -14,18 +14,14 @@ namespace Controladores
         private AsistenciaTecnicaServicio _servicio;
         private TipoProblemaServicio _tipoProblemaServicio;
         private EstadoAsistenciaTecnicaServicio _estadoAsistenciaTecnicaServicio;
-        public AsistenciaTecnicaControlador(IAsistenciaTecnicaVista vista, AsistenciaTecnicaServicio servicio)
-        {
-            _vista = vista;
-            _servicio = servicio;
-            _tipoProblemaServicio = new TipoProblemaServicio();
-            _estadoAsistenciaTecnicaServicio = new EstadoAsistenciaTecnicaServicio();
-        }
 
         public AsistenciaTecnicaControlador(IAsistenciaTecnicaVista vista)
         {
             _vista = vista;
             _servicio = new AsistenciaTecnicaServicio();
+            _tipoProblemaServicio = new TipoProblemaServicio();
+            _estadoAsistenciaTecnicaServicio = new EstadoAsistenciaTecnicaServicio();
+            _tipoProblemaServicio = new TipoProblemaServicio();
         }
 
         public void MostrarAsistencias()
@@ -91,7 +87,7 @@ namespace Controladores
                 seleccionada.Estado = _vista.Estado;
                 seleccionada.Fecha = _vista.Fecha;
                 // seleccionada.Legajo = _vista.Legajo;
-                seleccionada.Tecnico = _vista.Tecnico;
+                // seleccionada.Tecnico = _vista.Tecnico;
                 seleccionada.Calificacion = _vista.Calificacion;
                 _servicio.Modificar(seleccionada.ToEntity());
             }
@@ -128,7 +124,7 @@ namespace Controladores
             {
                 if (Sesion.Instance.Rol == Rol.USUARIO) return;
                 var seleccionada = _vista.AsistenciaSelccionado;
-                throw new NotImplementedException();
+                _vista.MostrarGestionarComputadora(seleccionada.Usuario);
 
             }
             catch (Exception e)
@@ -160,9 +156,10 @@ namespace Controladores
                 ValidarCampos();
                 if (Sesion.Instance.Rol != Rol.USUARIO) return;
 
-                var seleccionada = _vista.AsistenciaSelccionado.ToEntity();
-                seleccionada.Calificacion = _vista.Calificacion;
-                _servicio.CalificarAsistencia(seleccionada);
+                var seleccionada = _vista.AsistenciaSelccionado;
+                _vista.MostrarCompletarEncuesta(seleccionada);
+                // seleccionada.Calificacion = _vista.Calificacion;
+                // _servicio.CalificarAsistencia(seleccionada);
             }
             catch (Exception e)
             {
@@ -183,14 +180,6 @@ namespace Controladores
                 default:
                     break;
             }
-        }
-    }
-
-    public class EstadoAsistenciaTecnicaServicio
-    {
-        public List<EstadoAsistenciaTecnica> ObtenerTodos()
-        {
-            throw new NotImplementedException();
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using AccesoDatos;
-using Controladores;
 using Entidades;
 using Repositorios;
 
@@ -9,12 +8,12 @@ namespace Servicios
 {
     public class AsistenciaTecnicaServicio
     {
-        private AsistenciaTecnicaRepositorio _asistenciaTecnicaRepositorio;
+        private AsistenciaTecnicaRepositorio _repositorio;
         private EstadisticasAsistenciaTecnicaServicio _estadisticasAsistenciasTecnicas;
 
         public AsistenciaTecnicaServicio()
         {
-            _asistenciaTecnicaRepositorio = new AsistenciaTecnicaRepositorio(AccesoADatos.Instance);
+            _repositorio = new AsistenciaTecnicaRepositorio(AccesoADatos.Instance);
             _estadisticasAsistenciasTecnicas = new EstadisticasAsistenciaTecnicaServicio();
         }
 
@@ -23,45 +22,44 @@ namespace Servicios
             ComputarEstadisticas(asistenciaTecnica);
         }
 
-        private EstadisticasAsistenciasTecnicas ComputarEstadisticas(AsistenciaTecnica asistenciaTecnica)
+        private void ComputarEstadisticas(AsistenciaTecnica asistenciaTecnica)
         {
-            _estadisticasAsistenciasTecnicas.ComputarEstadisticasActualizacionEstado(asistenciaTecnica);
-            throw new NotImplementedException();
+           _estadisticasAsistenciasTecnicas.ComputarEstadisticasActualizacionEstado(asistenciaTecnica);
         }
 
-        public List<AsistenciaTecnica> ObtenerAsistenciaTecnico(Legajo usuarioLegajo)
+        public List<AsistenciaTecnica> ObtenerAsistenciaTecnico(Legajo legajo)
         {
-            throw new NotImplementedException();
+           return _repositorio.ObtenerPorTecnico(legajo);
         }
 
-        public List<AsistenciaTecnica> ObtenerAsistenciasUsuario(Legajo usuarioLegajo)
+        public List<AsistenciaTecnica> ObtenerAsistenciasUsuario(Legajo legajo)
         {
-            throw new NotImplementedException();
+           return _repositorio.ObtenerPorLegajo(legajo);
         }
 
-        public List<AsistenciaTecnica> ObtenerAsistenciasJefe(Legajo usuarioLegajo)
+        public List<AsistenciaTecnica> ObtenerAsistenciasJefe(Legajo legajo)
         {
-            throw new NotImplementedException();
+           return _repositorio.ObtenerTodos();
         }
 
-        public void Modificar(AsistenciaTecnica toEntity)
+        public void Modificar(AsistenciaTecnica asistencia)
         {
-            throw new NotImplementedException();
+            _repositorio.Actualizar(asistencia);
         }
 
         public void EliminarAsistencia(CodigoAsistencia codigoAsistencia)
         {
-            throw new NotImplementedException();
+            _repositorio.Eliminar(codigoAsistencia);
         }
 
-        public void CalificarAsistencia(AsistenciaTecnica seleccionada)
+        public void CalificarAsistencia(AsistenciaTecnica asistencia)
         {
-            throw new NotImplementedException();
+            _repositorio.Actualizar(asistencia);
         }
 
-        public void ReemplazarComponente(AsistenciaTecnica asistenciaTecnica, Componente componente)
+        public void ReemplazarComponente(AsistenciaTecnica asistencia, Componente anterior, Componente componenteNuevo)
         {
-            throw new NotImplementedException();
+            asistencia.ReemplazarComponente(anterior, componenteNuevo);
         }
     }
 }

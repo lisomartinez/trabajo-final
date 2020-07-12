@@ -16,7 +16,7 @@ namespace Vistas
         List<SoftwareModelo> Software { get; set; }
         ComponenteModelo ComponenteSeleccionado { get; set; }
         SoftwareModelo SoftwareSeleccionado { get; set; }
-        void MostrarComponentesForm(ComputadoraModelo vistaComputadoraSeleccionada);
-        void MostrarGestionarSoftwareForm(ComputadoraModelo vistaComputadoraSeleccionada);
+        void MostrarComponentesForm(ComputadoraModelo computadora);
+        void MostrarGestionarSoftwareForm(ComputadoraModelo computadora);
     }
 }

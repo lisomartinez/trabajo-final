@@ -11,7 +11,7 @@ namespace Entidades
             _value = value;
         }
 
-        public static Id Empty { get; set; }
+        public static Id Empty => new Id(-1);
 
         public bool Equals(Id other)
         {
